@@ -1,0 +1,540 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{001E46F4-C463-45F5-BFD0-5E331FE51B66}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>asistencia</RootNamespace>
+    <AssemblyName>asistencia</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.zkemkeeper">
+      <HintPath>..\dll\AxInterop.zkemkeeper.dll</HintPath>
+    </Reference>
+    <Reference Include="ClaseCalendario">
+      <HintPath>..\dll\ClaseCalendario.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmAgencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgencia.Designer.cs">
+      <DependentUpon>frmAgencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAreas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAreas.Designer.cs">
+      <DependentUpon>frmAreas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarDNI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarDNI.Designer.cs">
+      <DependentUpon>frmBuscarDNI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCalendario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCalendario.Designer.cs">
+      <DependentUpon>frmCalendario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCambiarIP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCambiarIP.Designer.cs">
+      <DependentUpon>frmCambiarIP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCiudades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCiudades.Designer.cs">
+      <DependentUpon>frmCiudades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDiasNoLaborables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDiasNoLaborables.Designer.cs">
+      <DependentUpon>frmDiasNoLaborables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHabilitaPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHabilitaPersonal.Designer.cs">
+      <DependentUpon>frmHabilitaPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHorario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHorario.Designer.cs">
+      <DependentUpon>frmHorario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLicencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLicencia.Designer.cs">
+      <DependentUpon>frmLicencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLicenciasGrupales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLicenciasGrupales.Designer.cs">
+      <DependentUpon>frmLicenciasGrupales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmModalidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModalidad.Designer.cs">
+      <DependentUpon>frmModalidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNuevoToletancia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNuevoToletancia.designer.cs">
+      <DependentUpon>frmNuevoToletancia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNuevoVacaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNuevoVacaciones.Designer.cs">
+      <DependentUpon>frmNuevoVacaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOmision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOmision.Designer.cs">
+      <DependentUpon>frmOmision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOmisionesGrupales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOmisionesGrupales.Designer.cs">
+      <DependentUpon>frmOmisionesGrupales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPermiso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPermiso.Designer.cs">
+      <DependentUpon>frmPermiso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPersonal.Designer.cs">
+      <DependentUpon>frmPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPersonal1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPersonal1.Designer.cs">
+      <DependentUpon>frmPersonal1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistrarHuellas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistrarHuellas.Designer.cs">
+      <DependentUpon>frmRegistrarHuellas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReloj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReloj.Designer.cs">
+      <DependentUpon>frmReloj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTipoLIcencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTipoLIcencia.Designer.cs">
+      <DependentUpon>frmTipoLIcencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTipoPermiso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTipoPermiso.Designer.cs">
+      <DependentUpon>frmTipoPermiso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTipoPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTipoPersonal.Designer.cs">
+      <DependentUpon>frmTipoPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTurno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTurno.Designer.cs">
+      <DependentUpon>frmTurno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsuarios.Designer.cs">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVacaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVacaciones.Designer.cs">
+      <DependentUpon>frmVacaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVolcarDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVolcarDatos.Designer.cs">
+      <DependentUpon>frmVolcarDatos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="loguin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loguin.Designer.cs">
+      <DependentUpon>loguin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash.Designer.cs">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmAgencia.resx">
+      <DependentUpon>frmAgencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAreas.resx">
+      <DependentUpon>frmAreas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarDNI.resx">
+      <DependentUpon>frmBuscarDNI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCalendario.resx">
+      <DependentUpon>frmCalendario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCambiarIP.resx">
+      <DependentUpon>frmCambiarIP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCiudades.resx">
+      <DependentUpon>frmCiudades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDiasNoLaborables.resx">
+      <DependentUpon>frmDiasNoLaborables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHabilitaPersonal.resx">
+      <DependentUpon>frmHabilitaPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHorario.resx">
+      <DependentUpon>frmHorario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLicencia.resx">
+      <DependentUpon>frmLicencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLicenciasGrupales.resx">
+      <DependentUpon>frmLicenciasGrupales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModalidad.resx">
+      <DependentUpon>frmModalidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNuevoToletancia.resx">
+      <DependentUpon>frmNuevoToletancia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNuevoVacaciones.resx">
+      <DependentUpon>frmNuevoVacaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOmision.resx">
+      <DependentUpon>frmOmision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOmisionesGrupales.resx">
+      <DependentUpon>frmOmisionesGrupales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPermiso.resx">
+      <DependentUpon>frmPermiso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPersonal.resx">
+      <DependentUpon>frmPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPersonal1.resx">
+      <DependentUpon>frmPersonal1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistrarHuellas.resx">
+      <DependentUpon>frmRegistrarHuellas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReloj.resx">
+      <DependentUpon>frmReloj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTipoLIcencia.resx">
+      <DependentUpon>frmTipoLIcencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTipoPermiso.resx">
+      <DependentUpon>frmTipoPermiso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTipoPersonal.resx">
+      <DependentUpon>frmTipoPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTurno.resx">
+      <DependentUpon>frmTurno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsuarios.resx">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVacaciones.resx">
+      <DependentUpon>frmVacaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVolcarDatos.resx">
+      <DependentUpon>frmVolcarDatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loguin.resx">
+      <DependentUpon>loguin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Splash.resx">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loguin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vista %28151%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vista %2822%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\clases\clases.csproj">
+      <Project>{43767F0E-E82C-46BE-BD2C-1E4F0DCD81F3}</Project>
+      <Name>clases</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tester.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tiposPersonal1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calender.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\siluetaPersona.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\131.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\129.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondohuellas..png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\huellapulgar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\handright.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fairytale_button_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\110012_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anularder0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anularizq0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\indiceder0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\indiceizq0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medioder0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medioizq0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\meniqueder0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\meniqueizq0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pulgarder0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pulgarizq0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_button.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="zkemkeeper">
+      <Guid>{FE9DED34-E159-408E-8490-B720A5E632C7}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fecha-del-calendario-en-enero-de-icono-5659-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\siguiente-icono-5491-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Navidad-Christmas-Tree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\81-large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\120.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reloj.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\importar.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\empleado.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

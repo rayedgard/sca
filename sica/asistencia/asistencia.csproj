@@ -40,7 +40,7 @@
     <Reference Include="ClaseCalendario">
       <HintPath>..\dll\ClaseCalendario.dll</HintPath>
     </Reference>
-    <Reference Include="MySql.Data, Version=6.9.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.5.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.ServiceProcess" />
@@ -95,6 +95,12 @@
     </Compile>
     <Compile Include="frmDiasNoLaborables.Designer.cs">
       <DependentUpon>frmDiasNoLaborables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFotos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFotos.designer.cs">
+      <DependentUpon>frmFotos.cs</DependentUpon>
     </Compile>
     <Compile Include="frmHabilitaPersonal.cs">
       <SubType>Form</SubType>
@@ -216,6 +222,12 @@
     <Compile Include="frmVacaciones.Designer.cs">
       <DependentUpon>frmVacaciones.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmVisorFotos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVisorFotos.designer.cs">
+      <DependentUpon>frmVisorFotos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmVolcarDatos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -267,6 +279,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDiasNoLaborables.resx">
       <DependentUpon>frmDiasNoLaborables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFotos.resx">
+      <DependentUpon>frmFotos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmHabilitaPersonal.resx">
       <DependentUpon>frmHabilitaPersonal.cs</DependentUpon>
@@ -327,6 +342,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmVacaciones.resx">
       <DependentUpon>frmVacaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVisorFotos.resx">
+      <DependentUpon>frmVisorFotos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmVolcarDatos.resx">
       <DependentUpon>frmVolcarDatos.cs</DependentUpon>
@@ -528,6 +546,57 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\empleado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuarios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tolerancia1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ciudades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\areas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agencia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\modalidades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\relojes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nolaborables.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tiposlicencia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tipopermiso.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tolerancia2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fotos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tiposPersonal1 - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mostrarfoto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cargafotros.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_male.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anonymous.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

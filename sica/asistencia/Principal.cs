@@ -227,6 +227,13 @@ namespace asistencia
                 volcar.ShowDialog();
         }
 
+        private void gESTIONDEFOTOGRAFICASToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmFotos fotos = new frmFotos(string_ArchivoConfiguracion);
+            fotos.MdiParent = this;
+            fotos.Show();
+        }
+
 
 
         

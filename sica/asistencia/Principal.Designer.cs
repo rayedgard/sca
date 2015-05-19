@@ -31,40 +31,22 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnCambiaReloj = new System.Windows.Forms.Button();
             this.cbIPreloj = new System.Windows.Forms.ComboBox();
             this.lbVolvar = new System.Windows.Forms.Label();
-            this.pbVolcar = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lbVacaciones = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lbCalendario = new System.Windows.Forms.Label();
             this.lbHorarios = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.lbTurnos = new System.Windows.Forms.Label();
             this.lbTipoPersonal = new System.Windows.Forms.Label();
-            this.pbTiposPersonal = new System.Windows.Forms.PictureBox();
             this.lbPersonal = new System.Windows.Forms.Label();
-            this.pbPersonal = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbOmisiones = new System.Windows.Forms.Label();
             this.lbPermisos = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lbLicencias = new System.Windows.Forms.Label();
             this.msMenu = new System.Windows.Forms.MenuStrip();
             this.cONFIGURACIONToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.uSUARIOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tOLERANCIAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cIUDADESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.áREASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aGENCIASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mODALIDADESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rELOJESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dIASNOLABORABLESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tIPOSDELICENCIASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tIPOSDEPERMISOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tOLERANCIASEVENTUALESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bACKUPEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rESPALDARToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rESTAURARToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -77,18 +59,37 @@
             this.dATOSEXCELToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aCERCADEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.gESTIONDEFOTOGRAFICASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnCambiaReloj = new System.Windows.Forms.Button();
+            this.pbVolcar = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pbTiposPersonal = new System.Windows.Forms.PictureBox();
+            this.pbPersonal = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.uSUARIOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tOLERANCIAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cIUDADESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.áREASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aGENCIASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mODALIDADESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rELOJESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dIASNOLABORABLESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tIPOSDELICENCIASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tIPOSDEPERMISOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tOLERANCIASEVENTUALESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbVolcar)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.msMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbVolcar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbTiposPersonal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPersonal)).BeginInit();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.msMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -121,20 +122,6 @@
             this.panel5.Size = new System.Drawing.Size(219, 84);
             this.panel5.TabIndex = 6;
             // 
-            // btnCambiaReloj
-            // 
-            this.btnCambiaReloj.Enabled = false;
-            this.btnCambiaReloj.Image = global::asistencia.Properties.Resources.reloj;
-            this.btnCambiaReloj.Location = new System.Drawing.Point(85, 34);
-            this.btnCambiaReloj.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCambiaReloj.Name = "btnCambiaReloj";
-            this.btnCambiaReloj.Size = new System.Drawing.Size(129, 42);
-            this.btnCambiaReloj.TabIndex = 8;
-            this.btnCambiaReloj.Text = "Cambiar Dispositivo";
-            this.btnCambiaReloj.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCambiaReloj.UseVisualStyleBackColor = true;
-            this.btnCambiaReloj.Click += new System.EventHandler(this.btnCambiaReloj_Click);
-            // 
             // cbIPreloj
             // 
             this.cbIPreloj.FormattingEnabled = true;
@@ -156,18 +143,6 @@
             this.lbVolvar.TabIndex = 6;
             this.lbVolvar.Text = "IMPORTAR";
             this.lbVolvar.Click += new System.EventHandler(this.lbVolvar_Click);
-            // 
-            // pbVolcar
-            // 
-            this.pbVolcar.BackgroundImage = global::asistencia.Properties.Resources._81_large;
-            this.pbVolcar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbVolcar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbVolcar.Location = new System.Drawing.Point(10, 8);
-            this.pbVolcar.Name = "pbVolcar";
-            this.pbVolcar.Size = new System.Drawing.Size(70, 56);
-            this.pbVolcar.TabIndex = 4;
-            this.pbVolcar.TabStop = false;
-            this.pbVolcar.Click += new System.EventHandler(this.pbVolcar_Click);
             // 
             // panel4
             // 
@@ -191,16 +166,6 @@
             this.lbVacaciones.TabIndex = 6;
             this.lbVacaciones.Text = "VACACIONES";
             this.lbVacaciones.Click += new System.EventHandler(this.lbVacaciones_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::asistencia.Properties.Resources._120;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(10, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(80, 71);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
             // 
             // panel3
             // 
@@ -240,16 +205,6 @@
             this.lbHorarios.Text = "HORARIOS";
             this.lbHorarios.Click += new System.EventHandler(this.lbHorarios_Click);
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackgroundImage = global::asistencia.Properties.Resources._12;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox4.Location = new System.Drawing.Point(10, 9);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(80, 71);
-            this.pictureBox4.TabIndex = 4;
-            this.pictureBox4.TabStop = false;
-            // 
             // lbTurnos
             // 
             this.lbTurnos.AutoSize = true;
@@ -275,18 +230,6 @@
             this.lbTipoPersonal.TabIndex = 3;
             this.lbTipoPersonal.Text = "TIPO PERSONAL";
             // 
-            // pbTiposPersonal
-            // 
-            this.pbTiposPersonal.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbTiposPersonal.BackgroundImage")));
-            this.pbTiposPersonal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbTiposPersonal.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbTiposPersonal.Location = new System.Drawing.Point(98, 4);
-            this.pbTiposPersonal.Name = "pbTiposPersonal";
-            this.pbTiposPersonal.Size = new System.Drawing.Size(73, 67);
-            this.pbTiposPersonal.TabIndex = 3;
-            this.pbTiposPersonal.TabStop = false;
-            this.pbTiposPersonal.Click += new System.EventHandler(this.pbTiposPersonal_Click);
-            // 
             // lbPersonal
             // 
             this.lbPersonal.AutoSize = true;
@@ -298,18 +241,6 @@
             this.lbPersonal.Size = new System.Drawing.Size(72, 15);
             this.lbPersonal.TabIndex = 2;
             this.lbPersonal.Text = "PERSONAL";
-            // 
-            // pbPersonal
-            // 
-            this.pbPersonal.BackgroundImage = global::asistencia.Properties.Resources.tester;
-            this.pbPersonal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbPersonal.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbPersonal.Location = new System.Drawing.Point(4, 4);
-            this.pbPersonal.Name = "pbPersonal";
-            this.pbPersonal.Size = new System.Drawing.Size(73, 67);
-            this.pbPersonal.TabIndex = 1;
-            this.pbPersonal.TabStop = false;
-            this.pbPersonal.Click += new System.EventHandler(this.pbPersonal_Click);
             // 
             // panel2
             // 
@@ -348,16 +279,6 @@
             this.lbPermisos.TabIndex = 5;
             this.lbPermisos.Text = "PERMISOS";
             this.lbPermisos.Click += new System.EventHandler(this.lbPermisos_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImage = global::asistencia.Properties.Resources.Calender;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Location = new System.Drawing.Point(10, 9);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(80, 71);
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
             // 
             // lbLicencias
             // 
@@ -399,86 +320,11 @@
             this.dIASNOLABORABLESToolStripMenuItem,
             this.tIPOSDELICENCIASToolStripMenuItem,
             this.tIPOSDEPERMISOSToolStripMenuItem,
-            this.tOLERANCIASEVENTUALESToolStripMenuItem});
+            this.tOLERANCIASEVENTUALESToolStripMenuItem,
+            this.gESTIONDEFOTOGRAFICASToolStripMenuItem});
             this.cONFIGURACIONToolStripMenuItem.Name = "cONFIGURACIONToolStripMenuItem";
             this.cONFIGURACIONToolStripMenuItem.Size = new System.Drawing.Size(114, 20);
             this.cONFIGURACIONToolStripMenuItem.Text = "CONFIGURACION";
-            // 
-            // uSUARIOSToolStripMenuItem
-            // 
-            this.uSUARIOSToolStripMenuItem.Name = "uSUARIOSToolStripMenuItem";
-            this.uSUARIOSToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
-            this.uSUARIOSToolStripMenuItem.Text = "USUARIOS";
-            this.uSUARIOSToolStripMenuItem.Click += new System.EventHandler(this.uSUARIOSToolStripMenuItem_Click);
-            // 
-            // tOLERANCIAToolStripMenuItem
-            // 
-            this.tOLERANCIAToolStripMenuItem.Name = "tOLERANCIAToolStripMenuItem";
-            this.tOLERANCIAToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
-            this.tOLERANCIAToolStripMenuItem.Text = "TOLERANCIA";
-            this.tOLERANCIAToolStripMenuItem.Click += new System.EventHandler(this.tOLERANCIAToolStripMenuItem_Click);
-            // 
-            // cIUDADESToolStripMenuItem
-            // 
-            this.cIUDADESToolStripMenuItem.Name = "cIUDADESToolStripMenuItem";
-            this.cIUDADESToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
-            this.cIUDADESToolStripMenuItem.Text = "CIUDADES";
-            this.cIUDADESToolStripMenuItem.Click += new System.EventHandler(this.cIUDADESToolStripMenuItem_Click);
-            // 
-            // áREASToolStripMenuItem
-            // 
-            this.áREASToolStripMenuItem.Name = "áREASToolStripMenuItem";
-            this.áREASToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
-            this.áREASToolStripMenuItem.Text = "ÁREAS";
-            this.áREASToolStripMenuItem.Click += new System.EventHandler(this.áREASToolStripMenuItem_Click);
-            // 
-            // aGENCIASToolStripMenuItem
-            // 
-            this.aGENCIASToolStripMenuItem.Name = "aGENCIASToolStripMenuItem";
-            this.aGENCIASToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
-            this.aGENCIASToolStripMenuItem.Text = "AGENCIAS";
-            this.aGENCIASToolStripMenuItem.Click += new System.EventHandler(this.aGENCIASToolStripMenuItem_Click);
-            // 
-            // mODALIDADESToolStripMenuItem
-            // 
-            this.mODALIDADESToolStripMenuItem.Name = "mODALIDADESToolStripMenuItem";
-            this.mODALIDADESToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
-            this.mODALIDADESToolStripMenuItem.Text = "MODALIDADES";
-            this.mODALIDADESToolStripMenuItem.Click += new System.EventHandler(this.mODALIDADESToolStripMenuItem_Click);
-            // 
-            // rELOJESToolStripMenuItem
-            // 
-            this.rELOJESToolStripMenuItem.Name = "rELOJESToolStripMenuItem";
-            this.rELOJESToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
-            this.rELOJESToolStripMenuItem.Text = "RELOJES";
-            this.rELOJESToolStripMenuItem.Click += new System.EventHandler(this.rELOJESToolStripMenuItem_Click);
-            // 
-            // dIASNOLABORABLESToolStripMenuItem
-            // 
-            this.dIASNOLABORABLESToolStripMenuItem.Name = "dIASNOLABORABLESToolStripMenuItem";
-            this.dIASNOLABORABLESToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
-            this.dIASNOLABORABLESToolStripMenuItem.Text = "DIAS NO LABORABLES";
-            this.dIASNOLABORABLESToolStripMenuItem.Click += new System.EventHandler(this.dIASNOLABORABLESToolStripMenuItem_Click);
-            // 
-            // tIPOSDELICENCIASToolStripMenuItem
-            // 
-            this.tIPOSDELICENCIASToolStripMenuItem.Name = "tIPOSDELICENCIASToolStripMenuItem";
-            this.tIPOSDELICENCIASToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
-            this.tIPOSDELICENCIASToolStripMenuItem.Text = "TIPOS DE LICENCIAS";
-            this.tIPOSDELICENCIASToolStripMenuItem.Click += new System.EventHandler(this.tIPOSDELICENCIASToolStripMenuItem_Click);
-            // 
-            // tIPOSDEPERMISOSToolStripMenuItem
-            // 
-            this.tIPOSDEPERMISOSToolStripMenuItem.Name = "tIPOSDEPERMISOSToolStripMenuItem";
-            this.tIPOSDEPERMISOSToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
-            this.tIPOSDEPERMISOSToolStripMenuItem.Text = "TIPOS DE PERMISOS";
-            this.tIPOSDEPERMISOSToolStripMenuItem.Click += new System.EventHandler(this.tIPOSDEPERMISOSToolStripMenuItem_Click);
-            // 
-            // tOLERANCIASEVENTUALESToolStripMenuItem
-            // 
-            this.tOLERANCIASEVENTUALESToolStripMenuItem.Name = "tOLERANCIASEVENTUALESToolStripMenuItem";
-            this.tOLERANCIASEVENTUALESToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
-            this.tOLERANCIASEVENTUALESToolStripMenuItem.Text = "TOLERANCIAS EVENTUALES";
             // 
             // bACKUPEToolStripMenuItem
             // 
@@ -566,6 +412,181 @@
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // gESTIONDEFOTOGRAFICASToolStripMenuItem
+            // 
+            this.gESTIONDEFOTOGRAFICASToolStripMenuItem.Image = global::asistencia.Properties.Resources.fotos;
+            this.gESTIONDEFOTOGRAFICASToolStripMenuItem.Name = "gESTIONDEFOTOGRAFICASToolStripMenuItem";
+            this.gESTIONDEFOTOGRAFICASToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this.gESTIONDEFOTOGRAFICASToolStripMenuItem.Text = "GESTION DE FOTOGRAFICAS";
+            this.gESTIONDEFOTOGRAFICASToolStripMenuItem.Click += new System.EventHandler(this.gESTIONDEFOTOGRAFICASToolStripMenuItem_Click);
+            // 
+            // btnCambiaReloj
+            // 
+            this.btnCambiaReloj.Enabled = false;
+            this.btnCambiaReloj.Image = global::asistencia.Properties.Resources.reloj;
+            this.btnCambiaReloj.Location = new System.Drawing.Point(85, 34);
+            this.btnCambiaReloj.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCambiaReloj.Name = "btnCambiaReloj";
+            this.btnCambiaReloj.Size = new System.Drawing.Size(129, 42);
+            this.btnCambiaReloj.TabIndex = 8;
+            this.btnCambiaReloj.Text = "Cambiar Dispositivo";
+            this.btnCambiaReloj.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCambiaReloj.UseVisualStyleBackColor = true;
+            this.btnCambiaReloj.Click += new System.EventHandler(this.btnCambiaReloj_Click);
+            // 
+            // pbVolcar
+            // 
+            this.pbVolcar.BackgroundImage = global::asistencia.Properties.Resources._81_large;
+            this.pbVolcar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbVolcar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbVolcar.Location = new System.Drawing.Point(10, 8);
+            this.pbVolcar.Name = "pbVolcar";
+            this.pbVolcar.Size = new System.Drawing.Size(70, 56);
+            this.pbVolcar.TabIndex = 4;
+            this.pbVolcar.TabStop = false;
+            this.pbVolcar.Click += new System.EventHandler(this.pbVolcar_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::asistencia.Properties.Resources._120;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(10, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(80, 71);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImage = global::asistencia.Properties.Resources._12;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox4.Location = new System.Drawing.Point(10, 9);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(80, 71);
+            this.pictureBox4.TabIndex = 4;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pbTiposPersonal
+            // 
+            this.pbTiposPersonal.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbTiposPersonal.BackgroundImage")));
+            this.pbTiposPersonal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbTiposPersonal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbTiposPersonal.Location = new System.Drawing.Point(98, 4);
+            this.pbTiposPersonal.Name = "pbTiposPersonal";
+            this.pbTiposPersonal.Size = new System.Drawing.Size(73, 67);
+            this.pbTiposPersonal.TabIndex = 3;
+            this.pbTiposPersonal.TabStop = false;
+            this.pbTiposPersonal.Click += new System.EventHandler(this.pbTiposPersonal_Click);
+            // 
+            // pbPersonal
+            // 
+            this.pbPersonal.BackgroundImage = global::asistencia.Properties.Resources.tester;
+            this.pbPersonal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbPersonal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbPersonal.Location = new System.Drawing.Point(4, 4);
+            this.pbPersonal.Name = "pbPersonal";
+            this.pbPersonal.Size = new System.Drawing.Size(73, 67);
+            this.pbPersonal.TabIndex = 1;
+            this.pbPersonal.TabStop = false;
+            this.pbPersonal.Click += new System.EventHandler(this.pbPersonal_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = global::asistencia.Properties.Resources.Calender;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox3.Location = new System.Drawing.Point(10, 9);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(80, 71);
+            this.pictureBox3.TabIndex = 4;
+            this.pictureBox3.TabStop = false;
+            // 
+            // uSUARIOSToolStripMenuItem
+            // 
+            this.uSUARIOSToolStripMenuItem.Image = global::asistencia.Properties.Resources.usuarios;
+            this.uSUARIOSToolStripMenuItem.Name = "uSUARIOSToolStripMenuItem";
+            this.uSUARIOSToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this.uSUARIOSToolStripMenuItem.Text = "USUARIOS";
+            this.uSUARIOSToolStripMenuItem.Click += new System.EventHandler(this.uSUARIOSToolStripMenuItem_Click);
+            // 
+            // tOLERANCIAToolStripMenuItem
+            // 
+            this.tOLERANCIAToolStripMenuItem.Image = global::asistencia.Properties.Resources.tolerancia1;
+            this.tOLERANCIAToolStripMenuItem.Name = "tOLERANCIAToolStripMenuItem";
+            this.tOLERANCIAToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this.tOLERANCIAToolStripMenuItem.Text = "TOLERANCIA";
+            this.tOLERANCIAToolStripMenuItem.Click += new System.EventHandler(this.tOLERANCIAToolStripMenuItem_Click);
+            // 
+            // cIUDADESToolStripMenuItem
+            // 
+            this.cIUDADESToolStripMenuItem.Image = global::asistencia.Properties.Resources.ciudades1;
+            this.cIUDADESToolStripMenuItem.Name = "cIUDADESToolStripMenuItem";
+            this.cIUDADESToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this.cIUDADESToolStripMenuItem.Text = "CIUDADES";
+            this.cIUDADESToolStripMenuItem.Click += new System.EventHandler(this.cIUDADESToolStripMenuItem_Click);
+            // 
+            // áREASToolStripMenuItem
+            // 
+            this.áREASToolStripMenuItem.Image = global::asistencia.Properties.Resources.areas1;
+            this.áREASToolStripMenuItem.Name = "áREASToolStripMenuItem";
+            this.áREASToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this.áREASToolStripMenuItem.Text = "ÁREAS";
+            this.áREASToolStripMenuItem.Click += new System.EventHandler(this.áREASToolStripMenuItem_Click);
+            // 
+            // aGENCIASToolStripMenuItem
+            // 
+            this.aGENCIASToolStripMenuItem.Image = global::asistencia.Properties.Resources.agencia;
+            this.aGENCIASToolStripMenuItem.Name = "aGENCIASToolStripMenuItem";
+            this.aGENCIASToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this.aGENCIASToolStripMenuItem.Text = "AGENCIAS";
+            this.aGENCIASToolStripMenuItem.Click += new System.EventHandler(this.aGENCIASToolStripMenuItem_Click);
+            // 
+            // mODALIDADESToolStripMenuItem
+            // 
+            this.mODALIDADESToolStripMenuItem.Image = global::asistencia.Properties.Resources.modalidades;
+            this.mODALIDADESToolStripMenuItem.Name = "mODALIDADESToolStripMenuItem";
+            this.mODALIDADESToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this.mODALIDADESToolStripMenuItem.Text = "MODALIDADES";
+            this.mODALIDADESToolStripMenuItem.Click += new System.EventHandler(this.mODALIDADESToolStripMenuItem_Click);
+            // 
+            // rELOJESToolStripMenuItem
+            // 
+            this.rELOJESToolStripMenuItem.Image = global::asistencia.Properties.Resources.relojes;
+            this.rELOJESToolStripMenuItem.Name = "rELOJESToolStripMenuItem";
+            this.rELOJESToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this.rELOJESToolStripMenuItem.Text = "RELOJES";
+            this.rELOJESToolStripMenuItem.Click += new System.EventHandler(this.rELOJESToolStripMenuItem_Click);
+            // 
+            // dIASNOLABORABLESToolStripMenuItem
+            // 
+            this.dIASNOLABORABLESToolStripMenuItem.Image = global::asistencia.Properties.Resources.nolaborables;
+            this.dIASNOLABORABLESToolStripMenuItem.Name = "dIASNOLABORABLESToolStripMenuItem";
+            this.dIASNOLABORABLESToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this.dIASNOLABORABLESToolStripMenuItem.Text = "DIAS NO LABORABLES";
+            this.dIASNOLABORABLESToolStripMenuItem.Click += new System.EventHandler(this.dIASNOLABORABLESToolStripMenuItem_Click);
+            // 
+            // tIPOSDELICENCIASToolStripMenuItem
+            // 
+            this.tIPOSDELICENCIASToolStripMenuItem.Image = global::asistencia.Properties.Resources.tiposlicencia;
+            this.tIPOSDELICENCIASToolStripMenuItem.Name = "tIPOSDELICENCIASToolStripMenuItem";
+            this.tIPOSDELICENCIASToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this.tIPOSDELICENCIASToolStripMenuItem.Text = "TIPOS DE LICENCIAS";
+            this.tIPOSDELICENCIASToolStripMenuItem.Click += new System.EventHandler(this.tIPOSDELICENCIASToolStripMenuItem_Click);
+            // 
+            // tIPOSDEPERMISOSToolStripMenuItem
+            // 
+            this.tIPOSDEPERMISOSToolStripMenuItem.Image = global::asistencia.Properties.Resources.tipopermiso;
+            this.tIPOSDEPERMISOSToolStripMenuItem.Name = "tIPOSDEPERMISOSToolStripMenuItem";
+            this.tIPOSDEPERMISOSToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this.tIPOSDEPERMISOSToolStripMenuItem.Text = "TIPOS DE PERMISOS";
+            this.tIPOSDEPERMISOSToolStripMenuItem.Click += new System.EventHandler(this.tIPOSDEPERMISOSToolStripMenuItem_Click);
+            // 
+            // tOLERANCIASEVENTUALESToolStripMenuItem
+            // 
+            this.tOLERANCIASEVENTUALESToolStripMenuItem.Image = global::asistencia.Properties.Resources.tolerancia2;
+            this.tOLERANCIASEVENTUALESToolStripMenuItem.Name = "tOLERANCIASEVENTUALESToolStripMenuItem";
+            this.tOLERANCIASEVENTUALESToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this.tOLERANCIASEVENTUALESToolStripMenuItem.Text = "TOLERANCIAS EVENTUALES";
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -585,20 +606,20 @@
             this.panel1.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbVolcar)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.msMenu.ResumeLayout(false);
+            this.msMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbVolcar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbTiposPersonal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPersonal)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.msMenu.ResumeLayout(false);
-            this.msMenu.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -654,5 +675,6 @@
         private System.Windows.Forms.PictureBox pbVolcar;
         private System.Windows.Forms.ComboBox cbIPreloj;
         public System.Windows.Forms.Button btnCambiaReloj;
+        private System.Windows.Forms.ToolStripMenuItem gESTIONDEFOTOGRAFICASToolStripMenuItem;
     }
 }

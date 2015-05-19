@@ -54,6 +54,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="foto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="foto.designer.cs">
+      <DependentUpon>foto.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAgencia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -259,6 +265,9 @@
     <Compile Include="Splash.Designer.cs">
       <DependentUpon>Splash.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="foto.resx">
+      <DependentUpon>foto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAgencia.resx">
       <DependentUpon>frmAgencia.cs</DependentUpon>
     </EmbeddedResource>

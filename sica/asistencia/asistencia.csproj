@@ -210,6 +210,12 @@
     <Compile Include="frmTipoPersonal.Designer.cs">
       <DependentUpon>frmTipoPersonal.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmToleranciaEventual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmToleranciaEventual.Designer.cs">
+      <DependentUpon>frmToleranciaEventual.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTurno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -342,6 +348,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTipoPersonal.resx">
       <DependentUpon>frmTipoPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmToleranciaEventual.resx">
+      <DependentUpon>frmToleranciaEventual.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTurno.resx">
       <DependentUpon>frmTurno.cs</DependentUpon>

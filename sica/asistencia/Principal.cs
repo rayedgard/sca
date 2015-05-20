@@ -234,6 +234,13 @@ namespace asistencia
             fotos.Show();
         }
 
+        private void tOLERANCIASEVENTUALESToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmToleranciaEventual tole = new frmToleranciaEventual(string_ArchivoConfiguracion);
+            tole.MdiParent = this;
+            tole.Show();
+        }
+
 
 
         

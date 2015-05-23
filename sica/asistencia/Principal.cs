@@ -241,6 +241,13 @@ namespace asistencia
             tole.Show();
         }
 
+        private void rEPORTEGENERALToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReporteGeneral reporte= new frmReporteGeneral(string_ArchivoConfiguracion);
+            reporte.MdiParent=this;
+            reporte.Show();
+        }
+
 
 
         

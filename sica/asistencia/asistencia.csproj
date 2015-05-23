@@ -192,6 +192,12 @@
     <Compile Include="frmReloj.Designer.cs">
       <DependentUpon>frmReloj.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmReporteGeneral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporteGeneral.Designer.cs">
+      <DependentUpon>frmReporteGeneral.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTipoLIcencia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -339,6 +345,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmReloj.resx">
       <DependentUpon>frmReloj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteGeneral.resx">
+      <DependentUpon>frmReporteGeneral.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTipoLIcencia.resx">
       <DependentUpon>frmTipoLIcencia.cs</DependentUpon>

@@ -96,9 +96,22 @@ namespace asistencia
                 for (int i = 0; i < DiasConOmision.Tables[0].Rows.Count; i++)
                 {
                     string conOmision = "0";
-                    if (DiasConOmision.Tables[0].Rows[i][3].ToString() == "SALIDA")
+                    string valorOmision=DiasConOmision.Tables[0].Rows[i][3].ToString();
+                    if (valorOmision == "ENTRADA")
                     {
                         conOmision = "1";
+                    }
+                    if (valorOmision == "SALIDA DE REFRIGERIO")
+                    {
+                        conOmision = "2";
+                    }
+                    if (valorOmision =="ENTRADA DE REFRIGERIO")
+                    {
+                        conOmision = "3";
+                    }
+                    if (valorOmision == "SALIDA")
+                    {
+                        conOmision = "4";
                     }
                     calend_CalendarioDiasConPermisos.CambiarOpcionDia(conOmision, int.Parse(DiasConOmision.Tables[0].Rows[i][0].ToString()));
                 }
@@ -121,8 +134,29 @@ namespace asistencia
 
 
             Opcion[0] = "1";
-            Opcion[1] = "OMISIÓN DE REGISTRO";
+            Opcion[1] = "OMISIÓN De ENTRADA";
             Opcion[2] = Color.OrangeRed;
+            Opcion[3] = (System.Drawing.Image)(asistencia.Properties.Resources.Navidad_Christmas_Tree);
+
+            ListaMenuDiasOmision.Add(Opcion.Clone());
+
+            Opcion[0] = "2";
+            Opcion[1] = "OMISIÓN DE SALIDA A REFRIGERIOO";
+            Opcion[2] = Color.DeepSkyBlue;
+            Opcion[3] = (System.Drawing.Image)(asistencia.Properties.Resources.Navidad_Christmas_Tree);
+
+            ListaMenuDiasOmision.Add(Opcion.Clone());
+
+            Opcion[0] = "3";
+            Opcion[1] = "OMISIÓN DE ENTRADA DE REFRIGERIO";
+            Opcion[2] = Color.YellowGreen;
+            Opcion[3] = (System.Drawing.Image)(asistencia.Properties.Resources.Navidad_Christmas_Tree);
+
+            ListaMenuDiasOmision.Add(Opcion.Clone());
+
+            Opcion[0] = "4";
+            Opcion[1] = "OMISIÓN DE SALIDA";
+            Opcion[2] = Color.Green;
             Opcion[3] = (System.Drawing.Image)(asistencia.Properties.Resources.Navidad_Christmas_Tree);
 
             ListaMenuDiasOmision.Add(Opcion.Clone());

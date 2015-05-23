@@ -637,7 +637,6 @@
             // 
             // dataGridViewTextBoxColumn6
             // 
-            this.dataGridViewTextBoxColumn6.Frozen = true;
             this.dataGridViewTextBoxColumn6.HeaderText = "Entrada";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
@@ -648,7 +647,6 @@
             // 
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Blue;
             this.Column6.DefaultCellStyle = dataGridViewCellStyle1;
-            this.Column6.Frozen = true;
             this.Column6.HeaderText = "Tardanza 1";
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
@@ -656,21 +654,18 @@
             // 
             // Column16
             // 
-            this.Column16.Frozen = true;
             this.Column16.HeaderText = "Salida/Refrigerio";
             this.Column16.Name = "Column16";
             this.Column16.ReadOnly = true;
             // 
             // Column18
             // 
-            this.Column18.Frozen = true;
             this.Column18.HeaderText = "Entrada/Refrigerio";
             this.Column18.Name = "Column18";
             this.Column18.ReadOnly = true;
             // 
             // Column17
             // 
-            this.Column17.Frozen = true;
             this.Column17.HeaderText = "Tardanza 2";
             this.Column17.Name = "Column17";
             this.Column17.ReadOnly = true;
@@ -679,11 +674,9 @@
             // 
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewTextBoxColumn8.Frozen = true;
             this.dataGridViewTextBoxColumn8.HeaderText = "Salida";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            this.dataGridViewTextBoxColumn8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.dataGridViewTextBoxColumn8.Width = 60;
             // 
             // dataGridViewTextBoxColumn9

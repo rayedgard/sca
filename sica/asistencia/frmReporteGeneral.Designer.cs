@@ -282,6 +282,7 @@
             this.btnExcelModalidad.Size = new System.Drawing.Size(39, 35);
             this.btnExcelModalidad.TabIndex = 29;
             this.btnExcelModalidad.UseVisualStyleBackColor = true;
+            this.btnExcelModalidad.Click += new System.EventHandler(this.btnExcelModalidad_Click);
             // 
             // lblAreas
             // 
@@ -320,7 +321,6 @@
             this.Column3});
             this.dgvReportePersonal.Location = new System.Drawing.Point(3, 117);
             this.dgvReportePersonal.Name = "dgvReportePersonal";
-            this.dgvReportePersonal.ReadOnly = true;
             this.dgvReportePersonal.RowHeadersVisible = false;
             this.dgvReportePersonal.Size = new System.Drawing.Size(1060, 372);
             this.dgvReportePersonal.TabIndex = 43;
@@ -613,7 +613,6 @@
             this.dataGridViewTextBoxColumn2.Frozen = true;
             this.dataGridViewTextBoxColumn2.HeaderText = "Fecha";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.dataGridViewTextBoxColumn2.Width = 80;
             // 
@@ -622,7 +621,6 @@
             this.dataGridViewTextBoxColumn3.Frozen = true;
             this.dataGridViewTextBoxColumn3.HeaderText = "DNI";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.dataGridViewTextBoxColumn3.Width = 70;
             // 
@@ -631,7 +629,6 @@
             this.dataGridViewTextBoxColumn4.Frozen = true;
             this.dataGridViewTextBoxColumn4.HeaderText = "Nombres";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.dataGridViewTextBoxColumn4.Width = 190;
             // 
@@ -639,8 +636,6 @@
             // 
             this.dataGridViewTextBoxColumn6.HeaderText = "Entrada";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.dataGridViewTextBoxColumn6.Width = 60;
             // 
             // Column6
@@ -649,100 +644,79 @@
             this.Column6.DefaultCellStyle = dataGridViewCellStyle1;
             this.Column6.HeaderText = "Tardanza 1";
             this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
             this.Column6.Width = 80;
             // 
             // Column16
             // 
             this.Column16.HeaderText = "Salida/Refrigerio";
             this.Column16.Name = "Column16";
-            this.Column16.ReadOnly = true;
             // 
             // Column18
             // 
             this.Column18.HeaderText = "Entrada/Refrigerio";
             this.Column18.Name = "Column18";
-            this.Column18.ReadOnly = true;
             // 
             // Column17
             // 
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Blue;
+            this.Column17.DefaultCellStyle = dataGridViewCellStyle2;
             this.Column17.HeaderText = "Tardanza 2";
             this.Column17.Name = "Column17";
-            this.Column17.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn8
             // 
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewTextBoxColumn8.HeaderText = "Salida";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
             this.dataGridViewTextBoxColumn8.Width = 60;
             // 
             // dataGridViewTextBoxColumn9
             // 
             this.dataGridViewTextBoxColumn9.HeaderText = "Permiso Salida";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
             this.dataGridViewTextBoxColumn9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.dataGridViewTextBoxColumn9.Width = 65;
             // 
             // Column7
             // 
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Blue;
-            this.Column7.DefaultCellStyle = dataGridViewCellStyle3;
             this.Column7.HeaderText = "Permiso Retorno";
             this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
             this.Column7.Width = 65;
             // 
             // Column1
             // 
             this.Column1.HeaderText = "Horas Permiso";
             this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
             this.Column1.Width = 65;
             // 
             // Column4
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Blue;
             this.Column4.DefaultCellStyle = dataGridViewCellStyle4;
             this.Column4.HeaderText = "Total Horas Trabajadas";
             this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
             this.Column4.Width = 80;
             // 
             // Column5
             // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Blue;
             this.Column5.DefaultCellStyle = dataGridViewCellStyle5;
             this.Column5.HeaderText = "Tardanzas";
             this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
             this.Column5.Width = 80;
             // 
             // Column2
             // 
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.CornflowerBlue;
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Blue;
             this.Column2.DefaultCellStyle = dataGridViewCellStyle6;
             this.Column2.HeaderText = "Horas Extra";
             this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Observación";
             this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
             this.Column3.Width = 220;
             // 
             // frmReporteGeneral

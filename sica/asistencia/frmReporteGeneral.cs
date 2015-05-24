@@ -559,5 +559,139 @@ namespace asistencia
 
         object[] Temporal = { "codigo", "nombre", "dni", "area" };
 
+        private void btnExcelModalidad_Click(object sender, EventArgs e)
+        {
+            exportaExcel();
+        }
+
+         public void exportaExcel()
+        {
+
+            string MyDocumentsPath = System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            string TargetFilename = System.IO.Path.Combine(MyDocumentsPath, "Sample.xlsx");
+            //  Step 1: Create a DataSet, and put some sample data in it
+           // DataTable dt = agregadatos();
+
+            DataTable dt = ((DataTable)dgvReportePersonal.DataSource);
+            //  Step 2: Create the Excel file
+            try
+            {
+                CreateExcelFile.CreateExcelDocument(dt, TargetFilename);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Couldn't create Excel file.\r\nException: " + ex.Message);
+                return;
+            } 
+        }
+
+
+         public DataTable agregadatos()
+         {
+             DataTable dt = new DataTable();
+             dt.Columns.Add("Fecha", typeof(System.String));
+             dt.Columns.Add("DNI", typeof(System.String));
+             dt.Columns.Add("Nombres", typeof(System.String));
+             dt.Columns.Add("Entrada", typeof(System.String));
+             dt.Columns.Add("Tardanza 1", typeof(System.String));
+             dt.Columns.Add("Salida/Refrigerio", typeof(System.String));
+             dt.Columns.Add("Entrada/Refrigerio", typeof(System.String));
+             dt.Columns.Add("Tardanza 2", typeof(System.String));
+             dt.Columns.Add("Salida", typeof(System.String));
+             dt.Columns.Add("Permiso Salida", typeof(System.String));
+             dt.Columns.Add("Permiso Retorno", typeof(System.String));
+             dt.Columns.Add("Horas Permiso", typeof(System.String));
+             dt.Columns.Add("Total Horas Trabajadas", typeof(System.String));
+             dt.Columns.Add("Tardanzas", typeof(System.String));
+             dt.Columns.Add("Horas Extra", typeof(System.String));
+             dt.Columns.Add("Observación", typeof(System.String));
+
+             foreach (DataGridViewRow rowGrid in dgvReportePersonal.Rows)
+             {
+                 DataRow row = dt.NewRow();
+                
+                 row["Fecha"] = rowGrid.Cells[0].Value.ToString();
+                 row["DNI"] = rowGrid.Cells[1].Value.ToString();
+                 if (rowGrid.Cells[2].Value == null)
+                 { row["Nombres"] = ""; }
+                 else
+                 {row["Nombres"] = rowGrid.Cells[2].Value.ToString(); }
+                 
+                 if(rowGrid.Cells[3].Value==null)
+                 {row["Entrada"]="";}
+                 else
+                 {row["Entrada"] = rowGrid.Cells[3].Value.ToString();}
+
+                 if(rowGrid.Cells[4].Value==null)
+                 {row["Tardanza 1"]="";}
+                 else
+                 {row["Tardanza 1"] = rowGrid.Cells[4].Value.ToString();}
+
+                 if (rowGrid.Cells[5].Value == null)
+                 { row["Salida/Refrigerio"] = ""; }
+                 else
+                 { row["Salida/Refrigerio"] = rowGrid.Cells[5].Value.ToString(); }
+
+                 if(rowGrid.Cells[6].Value==null)
+                 {row["Entrada/Refrigerio"]="";}
+                 else
+                 {row["Entrada/Refrigerio"] = rowGrid.Cells[6].Value.ToString();}
+
+                   if(rowGrid.Cells[7].Value==null)
+                 {row["Tardanza 2"]="";}
+                 else
+                 {row["Tardanza 2"] = rowGrid.Cells[7].Value.ToString();}
+
+                   if(rowGrid.Cells[8].Value==null)
+                 {row["Salida"]="";}
+                 else
+                 {row["Salida"] = rowGrid.Cells[8].Value.ToString();}
+
+                  if(rowGrid.Cells[9].Value==null)
+                 {row["Permiso Salida"]="";}
+                 else
+                 {row["Permiso Salida"] = rowGrid.Cells[9].Value.ToString();}
+
+                  if(rowGrid.Cells[10].Value==null)
+                 {row["Permiso Retorno"]="";}
+                 else
+                 {row["Permiso Retorno"] = rowGrid.Cells[10].Value.ToString();}
+
+                  if(rowGrid.Cells[11].Value==null)
+                 {row["Horas Permiso"]="";}
+                 else
+                 {row["Horas Permiso"] = rowGrid.Cells[11].Value.ToString();}
+
+                  if(rowGrid.Cells[12].Value==null)
+                 {row["Total Horas Trabajadas"]="";}
+                 else
+                 {row["Total Horas Trabajadas"] = rowGrid.Cells[12].Value.ToString();}
+
+                 if(rowGrid.Cells[13].Value==null)
+                 {row["Tardanzas"]="";}
+                 else
+                 {row["Tardanzas"] = rowGrid.Cells[13].Value.ToString();}
+
+                  if(rowGrid.Cells[14].Value==null)
+                 {row["Horas Extra"]="";}
+                 else
+                 {row["Horas Extra"] = rowGrid.Cells[14].Value.ToString();}
+
+
+                  if(rowGrid.Cells[15].Value==null)
+                 {row["Observación"]="";}
+                 else
+                 {row["Observación"] = rowGrid.Cells[15].Value.ToString();}
+
+
+
+
+                 dt.Rows.Add(row);
+             }
+
+             return dt;
+         }
+
+
     }
 }

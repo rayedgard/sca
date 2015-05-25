@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(loguin));
             this.tbUsuario = new System.Windows.Forms.TextBox();
             this.tbPass = new System.Windows.Forms.TextBox();
             this.pbSalir = new System.Windows.Forms.PictureBox();
@@ -156,6 +157,7 @@
             this.Controls.Add(this.tbUsuario);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "loguin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "loguin";

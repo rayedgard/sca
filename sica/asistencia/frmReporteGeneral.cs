@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using clases;
+using System.IO;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.Diagnostics;
 
 namespace asistencia
 {
@@ -376,13 +380,15 @@ namespace asistencia
                         dtFechaPosterior = dtpFechaFInPersonal.Value.AddDays(1);
                         if (dtFechaInicioAnterior.Date == dtFechaPosterior.Date)
                         {
-                            dgvReportePersonal.Rows.Add("Tardanza:", ConvertirSegundosATime(pTotalTardanzas) + " Hrs", "Aproximado: " + ConvertirSegundosAMinutos(pTotalTardanzas) + "m", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ");
-                            dgvReportePersonal.Rows.Add("Faltas:", (pTotalFaltas).ToString(), " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ");
+                            dgvReportePersonal.Rows.Add("Tardanza:", ConvertirSegundosATime(pTotalTardanzas) + " Hrs", "Aproximado: " + ConvertirSegundosAMinutos(pTotalTardanzas) + "m");
+                            dgvReportePersonal.Rows.Add("Faltas:", (pTotalFaltas).ToString());
                             if (pTotalTardanzas > 3600) 
                             {
                                 descuentos = pTotalTardanzas - 3600;
                                 dgvReportePersonal.Rows.Add("Descuento:", ConvertirSegundosAMinutos(descuentos) + "m", " Por exeder el tiempo limite de tardanzas");
                             }
+                            dgvReportePersonal.Rows.Add("Horas trabajadas:", ConvertirSegundosATime(pTotalTrajados) + " Hrs");
+                            dgvReportePersonal.Rows.Add("Horas Extras:", ConvertirSegundosATime(extrasTotal) + " Hrs");
                             //object[] DatosVacaciones1 = ConexionBD.RecuperaDatoVacaciones("spuRep_numeroVacaciones", "pDNI", pDNI);
                             //dgvReportePersonal.Rows.Add("VACACIONES:", Convert.ToInt 32(DatosVacaciones1[0]));
 
@@ -404,7 +410,7 @@ namespace asistencia
                 if (pTotalFaltas > 0 & pTotalFaltas < (dias-(diasLibres+diasNoLaborabnles)) || pTotalTardanzas > 3659)
                 {
 
-                    dgvResumen.Rows.Add(Temporal[0].ToString(), Temporal[3].ToString(),
+                    dgvResumen.Rows.Add(Temporal[0].ToString(), Temporal[2].ToString(),
                         Temporal[1].ToString(),
                         ConvertirSegundosATime(pTotalTardanzas),
                         ConvertirSegundosAMinutos(descuentos),
@@ -548,17 +554,29 @@ namespace asistencia
 
         private void btnExcelModalidad_Click(object sender, EventArgs e)
         {
-            exportaExcel();
+            exportaExcel(dgvReportePersonal,1);
+            //----> 1 espara enviar gri 1 de reporte general
         }
 
-         public void exportaExcel()
+         public void exportaExcel(DataGridView datos, int tipo)
         {
 
             string MyDocumentsPath = System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             string TargetFilename = System.IO.Path.Combine(MyDocumentsPath, "Sample.xlsx");
             //  Step 1: Create a DataSet, and put some sample data in it
-           DataTable dt = agregadatos(dgvReportePersonal);
-
+            DataTable dt = new DataTable();
+            if (tipo == 1)
+            {
+                dt = agregadatos(datos);
+            }
+            if (tipo == 2)
+            {
+                dt = agregadatos2(datos);
+            }
+            if (tipo == 3)
+            {
+                dt = agregadatos3(datos);
+            }
             //DataTable dt = ((DataTable)dgvReportePersonal.DataSource);
             //  Step 2: Create the Excel file
             try
@@ -569,10 +587,20 @@ namespace asistencia
             {
                 MessageBox.Show("Couldn't create Excel file.\r\nException: " + ex.Message);
                 return;
-            } 
+            }
+            //  Step 3:  Let's open our new Excel file and shut down this application.
+            Process p = new Process();
+            p.StartInfo = new ProcessStartInfo(TargetFilename);
+            p.Start();
+
+            MessageBox.Show("DOCUMENTO EXPORTADO CON EXITO", "EXPORTACION DE XMLX", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
-
+        /// <summary>
+        /// ADJUNTA DATOS A UNA DATATABLE DE UN DATAGRIDVIEW
+        /// </summary>
+        /// <param name="datos">GDVREPORTEGENERAL</param>
+        /// <returns></returns>
          public DataTable agregadatos(DataGridView datos)
          {
              DataTable dt = new DataTable();
@@ -679,24 +707,455 @@ namespace asistencia
              return dt;
          }
 
+
+         /// <summary>
+         /// ADJUNTA DATOS A UNA DATATABLE DE UN DATAGRIDVIEW
+         /// </summary>
+         /// <param name="datos">DGV RESUMEN</param>
+         /// <returns></returns>
+         public DataTable agregadatos2(DataGridView datos)
+         {
+             DataTable dt = new DataTable();
+             dt.Columns.Add("DNI", typeof(System.String));
+             dt.Columns.Add("AREA", typeof(System.String));
+             dt.Columns.Add("NOMBRES", typeof(System.String));
+             dt.Columns.Add("TARDANZA CON TOLERANCIA", typeof(System.String));
+             dt.Columns.Add("DESCUENTO POR TARDANZA", typeof(System.String));
+             dt.Columns.Add("FALTAS POR DIAS", typeof(System.String));
+             dt.Columns.Add("OBSERVACIÓN", typeof(System.String));
+
+             foreach (DataGridViewRow rowGrid in datos.Rows)
+             {
+                 DataRow row = dt.NewRow();
+
+           
+                if (rowGrid.Cells[0].Value == null)
+                 { row["DNI"] = ""; }
+                 else
+                 { row["DNI"] = rowGrid.Cells[0].Value.ToString(); }
+
+                 if (rowGrid.Cells[1].Value == null)
+                 { row["AREA"] = ""; }
+                 else
+                 { row["AREA"] = rowGrid.Cells[1].Value.ToString(); }
+
+                 if (rowGrid.Cells[2].Value == null)
+                 { row["NOMBRES"] = ""; }
+                 else
+                 { row["NOMBRES"] = rowGrid.Cells[2].Value.ToString(); }
+
+                 if (rowGrid.Cells[3].Value == null)
+                 { row["TARDANZA CON TOLERANCIAo"] = ""; }
+                 else
+                 { row["TARDANZA CON TOLERANCIA"] = rowGrid.Cells[3].Value.ToString(); }
+
+                 if (rowGrid.Cells[4].Value == null)
+                 { row["DESCUENTO POR TARDANZA"] = ""; }
+                 else
+                 { row["DESCUENTO POR TARDANZA"] = rowGrid.Cells[4].Value.ToString(); }
+
+                 if (rowGrid.Cells[5].Value == null)
+                 { row["FALTAS POR DIAS"] = ""; }
+                 else
+                 { row["FALTAS POR DIAS"] = rowGrid.Cells[5].Value.ToString(); }
+
+                 if (rowGrid.Cells[6].Value == null)
+                 { row["OBSERVACIÓN"] = ""; }
+                 else
+                 { row["OBSERVACIÓN"] = rowGrid.Cells[6].Value.ToString(); }
+
+
+
+
+                 dt.Rows.Add(row);
+             }
+
+             return dt;
+         }
+
+
+         /// <summary>
+         /// ADJUNTA DATOS A UNA DATATABLE DE UN DATAGRIDVIEW
+         /// </summary>
+         /// <param name="datos">DGV RESUMEN2</param>
+         /// <returns></returns>
+         public DataTable agregadatos3(DataGridView datos)
+         {
+             DataTable dt = new DataTable();
+             dt.Columns.Add("DNI", typeof(System.String));
+             dt.Columns.Add("AREA", typeof(System.String));
+             dt.Columns.Add("NOMBRES", typeof(System.String));
+             dt.Columns.Add("FALTAS POR DIA", typeof(System.String));
+             dt.Columns.Add("OBSERVACIÓN", typeof(System.String));
+
+             foreach (DataGridViewRow rowGrid in datos.Rows)
+             {
+                 DataRow row = dt.NewRow();
+
+
+                 if (rowGrid.Cells[0].Value == null)
+                 { row["DNI"] = ""; }
+                 else
+                 { row["DNI"] = rowGrid.Cells[0].Value.ToString(); }
+
+                 if (rowGrid.Cells[1].Value == null)
+                 { row["AREA"] = ""; }
+                 else
+                 { row["AREA"] = rowGrid.Cells[1].Value.ToString(); }
+
+                 if (rowGrid.Cells[2].Value == null)
+                 { row["NOMBRES"] = ""; }
+                 else
+                 { row["NOMBRES"] = rowGrid.Cells[2].Value.ToString(); }
+
+                 if (rowGrid.Cells[3].Value == null)
+                 { row["FALTAS POR DIA"] = ""; }
+                 else
+                 { row["FALTAS POR DIA"] = rowGrid.Cells[3].Value.ToString(); }
+
+                 if (rowGrid.Cells[4].Value == null)
+                 { row["OBSERVACIÓN"] = ""; }
+                 else
+                 { row["OBSERVACIÓN"] = rowGrid.Cells[4].Value.ToString(); }
+
+
+
+
+                 dt.Rows.Add(row);
+             }
+
+             return dt;
+         }
+
+
+
          private void btnPDFExpor_Click(object sender, EventArgs e)
          {
-             string MyDocumentsPath = System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-             string TargetFilename = System.IO.Path.Combine(MyDocumentsPath, "Sample.xlsx");
-             //  Step 1: Create a DataSet, and put some sample data in it
-             //DataTable dt = agregadatos(dgvResumen);
+             exportaExcel(dgvResumen, 2);
+         }
 
-             DataTable dt = ((DataTable)dgvResumen.DataSource);
-             //  Step 2: Create the Excel file
-             try
+         private void tbDNIPersonal_KeyPress(object sender, KeyPressEventArgs e)
+         {
+             ValidarDatos.texto_KeyPress(((TextBox)sender).Text, "Numeros", sender, e);
+             if (e.KeyChar == '\r')
              {
-                 CreateExcelFile.CreateExcelDocument(dt, TargetFilename);
+                 e.Handled = true;
+                 SendKeys.Send("{TAB}");
              }
-             catch (Exception ex)
+         }
+
+         private void btnPDFModalidad_Click(object sender, EventArgs e)
+         {
+             generaPDF(dgvReportePersonal, 1);
+         }
+
+
+
+
+
+
+
+
+         /// <summary>
+         /// METODO PARA GENERAR EL REPORTE EN PDF
+         /// </summary>
+         /// <param name="grid">DATAGRIDVIEW QUE CONTIENE LOS DATOS DEL PERSONAL </param>
+         private void generaPDF(DataGridView grid, int tipo)
+         {
+             if (dgvReportePersonal.Rows.Count > 0)
              {
-                 MessageBox.Show("Couldn't create Excel file.\r\nException: " + ex.Message);
-                 return;
-             } 
+                 //Código para exportar DataGridView a PDF usando iTextSharp
+
+                 //Evento clic del Botón Exporta
+                 if (cbSoloEstaModalidad.Checked == false || (cbModalidades != null && cbModalidades.Text.Trim() != ""))
+                 {
+
+                     try
+                     {
+
+                         Document doc = new Document(PageSize.A4.Rotate(), 12, 12, 12, 15);
+
+                         SaveFileDialog saveFileDialog = new SaveFileDialog();
+
+                         saveFileDialog.Filter = "pdf Files (*.pdf)|*.pdf| All Files (*.*)|*.*";
+
+
+                         if (saveFileDialog.ShowDialog(this) == DialogResult.OK)
+                         {
+
+                             string filename = saveFileDialog.FileName;
+
+                             if (filename.Trim() != "")
+                             {
+
+                                 FileStream file = new FileStream(filename,
+
+                                 FileMode.OpenOrCreate,
+
+                                 FileAccess.ReadWrite,
+
+                                 FileShare.ReadWrite);
+
+                                 PdfWriter.GetInstance(doc, file);
+
+                                 doc.Open();
+
+                                 //este es una forma de agregarle una imagen al pdf
+
+                                 /*if (true)
+                                 {
+
+                                     iTextSharp.text.Image jpg = iTextSharp.text.Image.GetInstance(ControlAsistencia.Properties.Resources.icono_horario, System.Drawing.Imaging.ImageFormat.Gif);
+
+                                     jpg.Alignment = iTextSharp.text.Image.MIDDLE_ALIGN;
+
+                                     doc.Add(jpg);
+
+                                 }*/
+
+
+
+                                 string remito = string.Format("Periodo del Reporte: Desde {0} hasta {1}", dtpFechaInicioPersonal.Text, dtpFechaFInPersonal.Text);
+
+                                 DateTime fechahoy = DateTime.Now;
+
+                                 string envio = string.Format("Fecha del Reporte :{0}", fechahoy.ToLongDateString());
+
+                                 remito = remito + "      --     " + envio;
+
+                                 string proveedor = "";
+
+
+                                 //aca se agregan parrafos de cabecera antes del DataaGridView 
+                                 Chunk chunk21 = new Chunk(NombreMunicipalidad, FontFactory.GetFont("ARIAL", 12, iTextSharp.text.Font.BOLD));
+
+                                 doc.Add(new Paragraph(chunk21));
+                                 Chunk chunk = null;
+                                 if (cbSoloEstaModalidad.Checked == true)
+                                 {
+                                     chunk = new Chunk("REPORTE DE ASISTENCIA POR MODALIDAD:" + cbModalidades.Text.ToUpper(), FontFactory.GetFont("ARIAL", 10, iTextSharp.text.Font.BOLD));
+                                 }
+                                 else
+                                 {
+                                     chunk = new Chunk("REPORTE DE ASISTENCIA GENERAL", FontFactory.GetFont("ARIAL", 10, iTextSharp.text.Font.BOLD));
+                                 }
+                                 doc.Add(new Paragraph(chunk));
+
+                                 /*ESTA PARTE DE CODIGO SE INCREMENTA PARA GENERAR EL TEXTO PARA LOS MESAJES DE REPORETES DE DESCUENTOS Y REGISTROS IRREGULARES*/
+                                 if (tipo == 2)
+                                 {
+                                     Chunk chunk10 = new Chunk("REPORTE DE PERSONAL SUJETO A DESCUENTO POR TARDANZAS Y FALTAS", FontFactory.GetFont("ARIAL", 12, iTextSharp.text.Font.BOLD));
+                                     doc.Add(new Paragraph(chunk10));
+                                 }
+                                 if (tipo == 3)
+                                 {
+                                     Chunk chunk10 = new Chunk("REPORTE DE PERSONAL QUE NO REGISTRA SU INGRESO Y SALIDA (VERIFICAR SU PERMANENCIA LABORAL EN EL TRABAJO)", FontFactory.GetFont("ARIAL", 12, iTextSharp.text.Font.BOLD));
+                                     doc.Add(new Paragraph(chunk10));
+                                 }
+                                 /*-------------------------FIN VALORES------------*/
+
+
+                                 iTextSharp.text.Font FuenteTexto = FontFactory.GetFont("ARIAL", 8, BaseColor.ORANGE);
+
+                                 FuenteTexto.Color = BaseColor.BLUE;
+                                 doc.Add(new Paragraph(proveedor, FuenteTexto));
+
+                                 doc.Add(new Paragraph(remito, FuenteTexto));
+
+                                 // doc.Add(new Paragraph(envio, FuenteTexto));
+                                 FuenteTexto.Color = BaseColor.ORANGE;
+
+                                 doc.Add(new Paragraph("________________________________________________________________________", FuenteTexto));
+                                 //DataGridView ParaReporte = dgvReportePersonal; // GenerarDataGridParaReporte(dgvReportePersonal);
+
+                                 GenerarDocumento(doc, grid, tipo);
+
+
+                                 if (pBoolMostrarResumen)
+                                 {
+                                     iTextSharp.text.Font FuenteResumen = FontFactory.GetFont("ARIAL", 15, BaseColor.ORANGE);
+                                     //FuenteResumen.Color = BaseColor.RED;
+                                     //doc.Add(new Paragraph("RESUMEN ACUMULADO DEL REPORTE POR PERIODO", FuenteResumen));
+                                     FuenteTexto.Color = BaseColor.BLUE;
+                                     //doc.Add(new Paragraph("Total de tardanzas por periodo: " + ConvertirSegundosATime(pTotalTardanzas), FuenteTexto));
+                                     //doc.Add(new Paragraph("Tardanza en minuros " + ConvertirSegundosAMinutos(pTotalTardanzas), FuenteTexto));
+                                     //doc.Add(new Paragraph("Numero de dias que no asistio: " + (pTotalFaltas - pDiasVacacion).ToString(), FuenteTexto));
+                                     //doc.Add(new Paragraph("Total de horas trabajadas: " + ConvertirSegundosATime(pTotalTrajados), FuenteTexto));
+                                     //doc.Add(new Paragraph("Número de vacaciones restantes hasta la fecha: " + VacacionesR.ToString(), FuenteTexto));
+                                     //doc.Add(new Paragraph("Total hotas extras: " + ConvertirSegundosATime(extrasTotal), FuenteTexto));
+
+                                     doc.Add(new Paragraph("-------------------------------", FuenteTexto));
+                                 }
+
+                                 FuenteTexto.Color = BaseColor.BLUE;
+
+
+                                 doc.Close();
+
+                                 Process.Start(filename);
+
+                             }
+
+                             else
+                             {
+
+                                 MessageBox.Show("Ingrese nombre del archivo");
+
+                             }
+
+                         }
+
+                     }
+
+                     finally { }
+
+                 }
+             }
+
+         }
+
+
+
+         public void GenerarDocumento(Document document, DataGridView dgvReporte, int tipo)
+         {
+             iTextSharp.text.Font FuenteTexto = FontFactory.GetFont("ARIAL", 5, BaseColor.BLACK);
+             iTextSharp.text.Font FuenteTextoTarde = FontFactory.GetFont("ARIAL", 5, BaseColor.RED);
+             iTextSharp.text.Font FuenteTextoEntrada = FontFactory.GetFont("ARIAL", 5, BaseColor.BLUE);
+
+             int i, j;
+
+             //se crea un objeto PdfTable con el numero de columnas del dataGridView
+
+             PdfPTable datatable = new PdfPTable(dgvReporte.ColumnCount);
+
+             //asignamos algunas propiedades para el diseño del pdf
+
+             datatable.DefaultCell.Padding = 3;
+
+             float[] headerwidths = GetTamañoColumnas(dgvReporte);
+             //cambios para el nuevo reporte
+             float[] AnchosColumnas = { };
+
+             if (tipo == 1)
+             {
+
+                 float[] mon = { 7.0f, 7.0f, 30.0f, 6.0f, 6.0f, 6.0f, 6.0f, 6.0f, 6.0f, 6.0f, 8.0f, 6.0f, 8.0f, 8.0f, 8.0f, 30.0f };
+                 AnchosColumnas = mon;
+             }
+             if (tipo == 2)
+             {
+                 float[] mon = { 7.0f, 6.0f, 30.0f, 6.0f, 6.0f, 6.0f, 20.0f};
+                 AnchosColumnas = mon;
+             }
+             if (tipo == 3)
+             {
+                 float[] mon = { 7.0f, 20.0f, 30.0f, 6.0f, 20.0f };
+                 AnchosColumnas = mon;
+             }
+
+             datatable.SetWidths(AnchosColumnas);
+
+             datatable.WidthPercentage = 95;
+
+             datatable.DefaultCell.BorderWidth = 2;
+
+             if (tipo == 1)
+             {
+                 datatable.DefaultCell.HorizontalAlignment = Element.ALIGN_JUSTIFIED;
+             }
+             else
+             {
+                 datatable.DefaultCell.VerticalAlignment = Element.ALIGN_JUSTIFIED;
+             }
+
+             datatable.DefaultCell.BorderColor = BaseColor.DARK_GRAY;
+
+
+             //SE GENERA EL ENCABEZADO DE LA TABLA EN EL PDF
+
+             for (i = 0; i < dgvReporte.ColumnCount; i++)
+             {
+                 Phrase NuevaFrase = new Phrase(dgvReporte.Columns[i].HeaderText, FuenteTexto);
+                 datatable.AddCell(NuevaFrase);
+             }
+
+             datatable.HeaderRows = 1;
+             datatable.DefaultCell.BorderWidth = 1;
+
+             //SE GENERA EL CUERPO DEL PDF
+
+             for (i = 0; i < dgvReporte.RowCount; i++)
+             {
+
+                 for (j = 0; j < dgvReporte.ColumnCount; j++)
+                 {
+                     Phrase NuevaFrase = new Phrase("");
+                     if (dgvReporte[j, i].Value == null || dgvReporte[j, i].Value.ToString().Trim().Replace("\r\n", "") == "")
+                         NuevaFrase = new Phrase("", FuenteTexto);
+                     else
+                     {
+                         if (j == 3 || j == 6 || j == 12)
+                         {
+                             NuevaFrase = new Phrase(dgvReporte[j, i].Value.ToString(), FuenteTextoEntrada);
+                         }
+                         else
+                         {
+                             if (j == 4 || j == 7 || j == 13)
+                             {
+                                 NuevaFrase = new Phrase(dgvReporte[j, i].Value.ToString(), FuenteTextoTarde);
+                             }
+                             else
+                             {
+                                 NuevaFrase = new Phrase(dgvReporte[j, i].Value.ToString(), FuenteTexto);
+                             }
+                         }
+                     }
+                     if (j == 0 || j == 1 || j == 2 || j == 15)
+                     {
+                         datatable.DefaultCell.HorizontalAlignment = Element.ALIGN_LEFT;
+                     }
+                     else
+                     {
+                         datatable.DefaultCell.HorizontalAlignment = Element.ALIGN_CENTER;
+                     }
+                     datatable.AddCell(NuevaFrase);
+                 }
+                 datatable.CompleteRow();
+             }
+
+             //SE AGREGAR LA PDFPTABLE AL DOCUMENTO
+
+             document.Add(datatable);
+
+         }
+
+
+         //Función que obtiene los tamaños de las columnas del grid
+
+         public float[] GetTamañoColumnas(DataGridView dg)
+         {
+
+             float[] values = new float[dg.ColumnCount];
+
+             for (int i = 0; i < dg.ColumnCount; i++)
+             {
+
+                 values[i] = (float)dg.Columns[i].Width + 10;
+
+             }
+
+             return values;
+
+         }
+
+         private void btnExcelExpor_Click(object sender, EventArgs e)
+         {
+             generaPDF(dgvResumen, 2);
+         }
+
+         private void btnExcelExpor2_Click(object sender, EventArgs e)
+         {
+             generaPDF(dgvResumen2, 3);
          }
 
 

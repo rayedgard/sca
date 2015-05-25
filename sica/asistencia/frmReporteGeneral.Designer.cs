@@ -28,16 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReporteGeneral));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.cbFiltrado = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.gbEstadoPersonal = new System.Windows.Forms.GroupBox();
@@ -47,8 +46,6 @@
             this.prbCarga = new System.Windows.Forms.ProgressBar();
             this.cbSoloEstaModalidad = new System.Windows.Forms.CheckBox();
             this.cbModalidades = new System.Windows.Forms.ComboBox();
-            this.btnPDFModalidad = new System.Windows.Forms.Button();
-            this.btnExcelModalidad = new System.Windows.Forms.Button();
             this.lblAreas = new System.Windows.Forms.Label();
             this.dgvReportePersonal = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,8 +67,6 @@
             this.tbDNIPersonal = new System.Windows.Forms.TextBox();
             this.lbNombrePersonal = new System.Windows.Forms.Label();
             this.lbNombreUsuario = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.btnVerReportePersonal = new System.Windows.Forms.Button();
             this.dtpFechaFInPersonal = new System.Windows.Forms.DateTimePicker();
             this.dtpFechaInicioPersonal = new System.Windows.Forms.DateTimePicker();
@@ -82,10 +77,6 @@
             this.btnPDFExpor = new System.Windows.Forms.Button();
             this.btnExcelExpor = new System.Windows.Forms.Button();
             this.dgvResumen = new System.Windows.Forms.DataGridView();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.dgvResumen2 = new System.Windows.Forms.DataGridView();
-            this.btnPdfExpor2 = new System.Windows.Forms.Button();
-            this.btnExcelExpor2 = new System.Windows.Forms.Button();
             this.CODIGO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NOMBRES = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -93,11 +84,18 @@
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.dgvResumen2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnPdfExpor2 = new System.Windows.Forms.Button();
+            this.btnExcelExpor2 = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnPDFModalidad = new System.Windows.Forms.Button();
+            this.btnExcelModalidad = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.gbEstadoPersonal.SuspendLayout();
@@ -135,8 +133,6 @@
             this.tabPage1.Controls.Add(this.tbDNIPersonal);
             this.tabPage1.Controls.Add(this.lbNombrePersonal);
             this.tabPage1.Controls.Add(this.lbNombreUsuario);
-            this.tabPage1.Controls.Add(this.button3);
-            this.tabPage1.Controls.Add(this.button2);
             this.tabPage1.Controls.Add(this.btnVerReportePersonal);
             this.tabPage1.Controls.Add(this.dtpFechaFInPersonal);
             this.tabPage1.Controls.Add(this.dtpFechaInicioPersonal);
@@ -150,19 +146,6 @@
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "REPORTES DE PERSONAL";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBuscar.BackgroundImage")));
-            this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnBuscar.Location = new System.Drawing.Point(181, 3);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(29, 29);
-            this.btnBuscar.TabIndex = 66;
-            this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // cbFiltrado
             // 
@@ -262,25 +245,6 @@
             this.cbModalidades.Size = new System.Drawing.Size(436, 21);
             this.cbModalidades.TabIndex = 44;
             // 
-            // btnPDFModalidad
-            // 
-            this.btnPDFModalidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnPDFModalidad.Location = new System.Drawing.Point(1025, 66);
-            this.btnPDFModalidad.Name = "btnPDFModalidad";
-            this.btnPDFModalidad.Size = new System.Drawing.Size(39, 38);
-            this.btnPDFModalidad.TabIndex = 28;
-            this.btnPDFModalidad.UseVisualStyleBackColor = true;
-            // 
-            // btnExcelModalidad
-            // 
-            this.btnExcelModalidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnExcelModalidad.Location = new System.Drawing.Point(1025, 32);
-            this.btnExcelModalidad.Name = "btnExcelModalidad";
-            this.btnExcelModalidad.Size = new System.Drawing.Size(39, 35);
-            this.btnExcelModalidad.TabIndex = 29;
-            this.btnExcelModalidad.UseVisualStyleBackColor = true;
-            this.btnExcelModalidad.Click += new System.EventHandler(this.btnExcelModalidad_Click);
-            // 
             // lblAreas
             // 
             this.lblAreas.AutoSize = true;
@@ -318,6 +282,7 @@
             this.Column3});
             this.dgvReportePersonal.Location = new System.Drawing.Point(3, 117);
             this.dgvReportePersonal.Name = "dgvReportePersonal";
+            this.dgvReportePersonal.ReadOnly = true;
             this.dgvReportePersonal.RowHeadersVisible = false;
             this.dgvReportePersonal.Size = new System.Drawing.Size(1060, 372);
             this.dgvReportePersonal.TabIndex = 43;
@@ -327,6 +292,7 @@
             this.dataGridViewTextBoxColumn2.Frozen = true;
             this.dataGridViewTextBoxColumn2.HeaderText = "Fecha";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.dataGridViewTextBoxColumn2.Width = 80;
             // 
@@ -335,6 +301,7 @@
             this.dataGridViewTextBoxColumn3.Frozen = true;
             this.dataGridViewTextBoxColumn3.HeaderText = "DNI";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.dataGridViewTextBoxColumn3.Width = 70;
             // 
@@ -343,6 +310,7 @@
             this.dataGridViewTextBoxColumn4.Frozen = true;
             this.dataGridViewTextBoxColumn4.HeaderText = "Nombres";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.dataGridViewTextBoxColumn4.Width = 190;
             // 
@@ -350,45 +318,52 @@
             // 
             this.dataGridViewTextBoxColumn6.HeaderText = "Entrada";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
             this.dataGridViewTextBoxColumn6.Width = 60;
             // 
             // Column6
             // 
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Blue;
-            this.Column6.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.Blue;
+            this.Column6.DefaultCellStyle = dataGridViewCellStyle25;
             this.Column6.HeaderText = "Tardanza 1";
             this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
             this.Column6.Width = 80;
             // 
             // Column16
             // 
             this.Column16.HeaderText = "Salida/Refrigerio";
             this.Column16.Name = "Column16";
+            this.Column16.ReadOnly = true;
             // 
             // Column18
             // 
             this.Column18.HeaderText = "Entrada/Refrigerio";
             this.Column18.Name = "Column18";
+            this.Column18.ReadOnly = true;
             // 
             // Column17
             // 
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Blue;
-            this.Column17.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.Blue;
+            this.Column17.DefaultCellStyle = dataGridViewCellStyle26;
             this.Column17.HeaderText = "Tardanza 2";
             this.Column17.Name = "Column17";
+            this.Column17.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn8
             // 
-            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Black;
-            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.Black;
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle27;
             this.dataGridViewTextBoxColumn8.HeaderText = "Salida";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
             this.dataGridViewTextBoxColumn8.Width = 60;
             // 
             // dataGridViewTextBoxColumn9
             // 
             this.dataGridViewTextBoxColumn9.HeaderText = "Permiso Salida";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
             this.dataGridViewTextBoxColumn9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.dataGridViewTextBoxColumn9.Width = 65;
             // 
@@ -396,41 +371,47 @@
             // 
             this.Column7.HeaderText = "Permiso Retorno";
             this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
             this.Column7.Width = 65;
             // 
             // Column1
             // 
             this.Column1.HeaderText = "Horas Permiso";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             this.Column1.Width = 65;
             // 
             // Column4
             // 
-            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.Blue;
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.Blue;
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle28;
             this.Column4.HeaderText = "Total Horas Trabajadas";
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             this.Column4.Width = 80;
             // 
             // Column5
             // 
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.Blue;
-            this.Column5.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.Blue;
+            this.Column5.DefaultCellStyle = dataGridViewCellStyle29;
             this.Column5.HeaderText = "Tardanzas";
             this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             this.Column5.Width = 80;
             // 
             // Column2
             // 
-            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.Blue;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.Blue;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle30;
             this.Column2.HeaderText = "Horas Extra";
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Observación";
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             this.Column3.Width = 220;
             // 
             // tbDNIPersonal
@@ -442,6 +423,7 @@
             this.tbDNIPersonal.Size = new System.Drawing.Size(119, 20);
             this.tbDNIPersonal.TabIndex = 42;
             this.tbDNIPersonal.TextChanged += new System.EventHandler(this.tbDNIPersonal_TextChanged);
+            this.tbDNIPersonal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbDNIPersonal_KeyPress);
             // 
             // lbNombrePersonal
             // 
@@ -463,29 +445,11 @@
             this.lbNombreUsuario.Size = new System.Drawing.Size(0, 13);
             this.lbNombreUsuario.TabIndex = 30;
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(468, 84);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(191, 27);
-            this.button3.TabIndex = 39;
-            this.button3.Text = "LISTA PERSONAL";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(259, 84);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(204, 27);
-            this.button2.TabIndex = 39;
-            this.button2.Text = "REPORTE DIARIO";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // btnVerReportePersonal
             // 
             this.btnVerReportePersonal.Location = new System.Drawing.Point(6, 84);
             this.btnVerReportePersonal.Name = "btnVerReportePersonal";
-            this.btnVerReportePersonal.Size = new System.Drawing.Size(249, 27);
+            this.btnVerReportePersonal.Size = new System.Drawing.Size(653, 27);
             this.btnVerReportePersonal.TabIndex = 39;
             this.btnVerReportePersonal.Text = "VER REPORTE GENERAL";
             this.btnVerReportePersonal.UseVisualStyleBackColor = true;
@@ -554,22 +518,25 @@
             // 
             // btnPDFExpor
             // 
+            this.btnPDFExpor.BackgroundImage = global::asistencia.Properties.Resources.excel;
             this.btnPDFExpor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnPDFExpor.Location = new System.Drawing.Point(917, 0);
+            this.btnPDFExpor.Location = new System.Drawing.Point(963, 0);
             this.btnPDFExpor.Name = "btnPDFExpor";
-            this.btnPDFExpor.Size = new System.Drawing.Size(79, 85);
+            this.btnPDFExpor.Size = new System.Drawing.Size(49, 49);
             this.btnPDFExpor.TabIndex = 30;
             this.btnPDFExpor.UseVisualStyleBackColor = true;
             this.btnPDFExpor.Click += new System.EventHandler(this.btnPDFExpor_Click);
             // 
             // btnExcelExpor
             // 
+            this.btnExcelExpor.BackgroundImage = global::asistencia.Properties.Resources.PDF_Viewer;
             this.btnExcelExpor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnExcelExpor.Location = new System.Drawing.Point(1002, 0);
+            this.btnExcelExpor.Location = new System.Drawing.Point(1018, 0);
             this.btnExcelExpor.Name = "btnExcelExpor";
-            this.btnExcelExpor.Size = new System.Drawing.Size(79, 85);
+            this.btnExcelExpor.Size = new System.Drawing.Size(48, 49);
             this.btnExcelExpor.TabIndex = 31;
             this.btnExcelExpor.UseVisualStyleBackColor = true;
+            this.btnExcelExpor.Click += new System.EventHandler(this.btnExcelExpor_Click);
             // 
             // dgvResumen
             // 
@@ -584,58 +551,11 @@
             this.Column11,
             this.Column12,
             this.Column15});
-            this.dgvResumen.Location = new System.Drawing.Point(6, 91);
+            this.dgvResumen.Location = new System.Drawing.Point(6, 55);
             this.dgvResumen.Name = "dgvResumen";
             this.dgvResumen.ReadOnly = true;
-            this.dgvResumen.Size = new System.Drawing.Size(1060, 398);
+            this.dgvResumen.Size = new System.Drawing.Size(1060, 434);
             this.dgvResumen.TabIndex = 1;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.dgvResumen2);
-            this.tabPage3.Controls.Add(this.btnPdfExpor2);
-            this.tabPage3.Controls.Add(this.btnExcelExpor2);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1069, 496);
-            this.tabPage3.TabIndex = 4;
-            this.tabPage3.Text = "RESUMEN SIN REGISTROS";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // dgvResumen2
-            // 
-            this.dgvResumen2.AllowUserToAddRows = false;
-            this.dgvResumen2.AllowUserToDeleteRows = false;
-            this.dgvResumen2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvResumen2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.Column8,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn11,
-            this.Column13});
-            this.dgvResumen2.Location = new System.Drawing.Point(6, 92);
-            this.dgvResumen2.Name = "dgvResumen2";
-            this.dgvResumen2.ReadOnly = true;
-            this.dgvResumen2.Size = new System.Drawing.Size(1073, 675);
-            this.dgvResumen2.TabIndex = 35;
-            // 
-            // btnPdfExpor2
-            // 
-            this.btnPdfExpor2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnPdfExpor2.Location = new System.Drawing.Point(915, 3);
-            this.btnPdfExpor2.Name = "btnPdfExpor2";
-            this.btnPdfExpor2.Size = new System.Drawing.Size(79, 85);
-            this.btnPdfExpor2.TabIndex = 33;
-            this.btnPdfExpor2.UseVisualStyleBackColor = true;
-            // 
-            // btnExcelExpor2
-            // 
-            this.btnExcelExpor2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnExcelExpor2.Location = new System.Drawing.Point(1000, 3);
-            this.btnExcelExpor2.Name = "btnExcelExpor2";
-            this.btnExcelExpor2.Size = new System.Drawing.Size(79, 85);
-            this.btnExcelExpor2.TabIndex = 34;
-            this.btnExcelExpor2.UseVisualStyleBackColor = true;
             // 
             // CODIGO
             // 
@@ -683,6 +603,35 @@
             this.Column15.Name = "Column15";
             this.Column15.ReadOnly = true;
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.dgvResumen2);
+            this.tabPage3.Controls.Add(this.btnPdfExpor2);
+            this.tabPage3.Controls.Add(this.btnExcelExpor2);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(1069, 496);
+            this.tabPage3.TabIndex = 4;
+            this.tabPage3.Text = "RESUMEN SIN REGISTROS";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // dgvResumen2
+            // 
+            this.dgvResumen2.AllowUserToAddRows = false;
+            this.dgvResumen2.AllowUserToDeleteRows = false;
+            this.dgvResumen2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvResumen2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.Column8,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn11,
+            this.Column13});
+            this.dgvResumen2.Location = new System.Drawing.Point(6, 92);
+            this.dgvResumen2.Name = "dgvResumen2";
+            this.dgvResumen2.ReadOnly = true;
+            this.dgvResumen2.Size = new System.Drawing.Size(1073, 675);
+            this.dgvResumen2.TabIndex = 35;
+            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.HeaderText = "DNI";
@@ -714,6 +663,62 @@
             this.Column13.HeaderText = "OBSERVACIÓN";
             this.Column13.Name = "Column13";
             this.Column13.ReadOnly = true;
+            // 
+            // btnPdfExpor2
+            // 
+            this.btnPdfExpor2.BackgroundImage = global::asistencia.Properties.Resources.excel;
+            this.btnPdfExpor2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnPdfExpor2.Location = new System.Drawing.Point(968, 3);
+            this.btnPdfExpor2.Name = "btnPdfExpor2";
+            this.btnPdfExpor2.Size = new System.Drawing.Size(46, 47);
+            this.btnPdfExpor2.TabIndex = 33;
+            this.btnPdfExpor2.UseVisualStyleBackColor = true;
+            // 
+            // btnExcelExpor2
+            // 
+            this.btnExcelExpor2.BackgroundImage = global::asistencia.Properties.Resources.PDF_Viewer;
+            this.btnExcelExpor2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnExcelExpor2.Location = new System.Drawing.Point(1020, 3);
+            this.btnExcelExpor2.Name = "btnExcelExpor2";
+            this.btnExcelExpor2.Size = new System.Drawing.Size(46, 47);
+            this.btnExcelExpor2.TabIndex = 34;
+            this.btnExcelExpor2.UseVisualStyleBackColor = true;
+            this.btnExcelExpor2.Click += new System.EventHandler(this.btnExcelExpor2_Click);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBuscar.BackgroundImage")));
+            this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBuscar.Location = new System.Drawing.Point(181, 3);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(29, 29);
+            this.btnBuscar.TabIndex = 66;
+            this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // btnPDFModalidad
+            // 
+            this.btnPDFModalidad.BackgroundImage = global::asistencia.Properties.Resources.PDF_Viewer;
+            this.btnPDFModalidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnPDFModalidad.Location = new System.Drawing.Point(1025, 71);
+            this.btnPDFModalidad.Name = "btnPDFModalidad";
+            this.btnPDFModalidad.Size = new System.Drawing.Size(39, 38);
+            this.btnPDFModalidad.TabIndex = 28;
+            this.btnPDFModalidad.UseVisualStyleBackColor = true;
+            this.btnPDFModalidad.Click += new System.EventHandler(this.btnPDFModalidad_Click);
+            // 
+            // btnExcelModalidad
+            // 
+            this.btnExcelModalidad.BackgroundImage = global::asistencia.Properties.Resources.excel;
+            this.btnExcelModalidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnExcelModalidad.Location = new System.Drawing.Point(1025, 31);
+            this.btnExcelModalidad.Name = "btnExcelModalidad";
+            this.btnExcelModalidad.Size = new System.Drawing.Size(39, 42);
+            this.btnExcelModalidad.TabIndex = 29;
+            this.btnExcelModalidad.UseVisualStyleBackColor = true;
+            this.btnExcelModalidad.Click += new System.EventHandler(this.btnExcelModalidad_Click);
             // 
             // frmReporteGeneral
             // 
@@ -759,8 +764,6 @@
         private System.Windows.Forms.TextBox tbDNIPersonal;
         private System.Windows.Forms.Label lbNombrePersonal;
         private System.Windows.Forms.Label lbNombreUsuario;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnVerReportePersonal;
         private System.Windows.Forms.DateTimePicker dtpFechaFInPersonal;
         private System.Windows.Forms.DateTimePicker dtpFechaInicioPersonal;

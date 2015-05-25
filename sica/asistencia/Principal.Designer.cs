@@ -46,17 +46,6 @@
             this.lbPermisos = new System.Windows.Forms.Label();
             this.lbLicencias = new System.Windows.Forms.Label();
             this.msMenu = new System.Windows.Forms.MenuStrip();
-            this.cONFIGURACIONToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bACKUPEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rESPALDARToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rESTAURARToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rEPORTESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rEPORTEGENERALToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rEPORTEDELICENCIASYOPERMISOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cAMBIOSDEROLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.iMPORTARToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dATOSUSBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dATOSEXCELToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aCERCADEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.btnCambiaReloj = new System.Windows.Forms.Button();
@@ -66,6 +55,7 @@
             this.pbTiposPersonal = new System.Windows.Forms.PictureBox();
             this.pbPersonal = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.cONFIGURACIONToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.uSUARIOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tOLERANCIAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cIUDADESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -78,6 +68,16 @@
             this.tIPOSDEPERMISOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tOLERANCIASEVENTUALESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gESTIONDEFOTOGRAFICASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bACKUPEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rESPALDARToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rESTAURARToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rEPORTESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rEPORTEGENERALToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rEPORTEDELICENCIASYOPERMISOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cAMBIOSDEROLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.iMPORTARToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dATOSUSBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dATOSEXCELToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -307,96 +307,6 @@
             this.msMenu.TabIndex = 3;
             this.msMenu.Text = "menuStrip1";
             // 
-            // cONFIGURACIONToolStripMenuItem
-            // 
-            this.cONFIGURACIONToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.uSUARIOSToolStripMenuItem,
-            this.tOLERANCIAToolStripMenuItem,
-            this.cIUDADESToolStripMenuItem,
-            this.áREASToolStripMenuItem,
-            this.aGENCIASToolStripMenuItem,
-            this.mODALIDADESToolStripMenuItem,
-            this.rELOJESToolStripMenuItem,
-            this.dIASNOLABORABLESToolStripMenuItem,
-            this.tIPOSDELICENCIASToolStripMenuItem,
-            this.tIPOSDEPERMISOSToolStripMenuItem,
-            this.tOLERANCIASEVENTUALESToolStripMenuItem,
-            this.gESTIONDEFOTOGRAFICASToolStripMenuItem});
-            this.cONFIGURACIONToolStripMenuItem.Name = "cONFIGURACIONToolStripMenuItem";
-            this.cONFIGURACIONToolStripMenuItem.Size = new System.Drawing.Size(114, 20);
-            this.cONFIGURACIONToolStripMenuItem.Text = "CONFIGURACION";
-            // 
-            // bACKUPEToolStripMenuItem
-            // 
-            this.bACKUPEToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.rESPALDARToolStripMenuItem,
-            this.rESTAURARToolStripMenuItem});
-            this.bACKUPEToolStripMenuItem.Name = "bACKUPEToolStripMenuItem";
-            this.bACKUPEToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
-            this.bACKUPEToolStripMenuItem.Text = "BACKUPE";
-            // 
-            // rESPALDARToolStripMenuItem
-            // 
-            this.rESPALDARToolStripMenuItem.Name = "rESPALDARToolStripMenuItem";
-            this.rESPALDARToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
-            this.rESPALDARToolStripMenuItem.Text = "RESPALDAR";
-            // 
-            // rESTAURARToolStripMenuItem
-            // 
-            this.rESTAURARToolStripMenuItem.Name = "rESTAURARToolStripMenuItem";
-            this.rESTAURARToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
-            this.rESTAURARToolStripMenuItem.Text = "RESTAURAR";
-            // 
-            // rEPORTESToolStripMenuItem
-            // 
-            this.rEPORTESToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.rEPORTEGENERALToolStripMenuItem,
-            this.rEPORTEDELICENCIASYOPERMISOSToolStripMenuItem,
-            this.cAMBIOSDEROLToolStripMenuItem});
-            this.rEPORTESToolStripMenuItem.Name = "rEPORTESToolStripMenuItem";
-            this.rEPORTESToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
-            this.rEPORTESToolStripMenuItem.Text = "REPORTES";
-            // 
-            // rEPORTEGENERALToolStripMenuItem
-            // 
-            this.rEPORTEGENERALToolStripMenuItem.Name = "rEPORTEGENERALToolStripMenuItem";
-            this.rEPORTEGENERALToolStripMenuItem.Size = new System.Drawing.Size(282, 22);
-            this.rEPORTEGENERALToolStripMenuItem.Text = "REPORTE GENERAL";
-            this.rEPORTEGENERALToolStripMenuItem.Click += new System.EventHandler(this.rEPORTEGENERALToolStripMenuItem_Click);
-            // 
-            // rEPORTEDELICENCIASYOPERMISOSToolStripMenuItem
-            // 
-            this.rEPORTEDELICENCIASYOPERMISOSToolStripMenuItem.Name = "rEPORTEDELICENCIASYOPERMISOSToolStripMenuItem";
-            this.rEPORTEDELICENCIASYOPERMISOSToolStripMenuItem.Size = new System.Drawing.Size(282, 22);
-            this.rEPORTEDELICENCIASYOPERMISOSToolStripMenuItem.Text = "REPORTE DE LICENCIAS Y/O PERMISOS";
-            // 
-            // cAMBIOSDEROLToolStripMenuItem
-            // 
-            this.cAMBIOSDEROLToolStripMenuItem.Name = "cAMBIOSDEROLToolStripMenuItem";
-            this.cAMBIOSDEROLToolStripMenuItem.Size = new System.Drawing.Size(282, 22);
-            this.cAMBIOSDEROLToolStripMenuItem.Text = "CAMBIOS DE ROL";
-            // 
-            // iMPORTARToolStripMenuItem
-            // 
-            this.iMPORTARToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dATOSUSBToolStripMenuItem,
-            this.dATOSEXCELToolStripMenuItem});
-            this.iMPORTARToolStripMenuItem.Name = "iMPORTARToolStripMenuItem";
-            this.iMPORTARToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
-            this.iMPORTARToolStripMenuItem.Text = "IMPORTAR";
-            // 
-            // dATOSUSBToolStripMenuItem
-            // 
-            this.dATOSUSBToolStripMenuItem.Name = "dATOSUSBToolStripMenuItem";
-            this.dATOSUSBToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.dATOSUSBToolStripMenuItem.Text = "DATOS USB";
-            // 
-            // dATOSEXCELToolStripMenuItem
-            // 
-            this.dATOSEXCELToolStripMenuItem.Name = "dATOSEXCELToolStripMenuItem";
-            this.dATOSEXCELToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.dATOSEXCELToolStripMenuItem.Text = "DATOS EXCEL";
-            // 
             // aCERCADEToolStripMenuItem
             // 
             this.aCERCADEToolStripMenuItem.Name = "aCERCADEToolStripMenuItem";
@@ -493,6 +403,26 @@
             this.pictureBox3.TabIndex = 4;
             this.pictureBox3.TabStop = false;
             // 
+            // cONFIGURACIONToolStripMenuItem
+            // 
+            this.cONFIGURACIONToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.uSUARIOSToolStripMenuItem,
+            this.tOLERANCIAToolStripMenuItem,
+            this.cIUDADESToolStripMenuItem,
+            this.áREASToolStripMenuItem,
+            this.aGENCIASToolStripMenuItem,
+            this.mODALIDADESToolStripMenuItem,
+            this.rELOJESToolStripMenuItem,
+            this.dIASNOLABORABLESToolStripMenuItem,
+            this.tIPOSDELICENCIASToolStripMenuItem,
+            this.tIPOSDEPERMISOSToolStripMenuItem,
+            this.tOLERANCIASEVENTUALESToolStripMenuItem,
+            this.gESTIONDEFOTOGRAFICASToolStripMenuItem});
+            this.cONFIGURACIONToolStripMenuItem.Image = global::asistencia.Properties.Resources.System_Preferences;
+            this.cONFIGURACIONToolStripMenuItem.Name = "cONFIGURACIONToolStripMenuItem";
+            this.cONFIGURACIONToolStripMenuItem.Size = new System.Drawing.Size(130, 20);
+            this.cONFIGURACIONToolStripMenuItem.Text = "CONFIGURACION";
+            // 
             // uSUARIOSToolStripMenuItem
             // 
             this.uSUARIOSToolStripMenuItem.Image = global::asistencia.Properties.Resources.usuarios;
@@ -588,6 +518,90 @@
             this.gESTIONDEFOTOGRAFICASToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
             this.gESTIONDEFOTOGRAFICASToolStripMenuItem.Text = "GESTION DE FOTOGRAFICAS";
             this.gESTIONDEFOTOGRAFICASToolStripMenuItem.Click += new System.EventHandler(this.gESTIONDEFOTOGRAFICASToolStripMenuItem_Click);
+            // 
+            // bACKUPEToolStripMenuItem
+            // 
+            this.bACKUPEToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.rESPALDARToolStripMenuItem,
+            this.rESTAURARToolStripMenuItem});
+            this.bACKUPEToolStripMenuItem.Image = global::asistencia.Properties.Resources._130;
+            this.bACKUPEToolStripMenuItem.Name = "bACKUPEToolStripMenuItem";
+            this.bACKUPEToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
+            this.bACKUPEToolStripMenuItem.Text = "BACKUPE";
+            // 
+            // rESPALDARToolStripMenuItem
+            // 
+            this.rESPALDARToolStripMenuItem.Image = global::asistencia.Properties.Resources._127;
+            this.rESPALDARToolStripMenuItem.Name = "rESPALDARToolStripMenuItem";
+            this.rESPALDARToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.rESPALDARToolStripMenuItem.Text = "RESPALDAR";
+            this.rESPALDARToolStripMenuItem.Click += new System.EventHandler(this.rESPALDARToolStripMenuItem_Click);
+            // 
+            // rESTAURARToolStripMenuItem
+            // 
+            this.rESTAURARToolStripMenuItem.Image = global::asistencia.Properties.Resources._128;
+            this.rESTAURARToolStripMenuItem.Name = "rESTAURARToolStripMenuItem";
+            this.rESTAURARToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.rESTAURARToolStripMenuItem.Text = "RESTAURAR";
+            this.rESTAURARToolStripMenuItem.Click += new System.EventHandler(this.rESTAURARToolStripMenuItem_Click);
+            // 
+            // rEPORTESToolStripMenuItem
+            // 
+            this.rEPORTESToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.rEPORTEGENERALToolStripMenuItem,
+            this.rEPORTEDELICENCIASYOPERMISOSToolStripMenuItem,
+            this.cAMBIOSDEROLToolStripMenuItem});
+            this.rEPORTESToolStripMenuItem.Image = global::asistencia.Properties.Resources.Vista__129_;
+            this.rEPORTESToolStripMenuItem.Name = "rEPORTESToolStripMenuItem";
+            this.rEPORTESToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
+            this.rEPORTESToolStripMenuItem.Text = "REPORTES";
+            // 
+            // rEPORTEGENERALToolStripMenuItem
+            // 
+            this.rEPORTEGENERALToolStripMenuItem.Image = global::asistencia.Properties.Resources.Vista__281_;
+            this.rEPORTEGENERALToolStripMenuItem.Name = "rEPORTEGENERALToolStripMenuItem";
+            this.rEPORTEGENERALToolStripMenuItem.Size = new System.Drawing.Size(282, 22);
+            this.rEPORTEGENERALToolStripMenuItem.Text = "REPORTE GENERAL";
+            this.rEPORTEGENERALToolStripMenuItem.Click += new System.EventHandler(this.rEPORTEGENERALToolStripMenuItem_Click);
+            // 
+            // rEPORTEDELICENCIASYOPERMISOSToolStripMenuItem
+            // 
+            this.rEPORTEDELICENCIASYOPERMISOSToolStripMenuItem.Image = global::asistencia.Properties.Resources._67;
+            this.rEPORTEDELICENCIASYOPERMISOSToolStripMenuItem.Name = "rEPORTEDELICENCIASYOPERMISOSToolStripMenuItem";
+            this.rEPORTEDELICENCIASYOPERMISOSToolStripMenuItem.Size = new System.Drawing.Size(282, 22);
+            this.rEPORTEDELICENCIASYOPERMISOSToolStripMenuItem.Text = "REPORTE DE LICENCIAS Y/O PERMISOS";
+            this.rEPORTEDELICENCIASYOPERMISOSToolStripMenuItem.Click += new System.EventHandler(this.rEPORTEDELICENCIASYOPERMISOSToolStripMenuItem_Click);
+            // 
+            // cAMBIOSDEROLToolStripMenuItem
+            // 
+            this.cAMBIOSDEROLToolStripMenuItem.Image = global::asistencia.Properties.Resources._122;
+            this.cAMBIOSDEROLToolStripMenuItem.Name = "cAMBIOSDEROLToolStripMenuItem";
+            this.cAMBIOSDEROLToolStripMenuItem.Size = new System.Drawing.Size(282, 22);
+            this.cAMBIOSDEROLToolStripMenuItem.Text = "REPORTE DE VACACIONES";
+            // 
+            // iMPORTARToolStripMenuItem
+            // 
+            this.iMPORTARToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dATOSUSBToolStripMenuItem,
+            this.dATOSEXCELToolStripMenuItem});
+            this.iMPORTARToolStripMenuItem.Image = global::asistencia.Properties.Resources.Vista__85_;
+            this.iMPORTARToolStripMenuItem.Name = "iMPORTARToolStripMenuItem";
+            this.iMPORTARToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
+            this.iMPORTARToolStripMenuItem.Text = "IMPORTAR";
+            // 
+            // dATOSUSBToolStripMenuItem
+            // 
+            this.dATOSUSBToolStripMenuItem.Image = global::asistencia.Properties.Resources.Vista__26_;
+            this.dATOSUSBToolStripMenuItem.Name = "dATOSUSBToolStripMenuItem";
+            this.dATOSUSBToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.dATOSUSBToolStripMenuItem.Text = "DATOS USB";
+            // 
+            // dATOSEXCELToolStripMenuItem
+            // 
+            this.dATOSEXCELToolStripMenuItem.Image = global::asistencia.Properties.Resources._104;
+            this.dATOSEXCELToolStripMenuItem.Name = "dATOSEXCELToolStripMenuItem";
+            this.dATOSEXCELToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.dATOSEXCELToolStripMenuItem.Text = "DATOS EXCEL";
             // 
             // Principal
             // 

@@ -248,6 +248,271 @@ namespace asistencia
             reporte.Show();
         }
 
+        private void rESPALDARToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MysqlBackup())
+                {
+                    MessageBox.Show("RESPALDO DE DATOS CON EXITO", "HECHO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                    MessageBox.Show("HUBO UN PROBLEMA AL RESPALDAR LA DATA, POR FAVOR INTENTELO NUEVAMENTE", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, ex.Source, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private bool MysqlBackup()
+        {
+            try
+            {
+                SaveFileDialog fd;
+                fd = new SaveFileDialog();
+                fd.Filter = "sql Files (*.sql)|*.sql";
+                fd.FileName = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\BKAsistencias" + DateTime.Now.Day + "-" + DateTime.Now.Month + "-" + DateTime.Now.Year + ".sql";
+
+                DialogResult dialogo;
+                dialogo = fd.ShowDialog();
+
+
+
+                if (dialogo == DialogResult.OK)
+                {
+
+                    if (File.Exists("BDConfig.ini"))
+                    {  //Existe archivo de configuracion de base de datos
+                        FileStream stream = new FileStream("BDConfig.ini", FileMode.Open, FileAccess.ReadWrite);
+                        StreamReader reader = new StreamReader(stream);
+                        reader.ReadLine();
+                        string Servidor = reader.ReadLine();
+                        string DB = reader.ReadLine();
+                        string usuario = reader.ReadLine();
+                        string contrasenia = reader.ReadLine();
+                        string mysqldump = reader.ReadLine();
+                        string mysqlrestore = reader.ReadLine();
+                        reader.Close();
+                        if (fd.FileName != String.Empty)
+                        {
+                            try
+                            {
+                                String linea;
+                                string fichero = fd.FileName;
+                                System.Diagnostics.Process proc = new System.Diagnostics.Process();
+                                proc.EnableRaisingEvents = false;
+                                proc.StartInfo.UseShellExecute = false;
+                                proc.StartInfo.RedirectStandardOutput = true;
+                                proc.StartInfo.FileName = mysqldump;
+                                string argumentos = "--opt --hex-blob --routines " + DB + "  --single-transaction --host=" + Servidor + " --user=" + usuario + "  --password=" + contrasenia + "";
+                                proc.StartInfo.Arguments = argumentos;
+                                Process miProceso;
+                                miProceso = Process.Start(proc.StartInfo);
+                                StreamReader sr = miProceso.StandardOutput;
+                                TextWriter tw = new StreamWriter(fd.FileName, false, Encoding.UTF8);
+                                while ((linea = sr.ReadLine()) != null)
+                                {
+                                    tw.WriteLine(linea);
+                                }
+                                tw.Close();
+                                return true;
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show(ex.Message);
+                                return false;
+                            }
+                        }
+                        else
+                            return false;
+                    }
+                    else
+                    {
+
+                                          
+                        CConfigXML configXml_ArchivoConfiguracion = new CConfigXML(string_ArchivoConfiguracion);
+                        string Servidor = configXml_ArchivoConfiguracion.GetValue("principal", "servidor", "localhost");
+                        string DB = configXml_ArchivoConfiguracion.GetValue("principal", "database", "dbcontrolasistencia");
+                        string usuario = configXml_ArchivoConfiguracion.GetValue("principal", "usuario", "root");
+                        string contrasenia = configXml_ArchivoConfiguracion.GetValue("principal", "contrasenia", "mysql");
+                        System.Environment.SpecialFolder folderProgramas = System.Environment.SpecialFolder.ProgramFiles;
+                        System.Environment.SpecialFolder folderUsuarios = System.Environment.SpecialFolder.CommonApplicationData;
+                        string ProgramMySQL = Environment.GetFolderPath(folderProgramas) + @"\MySQL\MySQL Server 5.5";
+                        string mysqldump = configXml_ArchivoConfiguracion.GetValue("principal", "mysqldump", string.Format(@"{0}\bin\mysqldump.exe", ProgramMySQL));
+                        string mysqlrestore = configXml_ArchivoConfiguracion.GetValue("principal", "mysql", string.Format(@"{0}\bin\mysql.exe", ProgramMySQL));
+
+
+                        try
+                        {
+                            String linea;
+                            string fichero = fd.FileName;
+                            System.Diagnostics.Process proc = new System.Diagnostics.Process();
+                            proc.EnableRaisingEvents = false;
+                            proc.StartInfo.UseShellExecute = false;
+                            proc.StartInfo.RedirectStandardOutput = true;
+                            proc.StartInfo.FileName = mysqldump;
+                            string argumentos = "--opt --hex-blob --routines=" + DB + "  --single-transaction --host=" + Servidor + " --user=" + usuario + "  --password=" + contrasenia + "";
+                            proc.StartInfo.Arguments = argumentos;
+                            Process miProceso;
+                            miProceso = Process.Start(proc.StartInfo);
+                            StreamReader sr = miProceso.StandardOutput;
+                            TextWriter tw = new StreamWriter(fd.FileName, false, Encoding.UTF8);
+                            while ((linea = sr.ReadLine()) != null)
+                            {
+                                tw.WriteLine(linea);
+                            }
+                            tw.Close();
+                            return true;
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                            return false;
+                        }
+
+                    }
+                }
+                else
+                    return false;
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+                return false;
+            }
+        }
+
+        private void rESTAURARToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MysqlRestore())
+                {
+                    MessageBox.Show("Restaurado de la Base de Datos realizado correctamente", "HECHO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                    MessageBox.Show("Hubo problemas al tratar de restaurar la Base de Datos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, ex.Source, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private bool MysqlRestore()
+        {
+            try
+            {
+                OpenFileDialog fd;
+                fd = new OpenFileDialog();
+                fd.Filter = "sql Files (*.sql)|*.sql";
+                fd.FileName = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+                DialogResult dialogo;
+                dialogo = fd.ShowDialog();
+
+                if (dialogo == DialogResult.OK)
+                {
+                    if (fd.FileName != String.Empty)
+                    {
+                        if (File.Exists("BDConfig.ini"))
+                        {  //Existe archivo de configuracion de base de datos
+                            FileStream stream = new FileStream("BDConfig.ini", FileMode.Open, FileAccess.ReadWrite);
+                            StreamReader reader = new StreamReader(stream);
+                            reader.ReadLine();
+                            string Servidor = reader.ReadLine();
+                            string DB = reader.ReadLine();
+                            string usuario = reader.ReadLine();
+                            string contrasenia = reader.ReadLine();
+                            string mysqldump = reader.ReadLine();
+                            string mysqlrestore = reader.ReadLine();
+                            reader.Close();
+                            try
+                            {
+                                StreamReader file = new StreamReader(fd.FileName);
+                                ProcessStartInfo proc = new ProcessStartInfo();
+                                string cmdArgs = string.Format(@"-u{0} -p{1} -h{2} {3}", usuario, contrasenia, Servidor, DB);
+                                proc.FileName = mysqlrestore;
+                                proc.RedirectStandardInput = true;
+                                proc.RedirectStandardOutput = false;
+                                proc.Arguments = cmdArgs;
+                                proc.UseShellExecute = false;
+                                Process p = Process.Start(proc);
+                                string res = file.ReadToEnd();
+                                file.Close();
+                                p.StandardInput.WriteLine(res);
+                                p.Close();
+                                return true;
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show(ex.Message);
+                                return false;
+                            }
+                        }
+                        else
+                        {
+                            //System.Environment.SpecialFolder folder = System.Environment.CurrentDirectory;
+                            //string string_ArchivoConfiguracion = System.Environment.CurrentDirectory + @"\RelojSistema.cfg";
+                            CConfigXML configXml_ArchivoConfiguracion = new CConfigXML(string_ArchivoConfiguracion);
+                            string Servidor = configXml_ArchivoConfiguracion.GetValue("principal", "servidor", "localhost");
+                            string DB = configXml_ArchivoConfiguracion.GetValue("principal", "database", "dbcontrolasistencia");
+                            string usuario = configXml_ArchivoConfiguracion.GetValue("principal", "usuario", "root");
+                            string contrasenia = configXml_ArchivoConfiguracion.GetValue("principal", "contrasenia", "mysql");
+                            System.Environment.SpecialFolder folderProgramas = System.Environment.SpecialFolder.ProgramFiles;
+                            System.Environment.SpecialFolder folderUsuarios = System.Environment.SpecialFolder.CommonApplicationData;
+                            string ProgramMySQL = Environment.GetFolderPath(folderProgramas) + @"\MySQL\MySQL Server 5.5";
+                            string mysqldump = configXml_ArchivoConfiguracion.GetValue("principal", "mysqldump", string.Format(@"{0}\bin\mysqldump.exe", ProgramMySQL));
+                            string mysqlrestore = configXml_ArchivoConfiguracion.GetValue("principal", "mysql", string.Format(@"{0}\bin\mysql.exe", ProgramMySQL));
+
+                            try
+                            {
+                                StreamReader file = new StreamReader(fd.FileName);
+                                ProcessStartInfo proc = new ProcessStartInfo();
+                                string cmdArgs = string.Format(@"-u{0} -p{1} -h{2} {3}", usuario, contrasenia, Servidor, DB);
+                                proc.FileName = mysqlrestore;
+                                proc.RedirectStandardInput = true;
+                                proc.RedirectStandardOutput = false;
+                                proc.Arguments = cmdArgs;
+                                proc.UseShellExecute = false;
+                                Process p = Process.Start(proc);
+                                string res = file.ReadToEnd();
+                                file.Close();
+                                p.StandardInput.WriteLine(res);
+                                p.Close();
+                                return true;
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show(ex.Message);
+                                return false;
+                            }
+                        }
+                    }
+                    else
+                        return false;
+                }
+                else
+                    return false;
+            }
+            catch (Exception exc)
+            {
+                return false;
+            }
+        }
+
+        private void rEPORTEDELICENCIASYOPERMISOSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+
+
+
+
+
 
 
         

@@ -297,7 +297,7 @@ namespace clases
                 for (int colInx = 0; colInx < numberOfColumns; colInx++)
                 {
                     cellValue = dr.ItemArray[colInx].ToString();
-                    cellValue = ReplaceHexadecimalSymbols(cellValue);
+                                    cellValue = ReplaceHexadecimalSymbols(cellValue);
 
                     // Create cell with data
                     if (IsNumericColumn[colInx])

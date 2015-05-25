@@ -247,6 +247,13 @@ namespace asistencia
             pTotalTardanzas = 0;
             pTotalTrajados = 0;
             pDiasVacacion = 0;
+            int dias = (dtpFechaFInPersonal.Value.Day -dtpFechaInicioPersonal.Value.Day)+1;
+
+
+            int diasNoLaborabnles = ConexionBD.EjecutarProcedimientoReturnEntero("nuevo_muestraDiasNoLaborables", "pFecha", string.Format("{0}-{1}-{2}", dtpFechaFInPersonal.Value.Year, dtpFechaFInPersonal.Value.Month, dtpFechaFInPersonal.Value.Day));
+           
+            
+            int diasLibres = 0;
             ////////vacaciones y extras
             extras = 0;
             extrasTotal = 0;
@@ -271,14 +278,11 @@ namespace asistencia
             ParamValues[5] = areaModalidad; /*AQUI ADJUNTAMOS EL ESTADO DEL PERSONAL, PARA FILTRAR LOS REPORTES DEL PERSONAL*/
 
             string Consulta = "reporte";
-            string Consulta2 = "nuevo_reporteDNI";//PARA LOS DNIS
             string Consulta3 = "nuevo_determinaAreaPersonal";//PARA LAS AREAS
             DateTime dtFechaInicioAnterior = dtpFechaInicioPersonal.Value;
 
             DateTime dtFechaPosterior;
 
-            int estado2 = 0;
-            int acumulaEstado = 0;
             try
             {
                 for (int i = 0; dtFechaInicioAnterior.Date <= dtpFechaFInPersonal.Value.Date; i++)
@@ -286,7 +290,6 @@ namespace asistencia
                     ParamValues[0] = string.Format("{0}-{1}-{2}", dtFechaInicioAnterior.Year, dtFechaInicioAnterior.Month, dtFechaInicioAnterior.Day);
                     dtFechaInicioAnterior = dtFechaInicioAnterior.AddDays(1);
                     DataSet Reporte = ConexionBD.EjecutarProcedimientoReturnDataSet(Consulta, ParamNames, ParamValues);
-                    DataSet Reporte2 = ConexionBD.EjecutarProcedimientoReturnDataSet(Consulta2, "pDocumentoDNI", pDNI);//par los dnis
                     DataSet Reporte3 = ConexionBD.EjecutarProcedimientoReturnDataSet(Consulta3, "pDni", pDNI);//par lAS AREAS
 
                     if (Reporte != null && Reporte.Tables != null && Reporte.Tables[0].Rows.Count > 0)
@@ -310,14 +313,9 @@ namespace asistencia
                                 int SegundosTarde = ConvertirTimeASegundos(Reporte.Tables[0].Rows[j].ItemArray[13].ToString());
                                 int TotalTrabajo = ConvertirTimeASegundos(Reporte.Tables[0].Rows[j].ItemArray[12].ToString());
                                 extras = ConvertirTimeASegundos(Reporte.Tables[0].Rows[j].ItemArray[14].ToString());
-                                string pdiavacacion = Reporte.Tables[0].Rows[j].ItemArray[15].ToString();
-                                //estado2 = Convert.ToInt32(Reporte.Tables[0].Rows[j].ItemArray[13]);
-
-                                //if (pdiavacacion.Trim().ToUpper().Equals("VACACIONES"))
-                                //{
-                                //    pDiasVacacion++;
-                                //}
-                                /* aqui calculamos el teempo exta por periodo*/
+                                string Observacion = Reporte.Tables[0].Rows[j].ItemArray[15].ToString();
+                               
+                                /* aqui calculamos el tiempo exta por periodo*/
                                 if (extras > 0)
                                 {
                                     extrasTotal = extras + extrasTotal;
@@ -325,18 +323,22 @@ namespace asistencia
 
                                 pTotalTardanzas = pTotalTardanzas + SegundosTarde;
                                 //ultima modificacion para que los reportes salgan con todo
-                                if (pdiavacacion.Trim().ToUpper().Equals("FALTA NO JUSTIFICADA - SUJETO A DESCUENTO") || pdiavacacion.Trim().ToUpper().Equals("FALTA POR TARDANZA - SUJETO A DESCUENTO") || pdiavacacion.Trim().ToUpper().Equals("REGISTRO IRREGULAR - SUJETO A DESCUENTO"))
+                                if (Observacion.Trim().ToUpper().Equals("FALTA NO JUSTIFICADA") || Observacion.Trim().ToUpper().Equals("FALTA POR TARDANZA NO JUSTIFICADA") || Observacion.Trim().ToUpper().Equals("FALTA NO JUSTIFICADA POR OMISIÓN DE REGISTRO"))
                                 {
                                     pTotalFaltas++;
                                 }
 
+                                if (Observacion.Trim().ToUpper().Equals("DIA LIBRE O DESCANSO"))
+                                {
+                                    diasLibres++;
+                                }
 
                                 if (TotalTrabajo <= 0)
                                 {
-                                    if (pdiavacacion.Trim() != "")/*para validar los vacios*/
+                                    if (Observacion.Trim() != "")/*para validar los vacios*/
                                     {
-                                        string goce = pdiavacacion.Trim().Substring(0, 1);
-                                        string goceName = pdiavacacion.Trim().Substring(1);
+                                        string goce = Observacion.Trim().Substring(0, 1);
+                                        string goceName = Observacion.Trim().Substring(1);
                                         if (goce == "1" || goce == "0")
                                         {
                                             Reporte.Tables[0].Rows[j][15] = goceName;
@@ -357,10 +359,10 @@ namespace asistencia
                                     asistioNormal++;
 
                                 }
-                                if (estado2 == 1)
-                                {
-                                    acumulaEstado++;
-                                }
+                                //if (estado2 == 1)
+                                //{
+                                //    acumulaEstado++;
+                                //}
 
                                 dgvReportePersonal.Rows.Add(Reporte.Tables[0].Rows[j].ItemArray);
 
@@ -374,9 +376,9 @@ namespace asistencia
                         dtFechaPosterior = dtpFechaFInPersonal.Value.AddDays(1);
                         if (dtFechaInicioAnterior.Date == dtFechaPosterior.Date)
                         {
-                            dgvReportePersonal.Rows.Add("Tardanza:", ConvertirSegundosATime(pTotalTardanzas) + " Hrs", "Aproximado: " + ConvertirSegundosAMinutos(pTotalTardanzas) + "m");
-                            dgvReportePersonal.Rows.Add("Faltas:", (pTotalFaltas).ToString());
-                            if (pTotalTardanzas > 3600)
+                            dgvReportePersonal.Rows.Add("Tardanza:", ConvertirSegundosATime(pTotalTardanzas) + " Hrs", "Aproximado: " + ConvertirSegundosAMinutos(pTotalTardanzas) + "m", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ");
+                            dgvReportePersonal.Rows.Add("Faltas:", (pTotalFaltas).ToString(), " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ");
+                            if (pTotalTardanzas > 3600) 
                             {
                                 descuentos = pTotalTardanzas - 3600;
                                 dgvReportePersonal.Rows.Add("Descuento:", ConvertirSegundosAMinutos(descuentos) + "m", " Por exeder el tiempo limite de tardanzas");
@@ -386,10 +388,10 @@ namespace asistencia
 
                         }
 
-                        Temporal[0] = Reporte.Tables[0].Rows[0].ItemArray[1].ToString();
-                        Temporal[1] = Reporte.Tables[0].Rows[0].ItemArray[2].ToString();
-                        Temporal[2] = Reporte2.Tables[0].Rows[0].ItemArray[0].ToString();
-                        Temporal[3] = Reporte3.Tables[0].Rows[0].ItemArray[0].ToString();
+                        Temporal[0] = Reporte.Tables[0].Rows[0].ItemArray[1].ToString();//dni
+                        Temporal[1] = Reporte.Tables[0].Rows[0].ItemArray[2].ToString();//nombre
+                        Temporal[2] = Reporte3.Tables[0].Rows[0].ItemArray[0].ToString();//area
+                      
                     }
 
 
@@ -399,11 +401,11 @@ namespace asistencia
 
                 //codigo para almacenar los datos acumulados, resumen de reporte
                 /*/PARA UN MEJOR CONTROL DEL REPORTE CAMBIAR 5 POR UN GENERADOR DE DIAS CON FALTA/*/
-                if (pTotalFaltas > 0 & pTotalFaltas < 20 || pTotalTardanzas > 3659)
+                if (pTotalFaltas > 0 & pTotalFaltas < (dias-(diasLibres+diasNoLaborabnles)) || pTotalTardanzas > 3659)
                 {
 
                     dgvResumen.Rows.Add(Temporal[0].ToString(), Temporal[3].ToString(),
-                        Temporal[1].ToString(), Temporal[2].ToString(),
+                        Temporal[1].ToString(),
                         ConvertirSegundosATime(pTotalTardanzas),
                         ConvertirSegundosAMinutos(descuentos),
                         pTotalFaltas
@@ -412,48 +414,33 @@ namespace asistencia
                 }
 
 
-                /*PARA AGREGAR EL PERSONAL DESHABILITADO*/
-                if (acumulaEstado == 30)
-                {
-
-                    dgvResumen.Rows.Add(Temporal[0].ToString(), Temporal[3].ToString(),
-                        Temporal[1].ToString(), Temporal[2].ToString(),
-                        ConvertirSegundosATime(pTotalTardanzas),
-                        ConvertirSegundosAMinutos(descuentos),
-                        pTotalFaltas, "ASISTENCIA MANUAL, NORMAL"
-                        );
-
-                }
                 /*PARA AGREGAR AL PERSONAL CON ASISTENCIA NORMAL*/
-                if (asistioNormal == 30 && acumulaEstado == 0)
-                {
+                //if (asistioNormal == 30 )
+                //{
 
-                    dgvResumen.Rows.Add(Temporal[0].ToString(), Temporal[3].ToString(),
-                        Temporal[1].ToString(), Temporal[2].ToString(),
-                        ConvertirSegundosATime(pTotalTardanzas),
-                        ConvertirSegundosAMinutos(descuentos),
-                        pTotalFaltas, "Asistencia Normal"
-                        );
+                //    dgvResumen.Rows.Add(Temporal[0].ToString(), Temporal[3].ToString(),
+                //        Temporal[1].ToString(), Temporal[2].ToString(),
+                //        ConvertirSegundosATime(pTotalTardanzas),
+                //        ConvertirSegundosAMinutos(descuentos),
+                //        pTotalFaltas, "Asistencia Normal"
+                //        );
 
-                }
+                //}
 
                 //codigo para almacenar los datos acumulados, resumen de reporte
                 /*/PARA UN MEJOR CONTROL DEL REPORTE CAMBIAR 6 POR UN GENERADOR DE DIAS CON FALTA/*/
-                if (pTotalFaltas >= 20 & pTotalTardanzas == 0 & extrasTotal == 0 & pTotalTrajados == 0)
+                if (pTotalFaltas >= (dias - (diasLibres + diasNoLaborabnles)) & pTotalTardanzas == 0 & extrasTotal == 0 & pTotalTrajados == 0)
                 {
-                    dgvResumen2.Rows.Add(Temporal[0].ToString(), Temporal[3].ToString(),
-                        Temporal[1].ToString(), Temporal[2].ToString(),
-                        ConvertirSegundosAMinutos(pTotalTardanzas),
-                        ConvertirSegundosAMinutos(descuentos),
-                        pTotalFaltas
+                    dgvResumen2.Rows.Add(Temporal[0].ToString(), Temporal[2].ToString(),
+                        Temporal[1].ToString(), pTotalFaltas, "NO REGISTRA ASISTENCIA"
                         );
 
 
-                    dgvResumen.Rows.Add(Temporal[0].ToString(), Temporal[3].ToString(),
-                        Temporal[1].ToString(), Temporal[2].ToString(),
+                    dgvResumen.Rows.Add(Temporal[0].ToString(), Temporal[2].ToString(),
+                        Temporal[1].ToString(),
                         ConvertirSegundosATime(pTotalTardanzas),
                         ConvertirSegundosAMinutos(descuentos),
-                        pTotalFaltas, "NO PICAN"
+                        pTotalFaltas, "NO REGISTRA ASISTENCIA"
                         );
 
 
@@ -462,16 +449,16 @@ namespace asistencia
                 /*FIN  RESUMEN*/
 
                 //para las vacaciones diferidas
-                ConexionBD.Conectar(false, string_ArchivoConfiguracion);
-                object[] DatosVacaciones = ConexionBD.RecuperaDatoVacaciones("spuRep_numeroVacaciones", "pDNI", pDNI);
-                ConexionBD.Desconectar();
+                //ConexionBD.Conectar(false, string_ArchivoConfiguracion);
+                //object[] DatosVacaciones = ConexionBD.RecuperaDatoVacaciones("spuRep_numeroVacaciones", "pDNI", pDNI);
+                //ConexionBD.Desconectar();
                 //fin vacaciones
 
                 //lbExtras.Text = ConvertirSegundosATime(extrasTotal);
                 //lbFaltas.Text = (pTotalFaltas).ToString();
                 //lbTrabajados.Text = ConvertirSegundosATime(pTotalTrajados);
                 //lbMinutos.Text = ConvertirSegundosAMinutos(pTotalTardanzas);
-                VacacionesR = Convert.ToInt32(DatosVacaciones[0]);
+                //VacacionesR = Convert.ToInt32(DatosVacaciones[0]);
                 //lbVacacionesR.Text = VacacionesR.ToString();
                 //lbTardanza.Text = ConvertirSegundosATime(pTotalTardanzas);
 
@@ -557,7 +544,7 @@ namespace asistencia
         int pDiasVacacion = 0;
 
 
-        object[] Temporal = { "codigo", "nombre", "dni", "area" };
+        object[] Temporal = { "dni", "nombre", "area" };
 
         private void btnExcelModalidad_Click(object sender, EventArgs e)
         {
@@ -570,9 +557,9 @@ namespace asistencia
             string MyDocumentsPath = System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             string TargetFilename = System.IO.Path.Combine(MyDocumentsPath, "Sample.xlsx");
             //  Step 1: Create a DataSet, and put some sample data in it
-           // DataTable dt = agregadatos();
+           DataTable dt = agregadatos(dgvReportePersonal);
 
-            DataTable dt = ((DataTable)dgvReportePersonal.DataSource);
+            //DataTable dt = ((DataTable)dgvReportePersonal.DataSource);
             //  Step 2: Create the Excel file
             try
             {
@@ -586,7 +573,7 @@ namespace asistencia
         }
 
 
-         public DataTable agregadatos()
+         public DataTable agregadatos(DataGridView datos)
          {
              DataTable dt = new DataTable();
              dt.Columns.Add("Fecha", typeof(System.String));
@@ -606,7 +593,7 @@ namespace asistencia
              dt.Columns.Add("Horas Extra", typeof(System.String));
              dt.Columns.Add("Observación", typeof(System.String));
 
-             foreach (DataGridViewRow rowGrid in dgvReportePersonal.Rows)
+             foreach (DataGridViewRow rowGrid in datos.Rows)
              {
                  DataRow row = dt.NewRow();
                 
@@ -690,6 +677,26 @@ namespace asistencia
              }
 
              return dt;
+         }
+
+         private void btnPDFExpor_Click(object sender, EventArgs e)
+         {
+             string MyDocumentsPath = System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+             string TargetFilename = System.IO.Path.Combine(MyDocumentsPath, "Sample.xlsx");
+             //  Step 1: Create a DataSet, and put some sample data in it
+             //DataTable dt = agregadatos(dgvResumen);
+
+             DataTable dt = ((DataTable)dgvResumen.DataSource);
+             //  Step 2: Create the Excel file
+             try
+             {
+                 CreateExcelFile.CreateExcelDocument(dt, TargetFilename);
+             }
+             catch (Exception ex)
+             {
+                 MessageBox.Show("Couldn't create Excel file.\r\nException: " + ex.Message);
+                 return;
+             } 
          }
 
 

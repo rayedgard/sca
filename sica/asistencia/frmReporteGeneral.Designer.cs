@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReporteGeneral));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -51,40 +51,6 @@
             this.btnExcelModalidad = new System.Windows.Forms.Button();
             this.lblAreas = new System.Windows.Forms.Label();
             this.dgvReportePersonal = new System.Windows.Forms.DataGridView();
-            this.tbDNIPersonal = new System.Windows.Forms.TextBox();
-            this.lbNombrePersonal = new System.Windows.Forms.Label();
-            this.lbNombreUsuario = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btnVerReportePersonal = new System.Windows.Forms.Button();
-            this.dtpFechaFInPersonal = new System.Windows.Forms.DateTimePicker();
-            this.dtpFechaInicioPersonal = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.btnPDFExpor = new System.Windows.Forms.Button();
-            this.btnExcelExpor = new System.Windows.Forms.Button();
-            this.dgvResumen = new System.Windows.Forms.DataGridView();
-            this.CODIGO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NOMBRES = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.dgvResumen2 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnPdfExpor2 = new System.Windows.Forms.Button();
-            this.btnExcelExpor2 = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -101,6 +67,37 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tbDNIPersonal = new System.Windows.Forms.TextBox();
+            this.lbNombrePersonal = new System.Windows.Forms.Label();
+            this.lbNombreUsuario = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnVerReportePersonal = new System.Windows.Forms.Button();
+            this.dtpFechaFInPersonal = new System.Windows.Forms.DateTimePicker();
+            this.dtpFechaInicioPersonal = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnPDFExpor = new System.Windows.Forms.Button();
+            this.btnExcelExpor = new System.Windows.Forms.Button();
+            this.dgvResumen = new System.Windows.Forms.DataGridView();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.dgvResumen2 = new System.Windows.Forms.DataGridView();
+            this.btnPdfExpor2 = new System.Windows.Forms.Button();
+            this.btnExcelExpor2 = new System.Windows.Forms.Button();
+            this.CODIGO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NOMBRES = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.gbEstadoPersonal.SuspendLayout();
@@ -325,6 +322,117 @@
             this.dgvReportePersonal.Size = new System.Drawing.Size(1060, 372);
             this.dgvReportePersonal.TabIndex = 43;
             // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.Frozen = true;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Fecha";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn2.Width = 80;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.Frozen = true;
+            this.dataGridViewTextBoxColumn3.HeaderText = "DNI";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn3.Width = 70;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.Frozen = true;
+            this.dataGridViewTextBoxColumn4.HeaderText = "Nombres";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn4.Width = 190;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.HeaderText = "Entrada";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Width = 60;
+            // 
+            // Column6
+            // 
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Blue;
+            this.Column6.DefaultCellStyle = dataGridViewCellStyle19;
+            this.Column6.HeaderText = "Tardanza 1";
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 80;
+            // 
+            // Column16
+            // 
+            this.Column16.HeaderText = "Salida/Refrigerio";
+            this.Column16.Name = "Column16";
+            // 
+            // Column18
+            // 
+            this.Column18.HeaderText = "Entrada/Refrigerio";
+            this.Column18.Name = "Column18";
+            // 
+            // Column17
+            // 
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Blue;
+            this.Column17.DefaultCellStyle = dataGridViewCellStyle20;
+            this.Column17.HeaderText = "Tardanza 2";
+            this.Column17.Name = "Column17";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Black;
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle21;
+            this.dataGridViewTextBoxColumn8.HeaderText = "Salida";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.Width = 60;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.HeaderText = "Permiso Salida";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn9.Width = 65;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Permiso Retorno";
+            this.Column7.Name = "Column7";
+            this.Column7.Width = 65;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Horas Permiso";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 65;
+            // 
+            // Column4
+            // 
+            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.Blue;
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle22;
+            this.Column4.HeaderText = "Total Horas Trabajadas";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 80;
+            // 
+            // Column5
+            // 
+            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.Blue;
+            this.Column5.DefaultCellStyle = dataGridViewCellStyle23;
+            this.Column5.HeaderText = "Tardanzas";
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 80;
+            // 
+            // Column2
+            // 
+            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.Blue;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle24;
+            this.Column2.HeaderText = "Horas Extra";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Observación";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 220;
+            // 
             // tbDNIPersonal
             // 
             this.tbDNIPersonal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -452,6 +560,7 @@
             this.btnPDFExpor.Size = new System.Drawing.Size(79, 85);
             this.btnPDFExpor.TabIndex = 30;
             this.btnPDFExpor.UseVisualStyleBackColor = true;
+            this.btnPDFExpor.Click += new System.EventHandler(this.btnPDFExpor_Click);
             // 
             // btnExcelExpor
             // 
@@ -464,64 +573,22 @@
             // 
             // dgvResumen
             // 
+            this.dgvResumen.AllowUserToAddRows = false;
+            this.dgvResumen.AllowUserToDeleteRows = false;
             this.dgvResumen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvResumen.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CODIGO,
             this.Column9,
             this.NOMBRES,
-            this.DNI,
             this.Column10,
             this.Column11,
             this.Column12,
             this.Column15});
-            this.dgvResumen.Location = new System.Drawing.Point(6, 94);
+            this.dgvResumen.Location = new System.Drawing.Point(6, 91);
             this.dgvResumen.Name = "dgvResumen";
-            this.dgvResumen.Size = new System.Drawing.Size(1075, 673);
+            this.dgvResumen.ReadOnly = true;
+            this.dgvResumen.Size = new System.Drawing.Size(1060, 398);
             this.dgvResumen.TabIndex = 1;
-            // 
-            // CODIGO
-            // 
-            this.CODIGO.HeaderText = "CODIGO";
-            this.CODIGO.Name = "CODIGO";
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "AREA";
-            this.Column9.Name = "Column9";
-            // 
-            // NOMBRES
-            // 
-            this.NOMBRES.HeaderText = "NOMBRES";
-            this.NOMBRES.Name = "NOMBRES";
-            this.NOMBRES.Width = 250;
-            // 
-            // DNI
-            // 
-            this.DNI.HeaderText = "DNI";
-            this.DNI.Name = "DNI";
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "TARDANZA CON TOLERANCIA";
-            this.Column10.Name = "Column10";
-            this.Column10.Width = 150;
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "DESCUENTO POR TARDANZA";
-            this.Column11.Name = "Column11";
-            this.Column11.Width = 150;
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "FALTAS POR DIAS";
-            this.Column12.Name = "Column12";
-            this.Column12.Width = 150;
-            // 
-            // Column15
-            // 
-            this.Column15.HeaderText = "OBSERVACIÓN";
-            this.Column15.Name = "Column15";
             // 
             // tabPage3
             // 
@@ -537,58 +604,20 @@
             // 
             // dgvResumen2
             // 
+            this.dgvResumen2.AllowUserToAddRows = false;
+            this.dgvResumen2.AllowUserToDeleteRows = false;
             this.dgvResumen2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvResumen2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.Column8,
             this.dataGridViewTextBoxColumn5,
-            this.Column13,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11});
+            this.dataGridViewTextBoxColumn11,
+            this.Column13});
             this.dgvResumen2.Location = new System.Drawing.Point(6, 92);
             this.dgvResumen2.Name = "dgvResumen2";
+            this.dgvResumen2.ReadOnly = true;
             this.dgvResumen2.Size = new System.Drawing.Size(1073, 675);
             this.dgvResumen2.TabIndex = 35;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "CODIGO";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "AREA";
-            this.Column8.Name = "Column8";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "NOMBRES";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 250;
-            // 
-            // Column13
-            // 
-            this.Column13.HeaderText = "DNI";
-            this.Column13.Name = "Column13";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.HeaderText = "TARDANZA CON TOLERANCIA";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.HeaderText = "DESCUENTO POR TARDANZA";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.HeaderText = "FALTAS POR DIA";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.Width = 150;
             // 
             // btnPdfExpor2
             // 
@@ -608,116 +637,83 @@
             this.btnExcelExpor2.TabIndex = 34;
             this.btnExcelExpor2.UseVisualStyleBackColor = true;
             // 
-            // dataGridViewTextBoxColumn2
+            // CODIGO
             // 
-            this.dataGridViewTextBoxColumn2.Frozen = true;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Fecha";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn2.Width = 80;
+            this.CODIGO.HeaderText = "DNI";
+            this.CODIGO.Name = "CODIGO";
+            this.CODIGO.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn3
+            // Column9
             // 
-            this.dataGridViewTextBoxColumn3.Frozen = true;
-            this.dataGridViewTextBoxColumn3.HeaderText = "DNI";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn3.Width = 70;
+            this.Column9.HeaderText = "AREA";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn4
+            // NOMBRES
             // 
-            this.dataGridViewTextBoxColumn4.Frozen = true;
-            this.dataGridViewTextBoxColumn4.HeaderText = "Nombres";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn4.Width = 190;
+            this.NOMBRES.HeaderText = "NOMBRES";
+            this.NOMBRES.Name = "NOMBRES";
+            this.NOMBRES.ReadOnly = true;
+            this.NOMBRES.Width = 250;
             // 
-            // dataGridViewTextBoxColumn6
+            // Column10
             // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "Entrada";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Width = 60;
+            this.Column10.HeaderText = "TARDANZA CON TOLERANCIA";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            this.Column10.Width = 150;
             // 
-            // Column6
+            // Column11
             // 
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Blue;
-            this.Column6.DefaultCellStyle = dataGridViewCellStyle1;
-            this.Column6.HeaderText = "Tardanza 1";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 80;
+            this.Column11.HeaderText = "DESCUENTO POR TARDANZA";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            this.Column11.Width = 150;
             // 
-            // Column16
+            // Column12
             // 
-            this.Column16.HeaderText = "Salida/Refrigerio";
-            this.Column16.Name = "Column16";
+            this.Column12.HeaderText = "FALTAS POR DIAS";
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            this.Column12.Width = 150;
             // 
-            // Column18
+            // Column15
             // 
-            this.Column18.HeaderText = "Entrada/Refrigerio";
-            this.Column18.Name = "Column18";
+            this.Column15.HeaderText = "OBSERVACIÓN";
+            this.Column15.Name = "Column15";
+            this.Column15.ReadOnly = true;
             // 
-            // Column17
+            // dataGridViewTextBoxColumn1
             // 
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Blue;
-            this.Column17.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Column17.HeaderText = "Tardanza 2";
-            this.Column17.Name = "Column17";
+            this.dataGridViewTextBoxColumn1.HeaderText = "DNI";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn8
+            // Column8
             // 
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewTextBoxColumn8.HeaderText = "Salida";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.Width = 60;
+            this.Column8.HeaderText = "AREA";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn9
+            // dataGridViewTextBoxColumn5
             // 
-            this.dataGridViewTextBoxColumn9.HeaderText = "Permiso Salida";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn9.Width = 65;
+            this.dataGridViewTextBoxColumn5.HeaderText = "NOMBRES";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Width = 250;
             // 
-            // Column7
+            // dataGridViewTextBoxColumn11
             // 
-            this.Column7.HeaderText = "Permiso Retorno";
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 65;
+            this.dataGridViewTextBoxColumn11.HeaderText = "FALTAS POR DIA";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            this.dataGridViewTextBoxColumn11.Width = 150;
             // 
-            // Column1
+            // Column13
             // 
-            this.Column1.HeaderText = "Horas Permiso";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 65;
-            // 
-            // Column4
-            // 
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Blue;
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Column4.HeaderText = "Total Horas Trabajadas";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 80;
-            // 
-            // Column5
-            // 
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Blue;
-            this.Column5.DefaultCellStyle = dataGridViewCellStyle5;
-            this.Column5.HeaderText = "Tardanzas";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 80;
-            // 
-            // Column2
-            // 
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Blue;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle6;
-            this.Column2.HeaderText = "Horas Extra";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Observación";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 220;
+            this.Column13.HeaderText = "OBSERVACIÓN";
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
             // 
             // frmReporteGeneral
             // 
@@ -775,23 +771,8 @@
         private System.Windows.Forms.Button btnPDFExpor;
         private System.Windows.Forms.Button btnExcelExpor;
         private System.Windows.Forms.DataGridView dgvResumen;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CODIGO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRES;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DNI;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.DataGridView dgvResumen2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.Button btnPdfExpor2;
         private System.Windows.Forms.Button btnExcelExpor2;
         public System.Windows.Forms.Button btnBuscar;
@@ -811,6 +792,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CODIGO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRES;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
 
     }
 }

@@ -46,7 +46,6 @@
             this.lbPermisos = new System.Windows.Forms.Label();
             this.lbLicencias = new System.Windows.Forms.Label();
             this.msMenu = new System.Windows.Forms.MenuStrip();
-            this.aCERCADEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.btnCambiaReloj = new System.Windows.Forms.Button();
@@ -79,6 +78,7 @@
             this.iMPORTARToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dATOSUSBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dATOSEXCELToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aCERCADEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -307,12 +307,6 @@
             this.msMenu.Size = new System.Drawing.Size(1075, 24);
             this.msMenu.TabIndex = 3;
             this.msMenu.Text = "menuStrip1";
-            // 
-            // aCERCADEToolStripMenuItem
-            // 
-            this.aCERCADEToolStripMenuItem.Name = "aCERCADEToolStripMenuItem";
-            this.aCERCADEToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
-            this.aCERCADEToolStripMenuItem.Text = "ACERCA DE";
             // 
             // menuStrip1
             // 
@@ -609,6 +603,14 @@
             this.dATOSEXCELToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.dATOSEXCELToolStripMenuItem.Text = "DATOS EXCEL";
             this.dATOSEXCELToolStripMenuItem.Click += new System.EventHandler(this.dATOSEXCELToolStripMenuItem_Click);
+            // 
+            // aCERCADEToolStripMenuItem
+            // 
+            this.aCERCADEToolStripMenuItem.Image = global::asistencia.Properties.Resources.ico;
+            this.aCERCADEToolStripMenuItem.Name = "aCERCADEToolStripMenuItem";
+            this.aCERCADEToolStripMenuItem.Size = new System.Drawing.Size(97, 20);
+            this.aCERCADEToolStripMenuItem.Text = "ACERCA DE";
+            this.aCERCADEToolStripMenuItem.Click += new System.EventHandler(this.aCERCADEToolStripMenuItem_Click);
             // 
             // Principal
             // 

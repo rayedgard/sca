@@ -599,6 +599,12 @@ namespace asistencia
             excel.Show();
         }
 
+        private void aCERCADEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmItdecsa itdecsa = new frmItdecsa();
+            itdecsa.ShowDialog();
+        }
+
 
 
 

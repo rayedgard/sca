@@ -43,7 +43,7 @@
     <Reference Include="itextsharp">
       <HintPath>..\dll\itextsharp.dll</HintPath>
     </Reference>
-    <Reference Include="MySql.Data, Version=6.9.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.5.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.ServiceProcess" />
@@ -131,6 +131,12 @@
     </Compile>
     <Compile Include="frmImportExcel.Designer.cs">
       <DependentUpon>frmImportExcel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmItdecsa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmItdecsa.Designer.cs">
+      <DependentUpon>frmItdecsa.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLicencia.cs">
       <SubType>Form</SubType>
@@ -330,6 +336,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmImportExcel.resx">
       <DependentUpon>frmImportExcel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmItdecsa.resx">
+      <DependentUpon>frmItdecsa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLicencia.resx">
       <DependentUpon>frmLicencia.cs</DependentUpon>
@@ -694,6 +703,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\104.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\itdecsa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vista %28148%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

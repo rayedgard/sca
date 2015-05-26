@@ -32,9 +32,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvExcel = new System.Windows.Forms.DataGridView();
             this.gbArchivo = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnHojas = new System.Windows.Forms.Button();
-            this.cbHojas = new System.Windows.Forms.ComboBox();
             this.tbNomabreArchivo = new System.Windows.Forms.TextBox();
             this.btnAbrir = new System.Windows.Forms.Button();
             this.Abrir = new System.Windows.Forms.OpenFileDialog();
@@ -64,9 +61,6 @@
             // 
             // gbArchivo
             // 
-            this.gbArchivo.Controls.Add(this.label1);
-            this.gbArchivo.Controls.Add(this.btnHojas);
-            this.gbArchivo.Controls.Add(this.cbHojas);
             this.gbArchivo.Controls.Add(this.tbNomabreArchivo);
             this.gbArchivo.Controls.Add(this.btnAbrir);
             this.gbArchivo.Location = new System.Drawing.Point(4, 8);
@@ -76,45 +70,17 @@
             this.gbArchivo.TabStop = false;
             this.gbArchivo.Text = "SELECCIONE EL ARCHIVO EXCEL PARA IMPORTAR LOS REGISTROS DE ASISTENCIA";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(484, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 13);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "Nombre de hojas";
-            // 
-            // btnHojas
-            // 
-            this.btnHojas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnHojas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHojas.ForeColor = System.Drawing.Color.Transparent;
-            this.btnHojas.Location = new System.Drawing.Point(713, 21);
-            this.btnHojas.Name = "btnHojas";
-            this.btnHojas.Size = new System.Drawing.Size(28, 25);
-            this.btnHojas.TabIndex = 18;
-            this.btnHojas.UseVisualStyleBackColor = false;
-            // 
-            // cbHojas
-            // 
-            this.cbHojas.FormattingEnabled = true;
-            this.cbHojas.Location = new System.Drawing.Point(577, 22);
-            this.cbHojas.Name = "cbHojas";
-            this.cbHojas.Size = new System.Drawing.Size(130, 21);
-            this.cbHojas.TabIndex = 17;
-            // 
             // tbNomabreArchivo
             // 
             this.tbNomabreArchivo.Enabled = false;
             this.tbNomabreArchivo.Location = new System.Drawing.Point(9, 22);
             this.tbNomabreArchivo.Name = "tbNomabreArchivo";
-            this.tbNomabreArchivo.Size = new System.Drawing.Size(378, 20);
+            this.tbNomabreArchivo.Size = new System.Drawing.Size(644, 20);
             this.tbNomabreArchivo.TabIndex = 16;
             // 
             // btnAbrir
             // 
-            this.btnAbrir.Location = new System.Drawing.Point(393, 21);
+            this.btnAbrir.Location = new System.Drawing.Point(659, 19);
             this.btnAbrir.Name = "btnAbrir";
             this.btnAbrir.Size = new System.Drawing.Size(85, 21);
             this.btnAbrir.TabIndex = 14;
@@ -151,9 +117,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvExcel;
         private System.Windows.Forms.GroupBox gbArchivo;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnHojas;
-        private System.Windows.Forms.ComboBox cbHojas;
         private System.Windows.Forms.TextBox tbNomabreArchivo;
         private System.Windows.Forms.Button btnAbrir;
         private System.Windows.Forms.OpenFileDialog Abrir;

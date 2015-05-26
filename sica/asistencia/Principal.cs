@@ -9,6 +9,7 @@ using MySql.Data;
 using System.Diagnostics;
 using System.IO;
 using clases;
+using System.Collections;
 
 
 namespace asistencia
@@ -503,10 +504,100 @@ namespace asistencia
 
         private void rEPORTEDELICENCIASYOPERMISOSToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            frmReporteLicencias licen = new frmReporteLicencias(string_ArchivoConfiguracion);
+            licen.MdiParent = this;
+            licen.Show();
+        }
 
+        private void dATOSUSBToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            usb();
         }
 
 
+        string string_DireccionProyecto;
+        string string_NombreArchivo;
+        public void usb()
+        {
+            ConexionBD.Conectar(false, string_ArchivoConfiguracion);
+            // Displays an OpenFileDialog so the user can select a Cursor.
+
+            
+                openFileDialog1.Filter = "*.dat|*.dat";
+                openFileDialog1.Title = "archivo";
+                string_NombreArchivo = "1_attlog.bat";
+                openFileDialog1.InitialDirectory = "E:\\";
+               
+                object[] VariablesNames = { "pDNI", "pFechaMarcacion", "pHoraMarcacion" };
+                object[] VariablesValues = { "pDNI", "pFechaMarcacion", "pHoraMarcacion" };
+                bool SeRegistro = false;
+                bool SeHizoRollBack = false;
+                string Mensaje = "";
+
+                try
+                {
+
+                    if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                    {
+                        string_DireccionProyecto = openFileDialog1.FileName;
+
+                        StreamReader objReader = new StreamReader(string_DireccionProyecto);
+                        string sLine = "";
+                        ArrayList arrText = new ArrayList();
+
+                        while (sLine != null)
+                        {
+                            sLine = objReader.ReadLine();
+                            if (sLine != null)
+                                arrText.Add(sLine);
+                        }
+                        objReader.Close();
+
+                        foreach (string sOutput in arrText)
+                        {
+                            char[] delimitadores = { ' ', ',', '.', '\t' };
+                            string texto = sOutput.Trim();
+                            string[] termino = texto.Split(delimitadores);
+
+
+                            for (int i = 0; i < 3; i++)
+                            {
+
+                                VariablesValues[i] = termino[i];
+                            }
+
+                            Mensaje = ConexionBD.EjecutarProcedimientoReturnMensaje("spuReg_RegistrarAsistenciaEmpleadoReloj", VariablesNames, VariablesValues);
+
+                        }
+
+                        ConexionBD.COMMIT();
+                        SeRegistro = true;
+
+                    }
+                }
+
+                catch (Exception ex)
+                {
+                    ConexionBD.ROLLBACK();
+                    MessageBox.Show("Operacion Cancelada " + ex.Message);
+                    SeRegistro = false;
+                    SeHizoRollBack = true;
+                }
+                finally
+                {
+                    ConexionBD.Desconectar();
+                }
+                if (SeRegistro)
+                    MessageBox.Show("Datos Importados Correctamente");
+           
+        }
+
+        private void dATOSEXCELToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmImportExcel excel = new frmImportExcel();
+            excel.MdiParent = this;
+            excel.Show();
+        }
 
 
 

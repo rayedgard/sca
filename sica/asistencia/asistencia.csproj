@@ -43,9 +43,7 @@
     <Reference Include="itextsharp">
       <HintPath>..\dll\itextsharp.dll</HintPath>
     </Reference>
-    <Reference Include="MySql.Data, Version=6.5.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <Private>True</Private>
-    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.ServiceProcess" />
@@ -128,6 +126,12 @@
     <Compile Include="frmHorario.Designer.cs">
       <DependentUpon>frmHorario.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmImportExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmImportExcel.Designer.cs">
+      <DependentUpon>frmImportExcel.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLicencia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,6 +209,12 @@
     </Compile>
     <Compile Include="frmReporteGeneral.Designer.cs">
       <DependentUpon>frmReporteGeneral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReporteLicencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporteLicencias.Designer.cs">
+      <DependentUpon>frmReporteLicencias.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTipoLIcencia.cs">
       <SubType>Form</SubType>
@@ -318,6 +328,9 @@
     <EmbeddedResource Include="frmHorario.resx">
       <DependentUpon>frmHorario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmImportExcel.resx">
+      <DependentUpon>frmImportExcel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLicencia.resx">
       <DependentUpon>frmLicencia.cs</DependentUpon>
     </EmbeddedResource>
@@ -356,6 +369,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmReporteGeneral.resx">
       <DependentUpon>frmReporteGeneral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteLicencias.resx">
+      <DependentUpon>frmReporteLicencias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTipoLIcencia.resx">
       <DependentUpon>frmTipoLIcencia.cs</DependentUpon>

@@ -48,6 +48,7 @@
             this.msMenu = new System.Windows.Forms.MenuStrip();
             this.aCERCADEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.btnCambiaReloj = new System.Windows.Forms.Button();
             this.pbVolcar = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -323,6 +324,10 @@
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // btnCambiaReloj
             // 
             this.btnCambiaReloj.Enabled = false;
@@ -595,6 +600,7 @@
             this.dATOSUSBToolStripMenuItem.Name = "dATOSUSBToolStripMenuItem";
             this.dATOSUSBToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.dATOSUSBToolStripMenuItem.Text = "DATOS USB";
+            this.dATOSUSBToolStripMenuItem.Click += new System.EventHandler(this.dATOSUSBToolStripMenuItem_Click);
             // 
             // dATOSEXCELToolStripMenuItem
             // 
@@ -602,6 +608,7 @@
             this.dATOSEXCELToolStripMenuItem.Name = "dATOSEXCELToolStripMenuItem";
             this.dATOSEXCELToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.dATOSEXCELToolStripMenuItem.Text = "DATOS EXCEL";
+            this.dATOSEXCELToolStripMenuItem.Click += new System.EventHandler(this.dATOSEXCELToolStripMenuItem_Click);
             // 
             // Principal
             // 
@@ -692,5 +699,6 @@
         private System.Windows.Forms.ComboBox cbIPreloj;
         public System.Windows.Forms.Button btnCambiaReloj;
         private System.Windows.Forms.ToolStripMenuItem gESTIONDEFOTOGRAFICASToolStripMenuItem;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

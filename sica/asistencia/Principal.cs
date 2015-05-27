@@ -528,8 +528,8 @@ namespace asistencia
                 string_NombreArchivo = "1_attlog.bat";
                 openFileDialog1.InitialDirectory = "E:\\";
                
-                object[] VariablesNames = { "pDNI", "pFechaMarcacion", "pHoraMarcacion" };
-                object[] VariablesValues = { "pDNI", "pFechaMarcacion", "pHoraMarcacion" };
+                object[] VariablesNames = { "pDNI", "pFechaMarcacion", "pHoraMarcacion","pModo" };
+                object[] VariablesValues = { "pDNI", "pFechaMarcacion", "pHoraMarcacion", "pModo" };
                 bool SeRegistro = false;
                 bool SeHizoRollBack = false;
                 string Mensaje = "";
@@ -542,13 +542,13 @@ namespace asistencia
                         string_DireccionProyecto = openFileDialog1.FileName;
 
                         StreamReader objReader = new StreamReader(string_DireccionProyecto);
-                        string sLine = "";
+                        string sLine="";
                         ArrayList arrText = new ArrayList();
 
-                        while (sLine != null)
+                        while (sLine != null )
                         {
                             sLine = objReader.ReadLine();
-                            if (sLine != null)
+                            if (sLine != null && sLine.Trim().Length > 0)
                                 arrText.Add(sLine);
                         }
                         objReader.Close();
@@ -560,17 +560,17 @@ namespace asistencia
                             string[] termino = texto.Split(delimitadores);
 
 
-                            for (int i = 0; i < 3; i++)
+                            for (int i = 0; i < 4; i++)
                             {
 
                                 VariablesValues[i] = termino[i];
                             }
 
-                            Mensaje = ConexionBD.EjecutarProcedimientoReturnMensaje("spuReg_RegistrarAsistenciaEmpleadoReloj", VariablesNames, VariablesValues);
+                            Mensaje = ConexionBD.EjecutarProcedimientoReturnMensaje("spuReg_RegistrarAsistencia", VariablesNames, VariablesValues);
 
                         }
 
-                        ConexionBD.COMMIT();
+                       
                         SeRegistro = true;
 
                     }
@@ -603,6 +603,13 @@ namespace asistencia
         {
             frmItdecsa itdecsa = new frmItdecsa();
             itdecsa.ShowDialog();
+        }
+
+        private void cAMBIOSDEROLToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReporteVacaciones vacaciones = new frmReporteVacaciones(string_ArchivoConfiguracion);
+            vacaciones.MdiParent = this;
+            vacaciones.Show();
         }
 
 

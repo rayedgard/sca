@@ -43,7 +43,7 @@
     <Reference Include="itextsharp">
       <HintPath>..\dll\itextsharp.dll</HintPath>
     </Reference>
-    <Reference Include="MySql.Data, Version=6.5.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.9.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.ServiceProcess" />
@@ -222,6 +222,12 @@
     <Compile Include="frmReporteLicencias.Designer.cs">
       <DependentUpon>frmReporteLicencias.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmReporteVacaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporteVacaciones.Designer.cs">
+      <DependentUpon>frmReporteVacaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTipoLIcencia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -381,6 +387,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmReporteLicencias.resx">
       <DependentUpon>frmReporteLicencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteVacaciones.resx">
+      <DependentUpon>frmReporteVacaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTipoLIcencia.resx">
       <DependentUpon>frmTipoLIcencia.cs</DependentUpon>

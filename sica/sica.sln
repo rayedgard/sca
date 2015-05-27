@@ -1,9 +1,13 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "asistencia", "asistencia\asistencia.csproj", "{001E46F4-C463-45F5-BFD0-5E331FE51B66}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "clases", "clases\clases.csproj", "{43767F0E-E82C-46BE-BD2C-1E4F0DCD81F3}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "InstallSica", "InstallSica\InstallSica.vdproj", "{277F83FF-F461-4A69-B47F-624A08A943BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +39,12 @@ Global
 		{43767F0E-E82C-46BE-BD2C-1E4F0DCD81F3}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{43767F0E-E82C-46BE-BD2C-1E4F0DCD81F3}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{43767F0E-E82C-46BE-BD2C-1E4F0DCD81F3}.Release|x86.ActiveCfg = Release|Any CPU
+		{277F83FF-F461-4A69-B47F-624A08A943BA}.Debug|Any CPU.ActiveCfg = Debug
+		{277F83FF-F461-4A69-B47F-624A08A943BA}.Debug|Mixed Platforms.ActiveCfg = Debug
+		{277F83FF-F461-4A69-B47F-624A08A943BA}.Debug|x86.ActiveCfg = Debug
+		{277F83FF-F461-4A69-B47F-624A08A943BA}.Release|Any CPU.ActiveCfg = Release
+		{277F83FF-F461-4A69-B47F-624A08A943BA}.Release|Mixed Platforms.ActiveCfg = Release
+		{277F83FF-F461-4A69-B47F-624A08A943BA}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

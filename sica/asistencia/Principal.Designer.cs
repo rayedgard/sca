@@ -577,6 +577,7 @@
             this.cAMBIOSDEROLToolStripMenuItem.Name = "cAMBIOSDEROLToolStripMenuItem";
             this.cAMBIOSDEROLToolStripMenuItem.Size = new System.Drawing.Size(282, 22);
             this.cAMBIOSDEROLToolStripMenuItem.Text = "REPORTE DE VACACIONES";
+            this.cAMBIOSDEROLToolStripMenuItem.Click += new System.EventHandler(this.cAMBIOSDEROLToolStripMenuItem_Click);
             // 
             // iMPORTARToolStripMenuItem
             // 
@@ -592,7 +593,7 @@
             // 
             this.dATOSUSBToolStripMenuItem.Image = global::asistencia.Properties.Resources.Vista__26_;
             this.dATOSUSBToolStripMenuItem.Name = "dATOSUSBToolStripMenuItem";
-            this.dATOSUSBToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.dATOSUSBToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.dATOSUSBToolStripMenuItem.Text = "DATOS USB";
             this.dATOSUSBToolStripMenuItem.Click += new System.EventHandler(this.dATOSUSBToolStripMenuItem_Click);
             // 
@@ -600,7 +601,7 @@
             // 
             this.dATOSEXCELToolStripMenuItem.Image = global::asistencia.Properties.Resources._104;
             this.dATOSEXCELToolStripMenuItem.Name = "dATOSEXCELToolStripMenuItem";
-            this.dATOSEXCELToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.dATOSEXCELToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.dATOSEXCELToolStripMenuItem.Text = "DATOS EXCEL";
             this.dATOSEXCELToolStripMenuItem.Click += new System.EventHandler(this.dATOSEXCELToolStripMenuItem_Click);
             // 

@@ -34,7 +34,6 @@
             this.gbArchivo = new System.Windows.Forms.GroupBox();
             this.tbNomabreArchivo = new System.Windows.Forms.TextBox();
             this.btnAbrir = new System.Windows.Forms.Button();
-            this.Abrir = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExcel)).BeginInit();
             this.gbArchivo.SuspendLayout();
@@ -88,10 +87,6 @@
             this.btnAbrir.UseVisualStyleBackColor = true;
             this.btnAbrir.Click += new System.EventHandler(this.btnAbrir_Click);
             // 
-            // Abrir
-            // 
-            this.Abrir.FileName = "openFileDialog1";
-            // 
             // frmImportExcel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -119,6 +114,5 @@
         private System.Windows.Forms.GroupBox gbArchivo;
         private System.Windows.Forms.TextBox tbNomabreArchivo;
         private System.Windows.Forms.Button btnAbrir;
-        private System.Windows.Forms.OpenFileDialog Abrir;
     }
 }

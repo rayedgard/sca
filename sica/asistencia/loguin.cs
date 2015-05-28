@@ -57,7 +57,7 @@ namespace asistencia
                 //System.Environment.SpecialFolder folder = System.Environment.CurrentDirectory;
                 //string string_ArchivoConfiguracion = System.Environment.CurrentDirectory + @"\RelojSistema.cfg";
                 string Servidor = configXml_ArchivoConfiguracion.GetValue("principal", "servidor", "localhost");
-                string DB = configXml_ArchivoConfiguracion.GetValue("principal", "database", "salud");
+                string DB = configXml_ArchivoConfiguracion.GetValue("principal", "database", "asistencia");
                 string usuario = configXml_ArchivoConfiguracion.GetValue("principal", "usuario", "root");
                 string contrasenia = configXml_ArchivoConfiguracion.GetValue("principal", "contrasenia", "mysql");
                 System.Environment.SpecialFolder folderProgramas = System.Environment.SpecialFolder.ProgramFiles;
@@ -67,7 +67,7 @@ namespace asistencia
                 string mysqlrestore = configXml_ArchivoConfiguracion.GetValue("principal", "mysql", string.Format(@"{0}\bin\mysql.exe", ProgramMySQL));
                 try
                 {
-                    System.IO.StreamReader file = new System.IO.StreamReader(System.Environment.CurrentDirectory + @"\dbhospital.sql");
+                    System.IO.StreamReader file = new System.IO.StreamReader(System.Environment.CurrentDirectory + @"\asistencia_dos.sql");
                     System.Diagnostics.ProcessStartInfo proc = new System.Diagnostics.ProcessStartInfo();
                     string cmdArgs = string.Format(@"-u{0} -p{1} -h{2} {3}", usuario, contrasenia, Servidor, DB);
                     proc.FileName = mysqlrestore;

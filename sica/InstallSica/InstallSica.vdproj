@@ -15,6 +15,12 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_0953769653CF47C29E8407A76B65A532"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_0AE03E9C1B0B7B26F777CD77B89F4ECB"
         "OwnerKey" = "8:_48C90E8DCFEE4CDAA18F83157AA31DC3"
         "MsmSig" = "8:_UNDEFINED"
@@ -29,6 +35,36 @@
         {
         "MsmKey" = "8:_177AB2D948750B03EA2150E6A83128AF"
         "OwnerKey" = "8:_97CBB5F0965245135FCB2707305F8620"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_1E3C9396817340BD9D20A9C8EA2C55DC"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_2AB2B098CAFE42C4A5F5A6BC762D56BF"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_31FC916118E04C01868EC939ECDB76E5"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_325D5CA704E44EDCA1BD9612D4ECB50A"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_34378E08B50F4827A6CC9FD560FF4A74"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -65,6 +101,24 @@
         {
         "MsmKey" = "8:_53400F01FC9CC7EC57B37A9D71AE3189"
         "OwnerKey" = "8:_48C90E8DCFEE4CDAA18F83157AA31DC3"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_5491AC24129D47B0B269C15EBB9E5A93"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_6159B6FB89F8420FB52CDB55FA86BF34"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_778A336BAFBF458C9BF54D06417F7B37"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -123,8 +177,44 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_99D0572106654A24926644E69F3F43DE"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_C714D252B2B24E1ABB680006FFB72E2A"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_CDBD237EA7DE4DE7B398881502DC7B93"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_EA61077624C34A76B8F9055D06ECB20D"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F3D0AFD4FE144B93B8D7B2B9472ED4D1"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F940248306EF4B14B8A15CD3C5B408D3"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_47E457ECABB802AAAC1EDC757BE93E09"
+        "OwnerKey" = "8:_48C90E8DCFEE4CDAA18F83157AA31DC3"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -137,12 +227,6 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_7B0BFD025EF06C9C9EFC9C9705707F0F"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_48C90E8DCFEE4CDAA18F83157AA31DC3"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -187,6 +271,12 @@
         "OwnerKey" = "8:_0AE03E9C1B0B7B26F777CD77B89F4ECB"
         "MsmSig" = "8:_UNDEFINED"
         }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_47E457ECABB802AAAC1EDC757BE93E09"
+        "MsmSig" = "8:_UNDEFINED"
+        }
     }
     "Configurations"
     {
@@ -205,6 +295,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.5"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.5 (x86 y x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.5"
+                    }
+                }
+            }
         }
         "Release"
         {
@@ -221,6 +327,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -250,6 +364,26 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0953769653CF47C29E8407A76B65A532"
+            {
+            "SourcePath" = "8:..\\..\\para el proyecto de install\\mysql-5.5.14-win32.msi"
+            "TargetName" = "8:mysql-5.5.14-win32.msi"
+            "Tag" = "8:"
+            "Folder" = "8:_0793D3772F4D498C91ED7EE2CFDA0285"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_0AE03E9C1B0B7B26F777CD77B89F4ECB"
             {
             "AssemblyRegister" = "3:1"
@@ -299,6 +433,106 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1E3C9396817340BD9D20A9C8EA2C55DC"
+            {
+            "SourcePath" = "8:..\\..\\para el proyecto de install\\DLLS\\tcpcomm.dll"
+            "TargetName" = "8:tcpcomm.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_0793D3772F4D498C91ED7EE2CFDA0285"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2AB2B098CAFE42C4A5F5A6BC762D56BF"
+            {
+            "SourcePath" = "8:..\\..\\para el proyecto de install\\DLLS\\zkemkeeper.dll"
+            "TargetName" = "8:zkemkeeper.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_0793D3772F4D498C91ED7EE2CFDA0285"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_31FC916118E04C01868EC939ECDB76E5"
+            {
+            "SourcePath" = "8:..\\asistencia\\Resources\\Clock.ico"
+            "TargetName" = "8:Clock.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_0793D3772F4D498C91ED7EE2CFDA0285"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_325D5CA704E44EDCA1BD9612D4ECB50A"
+            {
+            "SourcePath" = "8:..\\..\\para el proyecto de install\\DLLS\\rscomm.dll"
+            "TargetName" = "8:rscomm.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_0793D3772F4D498C91ED7EE2CFDA0285"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_34378E08B50F4827A6CC9FD560FF4A74"
+            {
+            "SourcePath" = "8:..\\..\\para el proyecto de install\\DLLS\\plce.dll"
+            "TargetName" = "8:plce.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_0793D3772F4D498C91ED7EE2CFDA0285"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_47E457ECABB802AAAC1EDC757BE93E09"
@@ -392,6 +626,66 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5491AC24129D47B0B269C15EBB9E5A93"
+            {
+            "SourcePath" = "8:..\\..\\para el proyecto de install\\DLLS\\usbcomm.dll"
+            "TargetName" = "8:usbcomm.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_0793D3772F4D498C91ED7EE2CFDA0285"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6159B6FB89F8420FB52CDB55FA86BF34"
+            {
+            "SourcePath" = "8:..\\..\\para el proyecto de install\\asistencia_dos.sql"
+            "TargetName" = "8:asistencia_dos.sql"
+            "Tag" = "8:"
+            "Folder" = "8:_0793D3772F4D498C91ED7EE2CFDA0285"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_778A336BAFBF458C9BF54D06417F7B37"
+            {
+            "SourcePath" = "8:..\\..\\para el proyecto de install\\DLLS\\rscagent.dll"
+            "TargetName" = "8:rscagent.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_0793D3772F4D498C91ED7EE2CFDA0285"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_7B0BFD025EF06C9C9EFC9C9705707F0F"
@@ -549,6 +843,126 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_99D0572106654A24926644E69F3F43DE"
+            {
+            "SourcePath" = "8:..\\..\\para el proyecto de install\\DLLS\\commpro.dll"
+            "TargetName" = "8:commpro.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_0793D3772F4D498C91ED7EE2CFDA0285"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C714D252B2B24E1ABB680006FFB72E2A"
+            {
+            "SourcePath" = "8:..\\..\\para el proyecto de install\\dbAsistencia_blanco.sql"
+            "TargetName" = "8:dbAsistencia_blanco.sql"
+            "Tag" = "8:"
+            "Folder" = "8:_0793D3772F4D498C91ED7EE2CFDA0285"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CDBD237EA7DE4DE7B398881502DC7B93"
+            {
+            "SourcePath" = "8:..\\..\\para el proyecto de install\\DLLS\\zkemsdk.dll"
+            "TargetName" = "8:zkemsdk.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_0793D3772F4D498C91ED7EE2CFDA0285"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EA61077624C34A76B8F9055D06ECB20D"
+            {
+            "SourcePath" = "8:..\\..\\para el proyecto de install\\SQLyog805.exe"
+            "TargetName" = "8:SQLyog805.exe"
+            "Tag" = "8:"
+            "Folder" = "8:_0793D3772F4D498C91ED7EE2CFDA0285"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F3D0AFD4FE144B93B8D7B2B9472ED4D1"
+            {
+            "SourcePath" = "8:..\\..\\para el proyecto de install\\mysql-5.5.14-winx64.msi"
+            "TargetName" = "8:mysql-5.5.14-winx64.msi"
+            "Tag" = "8:"
+            "Folder" = "8:_0793D3772F4D498C91ED7EE2CFDA0285"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F940248306EF4B14B8A15CD3C5B408D3"
+            {
+            "SourcePath" = "8:..\\..\\para el proyecto de install\\DLLS\\comms.dll"
+            "TargetName" = "8:comms.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_0793D3772F4D498C91ED7EE2CFDA0285"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
         }
         "FileType"
         {
@@ -567,6 +981,17 @@
                 {
                 }
             }
+            "{1525181F-901A-416C-8A58-119130FE478E}:_407E8F9A3F654E5DA5D7F930536B519C"
+            {
+            "Name" = "8:#1914"
+            "AlwaysCreate" = "11:FALSE"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Property" = "8:SystemFolder"
+                "Folders"
+                {
+                }
+            }
             "{1525181F-901A-416C-8A58-119130FE478E}:_40D313AA804D4E1C9E8417926D96C03C"
             {
             "Name" = "8:#1916"
@@ -574,6 +999,17 @@
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Property" = "8:DesktopFolder"
+                "Folders"
+                {
+                }
+            }
+            "{1525181F-901A-416C-8A58-119130FE478E}:_7BB30F6A9E0E4D96967D5E762B541C07"
+            {
+            "Name" = "8:#1928"
+            "AlwaysCreate" = "11:FALSE"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Property" = "8:StartupFolder"
                 "Folders"
                 {
                 }
@@ -605,23 +1041,23 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:InstallSica"
-        "ProductCode" = "8:{7698D1C9-4BF0-4B33-9674-704D18B2E72A}"
-        "PackageCode" = "8:{F952FDE5-0DE3-4B2A-B0CE-00FE1D4C9FE7}"
+        "ProductCode" = "8:{F15B1E9E-1723-460F-ADB9-C0BAC62E2D86}"
+        "PackageCode" = "8:{A0F226A0-D9D8-45BC-87EB-EDC936C5E766}"
         "UpgradeCode" = "8:{18F50E24-6025-4BB3-A674-DCCC754CEB72}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.0"
-        "Manufacturer" = "8:Default Company Name"
+        "ProductVersion" = "8:5"
+        "Manufacturer" = "8:ITDECSA"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
         "Title" = "8:InstallSica"
         "Subject" = "8:"
-        "ARPCONTACT" = "8:Default Company Name"
+        "ARPCONTACT" = "8:ITDECSA"
         "Keywords" = "8:"
-        "ARPCOMMENTS" = "8:"
+        "ARPCOMMENTS" = "8:SISTEMA DE CONTROL DE ASISTENCIA"
         "ARPURLINFOABOUT" = "8:"
         "ARPPRODUCTICON" = "8:"
         "ARPIconIndex" = "3:0"
@@ -726,6 +1162,48 @@
         }
         "Shortcut"
         {
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_37D7DFDB313441F9B6DC26BA74FD9638"
+            {
+            "Name" = "8:SICA V5"
+            "Arguments" = "8:"
+            "Description" = "8:SISTEMA DE CONTROL DE ASISTENCIA VERSION  5"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_48C90E8DCFEE4CDAA18F83157AA31DC3"
+            "Folder" = "8:_40D313AA804D4E1C9E8417926D96C03C"
+            "WorkingFolder" = "8:_0793D3772F4D498C91ED7EE2CFDA0285"
+            "Icon" = "8:_31FC916118E04C01868EC939ECDB76E5"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_4F64F70EAE9D4963AD34EDC0F4E721B2"
+            {
+            "Name" = "8:SICA V5"
+            "Arguments" = "8:"
+            "Description" = "8:SISTEMA DE  CONTROL DE ASISTENCIA"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_48C90E8DCFEE4CDAA18F83157AA31DC3"
+            "Folder" = "8:_9D9C69FD36F84DC891BCF7D3E9C3A1C4"
+            "WorkingFolder" = "8:_0793D3772F4D498C91ED7EE2CFDA0285"
+            "Icon" = "8:_31FC916118E04C01868EC939ECDB76E5"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_937B6C5ACF0844F98404A98A0C9A4C2C"
+            {
+            "Name" = "8:SICA V5"
+            "Arguments" = "8:"
+            "Description" = "8:SISTEMA DE CONTROL DE ASISTENCIA"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_48C90E8DCFEE4CDAA18F83157AA31DC3"
+            "Folder" = "8:_7BB30F6A9E0E4D96967D5E762B541C07"
+            "WorkingFolder" = "8:_0793D3772F4D498C91ED7EE2CFDA0285"
+            "Icon" = "8:_31FC916118E04C01868EC939ECDB76E5"
+            "Feature" = "8:"
+            }
         }
         "UserInterface"
         {

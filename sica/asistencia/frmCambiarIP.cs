@@ -192,14 +192,14 @@ namespace asistencia
             writer.WriteLine("echo MySQL Version 5.5.14 installed...");
             writer.WriteLine("md %mysql_data2%");
             writer.WriteLine("");
-            writer.WriteLine(string.Format(@"""{0}\bin\mysqlinstanceconfig.exe"" -i -q ServiceName=MySQLAngel RootPassword=mysql ServerType=DEVELOPMENT DatabaseType=MYISAM Port=3306 RootCurrentPassword=mysql", ProgramMySQL));
+            writer.WriteLine(string.Format(@"""{0}\bin\mysqlinstanceconfig.exe"" -i -q ServiceName=MySQErayme RootPassword=mysql ServerType=DEVELOPMENT DatabaseType=MYISAM Port=3306 RootCurrentPassword=mysql", ProgramMySQL));
             writer.WriteLine("echo MySQL Instance Configured...Service started...");
             writer.WriteLine("");
             writer.WriteLine("rem Uncomment next line to allow root access from any pc...");
             writer.WriteLine(string.Format(@"""{0}\bin\mysql.exe"" -uroot -pmysql -e %mysql_cmd%", ProgramMySQL));
             writer.WriteLine("");
-            writer.WriteLine(string.Format(@"""{0}\bin\mysql.exe"" -uroot -pmysql -e ""drop database dbcontrolasistencia""", ProgramMySQL));
-            writer.WriteLine(string.Format(@"""{0}\bin\mysql.exe"" -uroot -pmysql -e ""create database dbcontrolasistencia""", ProgramMySQL));
+            writer.WriteLine(string.Format(@"""{0}\bin\mysql.exe"" -uroot -pmysql -e ""drop database asistencia""", ProgramMySQL));
+            writer.WriteLine(string.Format(@"""{0}\bin\mysql.exe"" -uroot -pmysql -e ""create database asistencia""", ProgramMySQL));
             writer.WriteLine("");
             writer.WriteLine("msiexec /qn /i %mysql_odbc% /L* " + MySQLODBC);
             writer.WriteLine("echo ODBC Connector installed...");
@@ -218,7 +218,7 @@ namespace asistencia
             //string_ArchivoConfiguracion = System.Environment.CurrentDirectory + @"\RelojSistema.cfg";
             CConfigXML configXml_ArchivoConfiguracion = new CConfigXML(string_ArchivoConfiguracion);
             configXml_ArchivoConfiguracion.SetValue("principal", "servidor", "localhost");
-            configXml_ArchivoConfiguracion.SetValue("principal", "database", "dbcontrolasistencia");
+            configXml_ArchivoConfiguracion.SetValue("principal", "database", "asistencia");
             configXml_ArchivoConfiguracion.SetValue("principal", "usuario", "root");
             configXml_ArchivoConfiguracion.SetValue("principal", "contrasenia", "mysql");
             configXml_ArchivoConfiguracion.SetValue("principal", "mysqldump", string.Format(@"{0}\bin\mysqldump.exe", ProgramMySQL));

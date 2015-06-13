@@ -22,7 +22,7 @@ namespace asistencia
         int a_Puerto;
         string string_ArchivoConfiguracion;
 
-
+        ValidarLlaveUSB validaLLave;
         CValidacion ValidarDatos;
         CConection ConexionBD;
 
@@ -33,9 +33,42 @@ namespace asistencia
             InitializeComponent();
             CargarConfiguracionEquipo();
             cargaReloj();
+            
+            
+            
+            validaLLave = new ValidarLlaveUSB();
+            //tTiempo.Enabled = true;
+            //tTiempo.Interval = 30000;
+
         }
-       
-        
+
+
+
+
+
+
+        private void tTiempo_Tick(object sender, EventArgs e)
+        {
+            //if (validaLLave.AccesoPermitidoAlSistema())
+            //{
+
+            //    tTiempo.Start();
+            //    this.Enabled = true;
+            //}
+            //else
+            //{
+            //    frmValidaUSB valida = new frmValidaUSB();
+            //    valida.ShowDialog();
+
+            //    this.Enabled = false;
+            //}
+
+        }
+
+
+
+
+
         
         public void CargarConfiguracionEquipo()
         {
@@ -53,7 +86,22 @@ namespace asistencia
             //Cargar Provincias
             ConexionBD.Conectar(false, string_ArchivoConfiguracion);
             ConexionBD.EjecutarProcedimientoReturnComboBox(cbIPreloj, true, "nuevo_listarReloj");
+            DataSet datosCombo = ConexionBD.EjecutarProcedimientoReturnDataSet("nuevo_listarReloj"); 
             ConexionBD.Desconectar();
+
+            CConfigXML configXml_ArchivoConfiguracion = new CConfigXML(string_ArchivoConfiguracion);
+            string ip = configXml_ArchivoConfiguracion.GetValue("principal", "ipmaquina", "192.168.1.201");
+
+            for (int i = 0; i < datosCombo.Tables[0].Rows.Count; i++)
+            {
+                if (ip == datosCombo.Tables[0].Rows[i].ItemArray[0].ToString())
+                {
+                    lbReloj.Text = datosCombo.Tables[0].Rows[i].ItemArray[1].ToString();
+                }
+                    
+            }
+
+            
         }
         
         private void pbPersonal_Click(object sender, EventArgs e)
@@ -208,7 +256,8 @@ namespace asistencia
 
             frmCambiarIP ip = new frmCambiarIP(string_ArchivoConfiguracion);
             ip.CargarConfiguracionEquipo();
-            MessageBox.Show("Ud Cambio la conexión del RELOJ con IP:" + cbIPreloj.SelectedValue.ToString(), "MENSAJE", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Ud Cambio la conexión del RELOJ: " + cbIPreloj.SelectedValue.ToString(), "MENSAJE", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            lbReloj.Text = cbIPreloj.Text;
         }
 
         private void pbVolcar_Click(object sender, EventArgs e)
@@ -334,7 +383,7 @@ namespace asistencia
                                           
                         CConfigXML configXml_ArchivoConfiguracion = new CConfigXML(string_ArchivoConfiguracion);
                         string Servidor = configXml_ArchivoConfiguracion.GetValue("principal", "servidor", "localhost");
-                        string DB = configXml_ArchivoConfiguracion.GetValue("principal", "database", "dbcontrolasistencia");
+                        string DB = configXml_ArchivoConfiguracion.GetValue("principal", "database", "asistencia");
                         string usuario = configXml_ArchivoConfiguracion.GetValue("principal", "usuario", "root");
                         string contrasenia = configXml_ArchivoConfiguracion.GetValue("principal", "contrasenia", "mysql");
                         System.Environment.SpecialFolder folderProgramas = System.Environment.SpecialFolder.ProgramFiles;
@@ -457,7 +506,7 @@ namespace asistencia
                             //string string_ArchivoConfiguracion = System.Environment.CurrentDirectory + @"\RelojSistema.cfg";
                             CConfigXML configXml_ArchivoConfiguracion = new CConfigXML(string_ArchivoConfiguracion);
                             string Servidor = configXml_ArchivoConfiguracion.GetValue("principal", "servidor", "localhost");
-                            string DB = configXml_ArchivoConfiguracion.GetValue("principal", "database", "dbcontrolasistencia");
+                            string DB = configXml_ArchivoConfiguracion.GetValue("principal", "database", "asistencia");
                             string usuario = configXml_ArchivoConfiguracion.GetValue("principal", "usuario", "root");
                             string contrasenia = configXml_ArchivoConfiguracion.GetValue("principal", "contrasenia", "mysql");
                             System.Environment.SpecialFolder folderProgramas = System.Environment.SpecialFolder.ProgramFiles;
@@ -611,6 +660,56 @@ namespace asistencia
             vacaciones.MdiParent = this;
             vacaciones.Show();
         }
+
+        private void lbTipoPersonal_Click(object sender, EventArgs e)
+        {
+            frmTipoPersonal tipoPer = new frmTipoPersonal(string_ArchivoConfiguracion);
+            tipoPer.MdiParent = this;
+            tipoPer.Show();
+        }
+
+        private void lbPersonal_Click(object sender, EventArgs e)
+        {
+            frmPersonal1 per = new frmPersonal1(a_IPMaquina, a_Puerto, string_ArchivoConfiguracion);
+            per.MdiParent = this;
+            per.Show();
+        }
+
+        private void Principal_Load(object sender, EventArgs e)
+        {
+            MdiClient ctlMDI;
+
+            // Loop through all of the form's controls looking
+            // for the control of type MdiClient.
+            foreach (Control ctl in this.Controls)
+            {
+                try
+                {
+                    // Attempt to cast the control to type MdiClient.
+                    ctlMDI = (MdiClient)ctl;
+
+                    // Set the BackColor of the MdiClient control.
+                    ctlMDI.BackColor = this.BackColor;
+                }
+                catch (InvalidCastException exc)
+                {
+                    // Catch and ignore the error if casting failed.
+                }
+            }
+
+     
+        }
+
+        private void dATOSPERSONALToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmImportaPersonal imper = new frmImportaPersonal(string_ArchivoConfiguracion);
+            imper.MdiParent = this;
+            imper.Show();
+        }
+
+
+
+    
 
 
 

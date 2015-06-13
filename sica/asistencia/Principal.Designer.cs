@@ -28,33 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbVacaciones = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lbReloj = new System.Windows.Forms.Label();
+            this.btnCambiaReloj = new System.Windows.Forms.Button();
             this.cbIPreloj = new System.Windows.Forms.ComboBox();
             this.lbVolvar = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.lbVacaciones = new System.Windows.Forms.Label();
+            this.pbVolcar = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lbCalendario = new System.Windows.Forms.Label();
             this.lbHorarios = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.lbTurnos = new System.Windows.Forms.Label();
             this.lbTipoPersonal = new System.Windows.Forms.Label();
+            this.pbTiposPersonal = new System.Windows.Forms.PictureBox();
             this.lbPersonal = new System.Windows.Forms.Label();
+            this.pbPersonal = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbOmisiones = new System.Windows.Forms.Label();
             this.lbPermisos = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lbLicencias = new System.Windows.Forms.Label();
             this.msMenu = new System.Windows.Forms.MenuStrip();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.btnCambiaReloj = new System.Windows.Forms.Button();
-            this.pbVolcar = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pbTiposPersonal = new System.Windows.Forms.PictureBox();
-            this.pbPersonal = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.cONFIGURACIONToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.uSUARIOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tOLERANCIAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -78,27 +78,32 @@
             this.iMPORTARToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dATOSUSBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dATOSEXCELToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dATOSPERSONALToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aCERCADEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.tTiempo = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.msMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbVolcar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel5.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbVolcar)).BeginInit();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbTiposPersonal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPersonal)).BeginInit();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.msMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Firebrick;
+            this.panel1.BackColor = System.Drawing.Color.Maroon;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.lbVacaciones);
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.panel5);
-            this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.lbTipoPersonal);
             this.panel1.Controls.Add(this.pbTiposPersonal);
@@ -108,25 +113,87 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 24);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1075, 95);
+            this.panel1.Size = new System.Drawing.Size(1236, 95);
             this.panel1.TabIndex = 1;
+            // 
+            // lbVacaciones
+            // 
+            this.lbVacaciones.AutoSize = true;
+            this.lbVacaciones.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbVacaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbVacaciones.ForeColor = System.Drawing.Color.White;
+            this.lbVacaciones.Location = new System.Drawing.Point(577, 73);
+            this.lbVacaciones.Name = "lbVacaciones";
+            this.lbVacaciones.Size = new System.Drawing.Size(81, 15);
+            this.lbVacaciones.TabIndex = 8;
+            this.lbVacaciones.Text = "VACACIONES";
+            this.lbVacaciones.Click += new System.EventHandler(this.lbVacaciones_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::asistencia.Properties.Resources._120;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(579, 11);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(75, 60);
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
             // 
             // panel5
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.groupBox1);
             this.panel5.Controls.Add(this.btnCambiaReloj);
             this.panel5.Controls.Add(this.cbIPreloj);
             this.panel5.Controls.Add(this.lbVolvar);
             this.panel5.Controls.Add(this.pbVolcar);
-            this.panel5.Location = new System.Drawing.Point(762, 5);
+            this.panel5.Location = new System.Drawing.Point(660, 5);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(219, 84);
+            this.panel5.Size = new System.Drawing.Size(385, 84);
             this.panel5.TabIndex = 6;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.lbReloj);
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.Location = new System.Drawing.Point(87, 13);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(152, 52);
+            this.groupBox1.TabIndex = 9;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Dispositivo actual";
+            // 
+            // lbReloj
+            // 
+            this.lbReloj.BackColor = System.Drawing.Color.Transparent;
+            this.lbReloj.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbReloj.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbReloj.ForeColor = System.Drawing.Color.White;
+            this.lbReloj.Location = new System.Drawing.Point(3, 16);
+            this.lbReloj.Name = "lbReloj";
+            this.lbReloj.Size = new System.Drawing.Size(146, 37);
+            this.lbReloj.TabIndex = 9;
+            this.lbReloj.Text = "reloj";
+            this.lbReloj.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnCambiaReloj
+            // 
+            this.btnCambiaReloj.Enabled = false;
+            this.btnCambiaReloj.Image = global::asistencia.Properties.Resources.reloj;
+            this.btnCambiaReloj.Location = new System.Drawing.Point(245, 35);
+            this.btnCambiaReloj.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCambiaReloj.Name = "btnCambiaReloj";
+            this.btnCambiaReloj.Size = new System.Drawing.Size(129, 42);
+            this.btnCambiaReloj.TabIndex = 8;
+            this.btnCambiaReloj.Text = "Cambiar Dispositivo";
+            this.btnCambiaReloj.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCambiaReloj.UseVisualStyleBackColor = true;
+            this.btnCambiaReloj.Click += new System.EventHandler(this.btnCambiaReloj_Click);
             // 
             // cbIPreloj
             // 
             this.cbIPreloj.FormattingEnabled = true;
-            this.cbIPreloj.Location = new System.Drawing.Point(86, 10);
+            this.cbIPreloj.Location = new System.Drawing.Point(245, 7);
             this.cbIPreloj.Name = "cbIPreloj";
             this.cbIPreloj.Size = new System.Drawing.Size(127, 21);
             this.cbIPreloj.TabIndex = 7;
@@ -145,28 +212,17 @@
             this.lbVolvar.Text = "IMPORTAR";
             this.lbVolvar.Click += new System.EventHandler(this.lbVolvar_Click);
             // 
-            // panel4
+            // pbVolcar
             // 
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.lbVacaciones);
-            this.panel4.Controls.Add(this.pictureBox1);
-            this.panel4.Location = new System.Drawing.Point(582, 5);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(175, 84);
-            this.panel4.TabIndex = 5;
-            // 
-            // lbVacaciones
-            // 
-            this.lbVacaciones.AutoSize = true;
-            this.lbVacaciones.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbVacaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbVacaciones.ForeColor = System.Drawing.Color.White;
-            this.lbVacaciones.Location = new System.Drawing.Point(90, 63);
-            this.lbVacaciones.Name = "lbVacaciones";
-            this.lbVacaciones.Size = new System.Drawing.Size(81, 15);
-            this.lbVacaciones.TabIndex = 6;
-            this.lbVacaciones.Text = "VACACIONES";
-            this.lbVacaciones.Click += new System.EventHandler(this.lbVacaciones_Click);
+            this.pbVolcar.BackgroundImage = global::asistencia.Properties.Resources._81_large;
+            this.pbVolcar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbVolcar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbVolcar.Location = new System.Drawing.Point(10, 8);
+            this.pbVolcar.Name = "pbVolcar";
+            this.pbVolcar.Size = new System.Drawing.Size(70, 56);
+            this.pbVolcar.TabIndex = 4;
+            this.pbVolcar.TabStop = false;
+            this.pbVolcar.Click += new System.EventHandler(this.pbVolcar_Click);
             // 
             // panel3
             // 
@@ -206,6 +262,16 @@
             this.lbHorarios.Text = "HORARIOS";
             this.lbHorarios.Click += new System.EventHandler(this.lbHorarios_Click);
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImage = global::asistencia.Properties.Resources._12;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox4.Location = new System.Drawing.Point(10, 9);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(80, 71);
+            this.pictureBox4.TabIndex = 4;
+            this.pictureBox4.TabStop = false;
+            // 
             // lbTurnos
             // 
             this.lbTurnos.AutoSize = true;
@@ -230,6 +296,19 @@
             this.lbTipoPersonal.Size = new System.Drawing.Size(102, 15);
             this.lbTipoPersonal.TabIndex = 3;
             this.lbTipoPersonal.Text = "TIPO PERSONAL";
+            this.lbTipoPersonal.Click += new System.EventHandler(this.lbTipoPersonal_Click);
+            // 
+            // pbTiposPersonal
+            // 
+            this.pbTiposPersonal.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbTiposPersonal.BackgroundImage")));
+            this.pbTiposPersonal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbTiposPersonal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbTiposPersonal.Location = new System.Drawing.Point(98, 4);
+            this.pbTiposPersonal.Name = "pbTiposPersonal";
+            this.pbTiposPersonal.Size = new System.Drawing.Size(73, 67);
+            this.pbTiposPersonal.TabIndex = 3;
+            this.pbTiposPersonal.TabStop = false;
+            this.pbTiposPersonal.Click += new System.EventHandler(this.pbTiposPersonal_Click);
             // 
             // lbPersonal
             // 
@@ -242,6 +321,19 @@
             this.lbPersonal.Size = new System.Drawing.Size(72, 15);
             this.lbPersonal.TabIndex = 2;
             this.lbPersonal.Text = "PERSONAL";
+            this.lbPersonal.Click += new System.EventHandler(this.lbPersonal_Click);
+            // 
+            // pbPersonal
+            // 
+            this.pbPersonal.BackgroundImage = global::asistencia.Properties.Resources.tester;
+            this.pbPersonal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbPersonal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbPersonal.Location = new System.Drawing.Point(4, 4);
+            this.pbPersonal.Name = "pbPersonal";
+            this.pbPersonal.Size = new System.Drawing.Size(73, 67);
+            this.pbPersonal.TabIndex = 1;
+            this.pbPersonal.TabStop = false;
+            this.pbPersonal.Click += new System.EventHandler(this.pbPersonal_Click);
             // 
             // panel2
             // 
@@ -281,6 +373,16 @@
             this.lbPermisos.Text = "PERMISOS";
             this.lbPermisos.Click += new System.EventHandler(this.lbPermisos_Click);
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = global::asistencia.Properties.Resources.Calender;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox3.Location = new System.Drawing.Point(10, 9);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(80, 71);
+            this.pictureBox3.TabIndex = 4;
+            this.pictureBox3.TabStop = false;
+            // 
             // lbLicencias
             // 
             this.lbLicencias.AutoSize = true;
@@ -304,103 +406,9 @@
             this.aCERCADEToolStripMenuItem});
             this.msMenu.Location = new System.Drawing.Point(0, 0);
             this.msMenu.Name = "msMenu";
-            this.msMenu.Size = new System.Drawing.Size(1075, 24);
+            this.msMenu.Size = new System.Drawing.Size(1236, 24);
             this.msMenu.TabIndex = 3;
             this.msMenu.Text = "menuStrip1";
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.BackColor = System.Drawing.Color.Firebrick;
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.menuStrip1.Location = new System.Drawing.Point(0, 268);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1075, 24);
-            this.menuStrip1.TabIndex = 5;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // btnCambiaReloj
-            // 
-            this.btnCambiaReloj.Enabled = false;
-            this.btnCambiaReloj.Image = global::asistencia.Properties.Resources.reloj;
-            this.btnCambiaReloj.Location = new System.Drawing.Point(85, 34);
-            this.btnCambiaReloj.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCambiaReloj.Name = "btnCambiaReloj";
-            this.btnCambiaReloj.Size = new System.Drawing.Size(129, 42);
-            this.btnCambiaReloj.TabIndex = 8;
-            this.btnCambiaReloj.Text = "Cambiar Dispositivo";
-            this.btnCambiaReloj.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCambiaReloj.UseVisualStyleBackColor = true;
-            this.btnCambiaReloj.Click += new System.EventHandler(this.btnCambiaReloj_Click);
-            // 
-            // pbVolcar
-            // 
-            this.pbVolcar.BackgroundImage = global::asistencia.Properties.Resources._81_large;
-            this.pbVolcar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbVolcar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbVolcar.Location = new System.Drawing.Point(10, 8);
-            this.pbVolcar.Name = "pbVolcar";
-            this.pbVolcar.Size = new System.Drawing.Size(70, 56);
-            this.pbVolcar.TabIndex = 4;
-            this.pbVolcar.TabStop = false;
-            this.pbVolcar.Click += new System.EventHandler(this.pbVolcar_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::asistencia.Properties.Resources._120;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(10, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(80, 71);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackgroundImage = global::asistencia.Properties.Resources._12;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox4.Location = new System.Drawing.Point(10, 9);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(80, 71);
-            this.pictureBox4.TabIndex = 4;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pbTiposPersonal
-            // 
-            this.pbTiposPersonal.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbTiposPersonal.BackgroundImage")));
-            this.pbTiposPersonal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbTiposPersonal.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbTiposPersonal.Location = new System.Drawing.Point(98, 4);
-            this.pbTiposPersonal.Name = "pbTiposPersonal";
-            this.pbTiposPersonal.Size = new System.Drawing.Size(73, 67);
-            this.pbTiposPersonal.TabIndex = 3;
-            this.pbTiposPersonal.TabStop = false;
-            this.pbTiposPersonal.Click += new System.EventHandler(this.pbTiposPersonal_Click);
-            // 
-            // pbPersonal
-            // 
-            this.pbPersonal.BackgroundImage = global::asistencia.Properties.Resources.tester;
-            this.pbPersonal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbPersonal.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbPersonal.Location = new System.Drawing.Point(4, 4);
-            this.pbPersonal.Name = "pbPersonal";
-            this.pbPersonal.Size = new System.Drawing.Size(73, 67);
-            this.pbPersonal.TabIndex = 1;
-            this.pbPersonal.TabStop = false;
-            this.pbPersonal.Click += new System.EventHandler(this.pbPersonal_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImage = global::asistencia.Properties.Resources.Calender;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Location = new System.Drawing.Point(10, 9);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(80, 71);
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
             // 
             // cONFIGURACIONToolStripMenuItem
             // 
@@ -583,7 +591,8 @@
             // 
             this.iMPORTARToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dATOSUSBToolStripMenuItem,
-            this.dATOSEXCELToolStripMenuItem});
+            this.dATOSEXCELToolStripMenuItem,
+            this.dATOSPERSONALToolStripMenuItem});
             this.iMPORTARToolStripMenuItem.Image = global::asistencia.Properties.Resources.Vista__85_;
             this.iMPORTARToolStripMenuItem.Name = "iMPORTARToolStripMenuItem";
             this.iMPORTARToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
@@ -593,7 +602,7 @@
             // 
             this.dATOSUSBToolStripMenuItem.Image = global::asistencia.Properties.Resources.Vista__26_;
             this.dATOSUSBToolStripMenuItem.Name = "dATOSUSBToolStripMenuItem";
-            this.dATOSUSBToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.dATOSUSBToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.dATOSUSBToolStripMenuItem.Text = "DATOS USB";
             this.dATOSUSBToolStripMenuItem.Click += new System.EventHandler(this.dATOSUSBToolStripMenuItem_Click);
             // 
@@ -601,9 +610,17 @@
             // 
             this.dATOSEXCELToolStripMenuItem.Image = global::asistencia.Properties.Resources._104;
             this.dATOSEXCELToolStripMenuItem.Name = "dATOSEXCELToolStripMenuItem";
-            this.dATOSEXCELToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.dATOSEXCELToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.dATOSEXCELToolStripMenuItem.Text = "DATOS EXCEL";
             this.dATOSEXCELToolStripMenuItem.Click += new System.EventHandler(this.dATOSEXCELToolStripMenuItem_Click);
+            // 
+            // dATOSPERSONALToolStripMenuItem
+            // 
+            this.dATOSPERSONALToolStripMenuItem.Image = global::asistencia.Properties.Resources.siluetaPersona;
+            this.dATOSPERSONALToolStripMenuItem.Name = "dATOSPERSONALToolStripMenuItem";
+            this.dATOSPERSONALToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.dATOSPERSONALToolStripMenuItem.Text = "DATOS PERSONAL";
+            this.dATOSPERSONALToolStripMenuItem.Click += new System.EventHandler(this.dATOSPERSONALToolStripMenuItem_Click);
             // 
             // aCERCADEToolStripMenuItem
             // 
@@ -613,39 +630,61 @@
             this.aCERCADEToolStripMenuItem.Text = "ACERCA DE";
             this.aCERCADEToolStripMenuItem.Click += new System.EventHandler(this.aCERCADEToolStripMenuItem_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Maroon;
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.menuStrip1.Location = new System.Drawing.Point(0, 268);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1236, 24);
+            this.menuStrip1.TabIndex = 5;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // tTiempo
+            // 
+            this.tTiempo.Tick += new System.EventHandler(this.tTiempo_Tick);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1075, 292);
+            this.BackColor = System.Drawing.Color.Black;
+            this.BackgroundImage = global::asistencia.Properties.Resources.Abstract_wallpaper_by_Greeneagle777__1_;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1236, 292);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.msMenu);
             this.Controls.Add(this.menuStrip1);
+            this.DoubleBuffered = true;
             this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Principal";
-            this.Text = "SISTEMA DE CONTROL DE AISTENCIA V 6.5";
+            this.Text = "SISTEMA DE CONTROL DE ASISTENCIA V 6.5";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Principal_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbVolcar)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.msMenu.ResumeLayout(false);
-            this.msMenu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbVolcar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbTiposPersonal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPersonal)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.msMenu.ResumeLayout(false);
+            this.msMenu.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -685,9 +724,6 @@
         private System.Windows.Forms.ToolStripMenuItem dATOSUSBToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dATOSEXCELToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label lbVacaciones;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem áREASToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aGENCIASToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mODALIDADESToolStripMenuItem;
@@ -703,5 +739,11 @@
         public System.Windows.Forms.Button btnCambiaReloj;
         private System.Windows.Forms.ToolStripMenuItem gESTIONDEFOTOGRAFICASToolStripMenuItem;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.ToolStripMenuItem dATOSPERSONALToolStripMenuItem;
+        private System.Windows.Forms.Label lbVacaciones;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label lbReloj;
+        private System.Windows.Forms.Timer tTiempo;
     }
 }

@@ -40,7 +40,8 @@
     <Reference Include="ClaseCalendario">
       <HintPath>..\dll\ClaseCalendario.dll</HintPath>
     </Reference>
-    <Reference Include="itextsharp">
+    <Reference Include="itextsharp, Version=5.0.6.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\dll\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data, Version=6.5.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
@@ -90,6 +91,12 @@
     <Compile Include="frmCalendario.Designer.cs">
       <DependentUpon>frmCalendario.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCambiarCuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCambiarCuenta.designer.cs">
+      <DependentUpon>frmCambiarCuenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCambiarIP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +132,12 @@
     </Compile>
     <Compile Include="frmHorario.Designer.cs">
       <DependentUpon>frmHorario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmImportaPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmImportaPersonal.designer.cs">
+      <DependentUpon>frmImportaPersonal.cs</DependentUpon>
     </Compile>
     <Compile Include="frmImportExcel.cs">
       <SubType>Form</SubType>
@@ -185,12 +198,6 @@
     </Compile>
     <Compile Include="frmPermiso.Designer.cs">
       <DependentUpon>frmPermiso.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmPersonal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmPersonal.Designer.cs">
-      <DependentUpon>frmPersonal.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPersonal1.cs">
       <SubType>Form</SubType>
@@ -270,6 +277,12 @@
     <Compile Include="frmVacaciones.Designer.cs">
       <DependentUpon>frmVacaciones.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmValidaUSB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmValidaUSB.Designer.cs">
+      <DependentUpon>frmValidaUSB.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmVisorFotos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -322,6 +335,9 @@
     <EmbeddedResource Include="frmCalendario.resx">
       <DependentUpon>frmCalendario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCambiarCuenta.resx">
+      <DependentUpon>frmCambiarCuenta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCambiarIP.resx">
       <DependentUpon>frmCambiarIP.cs</DependentUpon>
     </EmbeddedResource>
@@ -339,6 +355,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmHorario.resx">
       <DependentUpon>frmHorario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmImportaPersonal.resx">
+      <DependentUpon>frmImportaPersonal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmImportExcel.resx">
       <DependentUpon>frmImportExcel.cs</DependentUpon>
@@ -369,9 +388,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPermiso.resx">
       <DependentUpon>frmPermiso.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmPersonal.resx">
-      <DependentUpon>frmPersonal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPersonal1.resx">
       <DependentUpon>frmPersonal1.cs</DependentUpon>
@@ -411,6 +427,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmVacaciones.resx">
       <DependentUpon>frmVacaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmValidaUSB.resx">
+      <DependentUpon>frmValidaUSB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmVisorFotos.resx">
       <DependentUpon>frmVisorFotos.cs</DependentUpon>
@@ -721,6 +740,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Vista %28148%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\200821080445-9436.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abstract_blue_7709.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Abstract_wallpaper_by_Greeneagle777 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LLAVE usb.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

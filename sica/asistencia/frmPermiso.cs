@@ -397,5 +397,15 @@ namespace asistencia
         }
         #endregion
 
+        private void tbDNIper_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarDatos.texto_KeyPress(((TextBox)sender).Text, "Numeros", sender, e);
+            if (e.KeyChar == '\r')
+            {
+                e.Handled = true;
+                SendKeys.Send("{TAB}");
+            }
+        }
+
     }
 }

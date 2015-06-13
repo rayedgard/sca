@@ -60,16 +60,16 @@
             this.gbDatos.Size = new System.Drawing.Size(501, 79);
             this.gbDatos.TabIndex = 5;
             this.gbDatos.TabStop = false;
-            this.gbDatos.Text = "CONFIGURARIÓN DE AREAS DE TRABAJO";
+            this.gbDatos.Text = "CONFIGURACIÓN DE ÁREAS DE TRABAJO";
             // 
             // tbDescripcionArea
             // 
             this.tbDescripcionArea.BackColor = System.Drawing.Color.White;
             this.tbDescripcionArea.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tbDescripcionArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbDescripcionArea.Location = new System.Drawing.Point(81, 50);
+            this.tbDescripcionArea.Location = new System.Drawing.Point(96, 50);
             this.tbDescripcionArea.Name = "tbDescripcionArea";
-            this.tbDescripcionArea.Size = new System.Drawing.Size(412, 20);
+            this.tbDescripcionArea.Size = new System.Drawing.Size(397, 20);
             this.tbDescripcionArea.TabIndex = 1;
             this.tbDescripcionArea.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validaMayuscula);
             // 
@@ -78,9 +78,9 @@
             this.tbNombreArea.BackColor = System.Drawing.Color.White;
             this.tbNombreArea.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tbNombreArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbNombreArea.Location = new System.Drawing.Point(81, 23);
+            this.tbNombreArea.Location = new System.Drawing.Point(96, 23);
             this.tbNombreArea.Name = "tbNombreArea";
-            this.tbNombreArea.Size = new System.Drawing.Size(412, 20);
+            this.tbNombreArea.Size = new System.Drawing.Size(397, 20);
             this.tbNombreArea.TabIndex = 0;
             this.tbNombreArea.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validaMayuscula);
             // 
@@ -93,7 +93,7 @@
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(63, 13);
             this.label18.TabIndex = 17;
-            this.label18.Text = "Descripcion";
+            this.label18.Text = "Descripción";
             // 
             // label20
             // 
@@ -102,9 +102,9 @@
             this.label20.ForeColor = System.Drawing.Color.DimGray;
             this.label20.Location = new System.Drawing.Point(6, 26);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(69, 13);
+            this.label20.Size = new System.Drawing.Size(83, 13);
             this.label20.TabIndex = 17;
-            this.label20.Text = "Nombre Area";
+            this.label20.Text = "Nombre de área";
             // 
             // dgvAreasExistentes
             // 
@@ -210,7 +210,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAreas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ASIGNACIÓN DE AREAS";
+            this.Text = "ASIGNACIÓN DE ÁREAS";
             this.gbDatos.ResumeLayout(false);
             this.gbDatos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAreasExistentes)).EndInit();

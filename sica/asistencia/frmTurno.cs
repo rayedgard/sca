@@ -123,7 +123,7 @@ namespace asistencia
         {
             ValidarDatos.texto_KeyPress(((TextBox)sender).Text, "LetrasNumerosEspacio", sender, e);
 
-            ((TextBox)sender).CharacterCasing = CharacterCasing.Upper;
+            //((TextBox)sender).CharacterCasing = CharacterCasing.Upper;
 
         }
 
@@ -331,33 +331,38 @@ namespace asistencia
 
         private void btnSubturno_Click(object sender, EventArgs e)
         {
-
-            int HoraInicioAux = ((int)nudHoraInicio.Value) * 60 + (int)nudMinutoIni.Value;
-            int HoraFinAux = ((int)nudHoraFin.Value) * 60 + (int)nudMinutoFin.Value;
-            //if (HoraFinAux > HoraInicioAux)
-            //{
-            int NroFilas = dgvSubturnos.Rows.Count + 1;
-            if (NroFilas > 1)
+            double horaInicio,horafin;
+            horaInicio = Convert.ToDouble(nudHoraInicio.Value + (nudMinutoIni.Value / 60));
+            horafin = Convert.ToDouble(nudHoraFin.Value + (nudMinutoFin.Value / 60));
+            if (horaInicio < horafin)
             {
-                string HoraSalAnterior = dgvSubturnos.Rows[NroFilas - 2].Cells[3].Value.ToString();
-                string[] HoraMinSegSaliAnterior = HoraSalAnterior.Split(':');
-                int HoraSalidaAnteriorAux = int.Parse(HoraMinSegSaliAnterior[0]) * 60 + int.Parse(HoraMinSegSaliAnterior[1]);
-                if (HoraSalidaAnteriorAux <= HoraInicioAux)
+
+                int HoraInicioAux = ((int)nudHoraInicio.Value) * 60 + (int)nudMinutoIni.Value;
+                int HoraFinAux = ((int)nudHoraFin.Value) * 60 + (int)nudMinutoFin.Value;
+                //if (HoraFinAux > HoraInicioAux)
+                //{
+                int NroFilas = dgvSubturnos.Rows.Count + 1;
+                if (NroFilas > 1)
+                {
+                    string HoraSalAnterior = dgvSubturnos.Rows[NroFilas - 2].Cells[3].Value.ToString();
+                    string[] HoraMinSegSaliAnterior = HoraSalAnterior.Split(':');
+                    int HoraSalidaAnteriorAux = int.Parse(HoraMinSegSaliAnterior[0]) * 60 + int.Parse(HoraMinSegSaliAnterior[1]);
+                    if (HoraSalidaAnteriorAux <= HoraInicioAux)
+                    {
+                        object[] NuevoSubturno = { (System.Drawing.Image)(asistencia.Properties.Resources.delete), NroFilas, nudHoraInicio.Value.ToString().Trim() + ":" + nudMinutoIni.Value.ToString().Trim() + ":00", nudHoraFin.Value.ToString().Trim() + ":" + nudMinutoFin.Value.ToString().Trim() + ":00" };
+                        dgvSubturnos.Rows.Add(NuevoSubturno);
+
+                    }
+                }
+                else
                 {
                     object[] NuevoSubturno = { (System.Drawing.Image)(asistencia.Properties.Resources.delete), NroFilas, nudHoraInicio.Value.ToString().Trim() + ":" + nudMinutoIni.Value.ToString().Trim() + ":00", nudHoraFin.Value.ToString().Trim() + ":" + nudMinutoFin.Value.ToString().Trim() + ":00" };
                     dgvSubturnos.Rows.Add(NuevoSubturno);
-                 
                 }
+                tipo = Tipo.subturno;
+                habilitaBoton();
+
             }
-            else
-            {
-                object[] NuevoSubturno = { (System.Drawing.Image)(asistencia.Properties.Resources.delete), NroFilas, nudHoraInicio.Value.ToString().Trim() + ":" + nudMinutoIni.Value.ToString().Trim() + ":00", nudHoraFin.Value.ToString().Trim() + ":" + nudMinutoFin.Value.ToString().Trim() + ":00" };
-                dgvSubturnos.Rows.Add(NuevoSubturno);
-            }
-            tipo = Tipo.subturno;
-            habilitaBoton();
-          
-            //}
         }
 
    

@@ -24,7 +24,7 @@ namespace clases
              * Direccion de Correo (Gmail o Hotmail)
              * y Contrasena correspondiente
              */
-            server.Credentials = new System.Net.NetworkCredential("soporte@itdecsa.com", "@rayedgard@");
+            server.Credentials = new System.Net.NetworkCredential("rayedgard@itdecsa.com", "edgard27");
             server.EnableSsl = true;
         }
 

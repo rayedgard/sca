@@ -13,25 +13,18 @@ namespace asistencia
     public partial class frmCambiarIP : Form
     {
         CValidacion ValidarDatos;
-        CConection ConexionBD;
+     
 
         string string_ArchivoConfiguracion;
         public frmCambiarIP(string ArchivoConfig)
         {
             string_ArchivoConfiguracion = ArchivoConfig;
-            ConexionBD = new CConection();
             InitializeComponent();
             ValidarDatos = new CValidacion();
-            cargaReloj();
+        
         }
 
-        private void cargaReloj()
-        {
-            //Cargar Provincias
-            ConexionBD.Conectar(false, string_ArchivoConfiguracion);
-            ConexionBD.EjecutarProcedimientoReturnComboBox(cbIPreloj, true, "nuevo_listarReloj");
-            ConexionBD.Desconectar();
-        }
+
         
 
         public void CargarConfiguracionEquipo()
@@ -89,8 +82,6 @@ namespace asistencia
                 //System.Environment.SpecialFolder folder = System.Environment.CurrentDirectory;
                 //string_ArchivoConfiguracion = System.Environment.CurrentDirectory + @"\RelojSistema.cfg";
                 CConfigXML configXml_ArchivoConfiguracion = new CConfigXML(string_ArchivoConfiguracion);
-
-                configXml_ArchivoConfiguracion.SetValue("principal", "ipmaquina", cbIPreloj.SelectedValue.ToString());
 
                 int puerto = 4370;
                 int.TryParse(tbPuerto.Text, out puerto);
@@ -171,7 +162,7 @@ namespace asistencia
 
             StreamWriter writer = File.CreateText(InstalerBAT);
             writer.WriteLine("echo on");
-            writer.WriteLine("cls");
+            writer.WriteLine("cls"); 
             writer.WriteLine("echo Starting Install...");
             writer.WriteLine(string.Format(@"set mysql_msi=""{0}""", mysqlmsi));
             writer.WriteLine("set mysql_svname=MySQL");
@@ -192,7 +183,7 @@ namespace asistencia
             writer.WriteLine("echo MySQL Version 5.5.14 installed...");
             writer.WriteLine("md %mysql_data2%");
             writer.WriteLine("");
-            writer.WriteLine(string.Format(@"""{0}\bin\mysqlinstanceconfig.exe"" -i -q ServiceName=MySQErayme RootPassword=mysql ServerType=DEVELOPMENT DatabaseType=MYISAM Port=3306 RootCurrentPassword=mysql", ProgramMySQL));
+            writer.WriteLine(string.Format(@"""{0}\bin\mysqlinstanceconfig.exe"" -i -q ServiceName=MySQRayme RootPassword=mysql ServerType=DEVELOPMENT DatabaseType=MYISAM Port=3306 RootCurrentPassword=mysql", ProgramMySQL));
             writer.WriteLine("echo MySQL Instance Configured...Service started...");
             writer.WriteLine("");
             writer.WriteLine("rem Uncomment next line to allow root access from any pc...");

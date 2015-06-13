@@ -31,6 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCiudades));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tbNombreAgencia = new System.Windows.Forms.TextBox();
+            this.btnGuardar2 = new System.Windows.Forms.Button();
+            this.btnGuardar1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label61 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lbUbicacionActual = new System.Windows.Forms.Label();
             this.tvPaisesDptos = new System.Windows.Forms.TreeView();
@@ -51,11 +56,6 @@
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.label61 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnGuardar1 = new System.Windows.Forms.Button();
-            this.btnGuardar2 = new System.Windows.Forms.Button();
-            this.tbNombreAgencia = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             this.cmsMenuOpcionesDist.SuspendLayout();
             this.cmsMenuOpcionesProv.SuspendLayout();
@@ -82,8 +82,68 @@
             this.groupBox2.Size = new System.Drawing.Size(787, 265);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Seleccione un Pais, Departamento, Provincia o Distrito  ";
+            this.groupBox2.Text = "Seleccione un País, Departamento, Provincia o Distrito  ";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // tbNombreAgencia
+            // 
+            this.tbNombreAgencia.BackColor = System.Drawing.Color.White;
+            this.tbNombreAgencia.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.tbNombreAgencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNombreAgencia.Location = new System.Drawing.Point(441, 40);
+            this.tbNombreAgencia.Name = "tbNombreAgencia";
+            this.tbNombreAgencia.Size = new System.Drawing.Size(260, 20);
+            this.tbNombreAgencia.TabIndex = 31;
+            this.tbNombreAgencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNombreAgencia_KeyPress);
+            // 
+            // btnGuardar2
+            // 
+            this.btnGuardar2.Enabled = false;
+            this.btnGuardar2.Image = global::asistencia.Properties.Resources.siguiente_icono_5491_32;
+            this.btnGuardar2.Location = new System.Drawing.Point(705, 111);
+            this.btnGuardar2.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGuardar2.Name = "btnGuardar2";
+            this.btnGuardar2.Size = new System.Drawing.Size(70, 27);
+            this.btnGuardar2.TabIndex = 4;
+            this.btnGuardar2.Text = "Añadir";
+            this.btnGuardar2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGuardar2.UseVisualStyleBackColor = true;
+            this.btnGuardar2.Click += new System.EventHandler(this.btnGuardar2_Click);
+            // 
+            // btnGuardar1
+            // 
+            this.btnGuardar1.Enabled = false;
+            this.btnGuardar1.Image = global::asistencia.Properties.Resources.siguiente_icono_5491_32;
+            this.btnGuardar1.Location = new System.Drawing.Point(705, 37);
+            this.btnGuardar1.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGuardar1.Name = "btnGuardar1";
+            this.btnGuardar1.Size = new System.Drawing.Size(70, 27);
+            this.btnGuardar1.TabIndex = 2;
+            this.btnGuardar1.Text = "Añadir";
+            this.btnGuardar1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGuardar1.UseVisualStyleBackColor = true;
+            this.btnGuardar1.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Firebrick;
+            this.label1.Location = new System.Drawing.Point(368, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(123, 16);
+            this.label1.TabIndex = 30;
+            this.label1.Text = "AÑADIR PAÍSES";
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.ForeColor = System.Drawing.Color.DimGray;
+            this.label61.Location = new System.Drawing.Point(368, 44);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(69, 13);
+            this.label61.TabIndex = 29;
+            this.label61.Text = "Nombre País";
             // 
             // label3
             // 
@@ -94,7 +154,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 16);
             this.label3.TabIndex = 4;
-            this.label3.Text = "UBICACION:";
+            this.label3.Text = "UBICACIÓN:";
             // 
             // lbUbicacionActual
             // 
@@ -135,9 +195,9 @@
             this.lbOperacion.ForeColor = System.Drawing.Color.DimGray;
             this.lbOperacion.Location = new System.Drawing.Point(368, 121);
             this.lbOperacion.Name = "lbOperacion";
-            this.lbOperacion.Size = new System.Drawing.Size(150, 13);
+            this.lbOperacion.Size = new System.Drawing.Size(147, 13);
             this.lbOperacion.TabIndex = 17;
-            this.lbOperacion.Text = "Añadir Elemento de Ubicación";
+            this.lbOperacion.Text = "Añadir elemento de ubicación";
             // 
             // cmsMenuOpcionesDist
             // 
@@ -255,66 +315,6 @@
             this.toolStripMenuItem1.Size = new System.Drawing.Size(228, 22);
             this.toolStripMenuItem1.Text = "ELIMINAR PAIS";
             // 
-            // label61
-            // 
-            this.label61.AutoSize = true;
-            this.label61.ForeColor = System.Drawing.Color.DimGray;
-            this.label61.Location = new System.Drawing.Point(368, 44);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(67, 13);
-            this.label61.TabIndex = 29;
-            this.label61.Text = "Nombre Pais";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Firebrick;
-            this.label1.Location = new System.Drawing.Point(368, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 16);
-            this.label1.TabIndex = 30;
-            this.label1.Text = "AÑADIR PAICES";
-            // 
-            // btnGuardar1
-            // 
-            this.btnGuardar1.Enabled = false;
-            this.btnGuardar1.Image = global::asistencia.Properties.Resources.siguiente_icono_5491_32;
-            this.btnGuardar1.Location = new System.Drawing.Point(705, 37);
-            this.btnGuardar1.Margin = new System.Windows.Forms.Padding(2);
-            this.btnGuardar1.Name = "btnGuardar1";
-            this.btnGuardar1.Size = new System.Drawing.Size(70, 27);
-            this.btnGuardar1.TabIndex = 2;
-            this.btnGuardar1.Text = "Añadir";
-            this.btnGuardar1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnGuardar1.UseVisualStyleBackColor = true;
-            this.btnGuardar1.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // btnGuardar2
-            // 
-            this.btnGuardar2.Enabled = false;
-            this.btnGuardar2.Image = global::asistencia.Properties.Resources.siguiente_icono_5491_32;
-            this.btnGuardar2.Location = new System.Drawing.Point(705, 111);
-            this.btnGuardar2.Margin = new System.Windows.Forms.Padding(2);
-            this.btnGuardar2.Name = "btnGuardar2";
-            this.btnGuardar2.Size = new System.Drawing.Size(70, 27);
-            this.btnGuardar2.TabIndex = 4;
-            this.btnGuardar2.Text = "Añadir";
-            this.btnGuardar2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnGuardar2.UseVisualStyleBackColor = true;
-            this.btnGuardar2.Click += new System.EventHandler(this.btnGuardar2_Click);
-            // 
-            // tbNombreAgencia
-            // 
-            this.tbNombreAgencia.BackColor = System.Drawing.Color.White;
-            this.tbNombreAgencia.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.tbNombreAgencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbNombreAgencia.Location = new System.Drawing.Point(441, 40);
-            this.tbNombreAgencia.Name = "tbNombreAgencia";
-            this.tbNombreAgencia.Size = new System.Drawing.Size(260, 20);
-            this.tbNombreAgencia.TabIndex = 31;
-            this.tbNombreAgencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNombreAgencia_KeyPress);
-            // 
             // frmCiudades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -324,7 +324,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCiudades";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ASIGNACION DE PAIS/DEPARTAMENTO/PROVINCIA/DISTRITO";
+            this.Text = "ASIGNACIÓN DE PAÍS/DEPARTAMENTO/PROVINCIA/DISTRITO";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.cmsMenuOpcionesDist.ResumeLayout(false);

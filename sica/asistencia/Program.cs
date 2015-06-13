@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using clases;
 
 namespace asistencia
 {
@@ -13,6 +14,7 @@ namespace asistencia
         [STAThread]
         static void Main()
         {
+            ValidarLlaveUSB validaLLave = new ValidarLlaveUSB(); 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //PARA EL SPLAS SCRIM
@@ -20,11 +22,20 @@ namespace asistencia
             
             if (sp.ShowDialog() == DialogResult.OK)
             {
-                //PARA EL FORMULARIO DE LOGUEO
-                loguin login = new loguin();
-                login.ShowDialog();
-                if (login.Login == 1)
-                    Application.Run(new Principal());
+                if (validaLLave.AccesoPermitidoAlSistema())
+                {
+                    //PARA EL FORMULARIO DE LOGUEO
+                    loguin login = new loguin();
+                    login.ShowDialog();
+                    if (login.Login == 1)
+                        Application.Run(new Principal());
+                }
+                else
+                {
+                    frmValidaUSB valida = new frmValidaUSB();
+                    valida.ShowDialog();
+                }
+               
 
 
 

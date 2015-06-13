@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOmisionesGrupales));
             this.btnGuardar = new System.Windows.Forms.Button();
             this.gbDatos = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbTipoOmision = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.tbDetalle = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -39,8 +41,6 @@
             this.cbCargos = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cbFiltrado = new System.Windows.Forms.ComboBox();
-            this.cbTipoOmision = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.gbDatos.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,6 +77,27 @@
             this.gbDatos.TabIndex = 92;
             this.gbDatos.TabStop = false;
             this.gbDatos.Text = "DATOS DE LICENCIAS";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(4, 72);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(120, 13);
+            this.label1.TabIndex = 105;
+            this.label1.Text = "Seleccione tipo Omisión";
+            // 
+            // cbTipoOmision
+            // 
+            this.cbTipoOmision.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbTipoOmision.FormattingEnabled = true;
+            this.cbTipoOmision.Location = new System.Drawing.Point(147, 69);
+            this.cbTipoOmision.Name = "cbTipoOmision";
+            this.cbTipoOmision.Size = new System.Drawing.Size(280, 21);
+            this.cbTipoOmision.TabIndex = 2;
             // 
             // label9
             // 
@@ -168,27 +189,6 @@
             this.cbFiltrado.TabIndex = 0;
             this.cbFiltrado.SelectedIndexChanged += new System.EventHandler(this.cbFiltrado_SelectedIndexChanged);
             // 
-            // cbTipoOmision
-            // 
-            this.cbTipoOmision.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbTipoOmision.FormattingEnabled = true;
-            this.cbTipoOmision.Location = new System.Drawing.Point(147, 69);
-            this.cbTipoOmision.Name = "cbTipoOmision";
-            this.cbTipoOmision.Size = new System.Drawing.Size(280, 21);
-            this.cbTipoOmision.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(4, 72);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 13);
-            this.label1.TabIndex = 105;
-            this.label1.Text = "Seleccione tipo Omisión";
-            // 
             // frmOmisionesGrupales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -197,6 +197,9 @@
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.gbDatos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(456, 253);
+            this.MinimizeBox = false;
             this.Name = "frmOmisionesGrupales";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ASIGNACIÓN DE OMISIONES GRUPALES";

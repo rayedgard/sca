@@ -261,8 +261,8 @@ namespace asistencia
 
 
                     //---------PARTA LAS LIMITACIONES-------------// 
-                    object[] DatosLimite = { "pDNI", "pIdTipoPermiso", "pTipo" };
-                    object[] ValoresLimite = { "pDNI", "pIdTipoPermiso", "pTipo" };
+                    object[] ValoresLimite = { "pDNI", "pIdTipoPermiso", "pTipo", "pAnno" };
+                    object[] DatosLimite = { "pDNI", "pIdTipoPermiso", "pTipo","pAnno" };
                     //----------fin limite---------///
                     //---------PARTA LA VERIFICACION INDIVIDUAL DE UNA LICENCIA-------------// 
                     object[] DatosIndividual = { "pDNI", "pFechaPermiso", "pIdTipoPermiso", "pTipo" };
@@ -292,6 +292,8 @@ namespace asistencia
                             /*--------AQUI VERIFICAMOS CUANTOS EL MILITE DE LICENCIAS------*/
                             ValoresLimite[1] = sa_DiasMesOpciones[i];
                             ValoresLimite[2] = "L";//L de LICENCIA
+                            ValoresLimite[3] = pAnio;//año actual
+
                             /*-----------fin limites---------*/
 
                             /*--------PARA LA AVERIFICACION INDIVIDUAL------*/

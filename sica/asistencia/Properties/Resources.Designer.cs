@@ -223,6 +223,16 @@ namespace asistencia.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _200821080445_9436 {
+            get {
+                object obj = ResourceManager.GetObject("200821080445-9436", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _3 {
             get {
                 object obj = ResourceManager.GetObject("3", resourceCulture);
@@ -316,6 +326,26 @@ namespace asistencia.Properties {
         internal static System.Drawing.Bitmap _91 {
             get {
                 object obj = ResourceManager.GetObject("91", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap abstract_blue_7709 {
+            get {
+                object obj = ResourceManager.GetObject("abstract_blue_7709", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Abstract_wallpaper_by_Greeneagle777__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Abstract_wallpaper_by_Greeneagle777 (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -503,6 +533,16 @@ namespace asistencia.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fondo {
+            get {
+                object obj = ResourceManager.GetObject("fondo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fondohuellas_ {
             get {
                 object obj = ResourceManager.GetObject("fondohuellas.", resourceCulture);
@@ -596,6 +636,16 @@ namespace asistencia.Properties {
         internal static System.Drawing.Bitmap itdecsa {
             get {
                 object obj = ResourceManager.GetObject("itdecsa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LLAVE_usb {
+            get {
+                object obj = ResourceManager.GetObject("LLAVE usb", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

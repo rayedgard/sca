@@ -89,11 +89,11 @@
             // 
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label12.Location = new System.Drawing.Point(3, 122);
+            this.label12.Location = new System.Drawing.Point(1, 122);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(374, 13);
+            this.label12.Size = new System.Drawing.Size(376, 13);
             this.label12.TabIndex = 34;
-            this.label12.Text = "despues de transcurrido los intervalos se considera, FALTA POR TANDANZA";
+            this.label12.Text = "Despues de transcurrido los intérvalos se considera, FALTA POR TARDANZA";
             // 
             // label7
             // 
@@ -124,7 +124,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(177, 13);
             this.label8.TabIndex = 31;
-            this.label8.Text = "3° intervalo, despues de 2° intervalo";
+            this.label8.Text = "3° intérvalo, despues de 2° intervalo";
             // 
             // label11
             // 
@@ -165,7 +165,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(177, 13);
             this.label5.TabIndex = 27;
-            this.label5.Text = "2° intervalo, despues de 1° intervalo";
+            this.label5.Text = "2° intérvalo, despues de 1° intervalo";
             // 
             // label6
             // 
@@ -251,7 +251,7 @@
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(170, 13);
             this.label19.TabIndex = 8;
-            this.label19.Text = "1° intervalo, despues de tolerancia";
+            this.label19.Text = "1° intérvalo, despues de tolerancia";
             // 
             // label20
             // 
@@ -302,6 +302,7 @@
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(409, 195);
             this.MinimizeBox = false;
             this.Name = "frmNuevoToletancia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

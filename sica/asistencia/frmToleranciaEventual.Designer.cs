@@ -90,6 +90,7 @@
             // tbDetalle
             // 
             this.tbDetalle.BackColor = System.Drawing.Color.White;
+            this.tbDetalle.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tbDetalle.Location = new System.Drawing.Point(120, 16);
             this.tbDetalle.Name = "tbDetalle";
             this.tbDetalle.Size = new System.Drawing.Size(350, 20);

@@ -37,14 +37,14 @@
             this.label7 = new System.Windows.Forms.Label();
             this.nudHoraFIn1 = new System.Windows.Forms.NumericUpDown();
             this.nudHoraInicio1 = new System.Windows.Forms.NumericUpDown();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.tbNumeroDocumento1 = new System.Windows.Forms.TextBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.lbNombre = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tbDNIper = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudMInutoFin1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudMinutoIni1)).BeginInit();
@@ -208,6 +208,20 @@
             this.nudHoraInicio1.Size = new System.Drawing.Size(47, 20);
             this.nudHoraInicio1.TabIndex = 1;
             // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Enabled = false;
+            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
+            this.btnGuardar.Location = new System.Drawing.Point(322, 88);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(98, 42);
+            this.btnGuardar.TabIndex = 7;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -228,6 +242,19 @@
             this.tbNumeroDocumento1.Name = "tbNumeroDocumento1";
             this.tbNumeroDocumento1.Size = new System.Drawing.Size(226, 20);
             this.tbNumeroDocumento1.TabIndex = 5;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBuscar.BackgroundImage")));
+            this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBuscar.Location = new System.Drawing.Point(191, 6);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(29, 29);
+            this.btnBuscar.TabIndex = 4;
+            this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // lbNombre
             // 
@@ -261,6 +288,7 @@
             this.tbDNIper.Size = new System.Drawing.Size(100, 20);
             this.tbDNIper.TabIndex = 0;
             this.tbDNIper.TextChanged += new System.EventHandler(this.tbDNIper_TextChanged);
+            this.tbDNIper.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbDNIper_KeyPress);
             // 
             // label5
             // 
@@ -272,33 +300,6 @@
             this.label5.Size = new System.Drawing.Size(26, 13);
             this.label5.TabIndex = 5;
             this.label5.Text = "DNI";
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Enabled = false;
-            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
-            this.btnGuardar.Location = new System.Drawing.Point(322, 88);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(98, 42);
-            this.btnGuardar.TabIndex = 7;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBuscar.BackgroundImage")));
-            this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnBuscar.Location = new System.Drawing.Point(191, 6);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(29, 29);
-            this.btnBuscar.TabIndex = 4;
-            this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // frmPermiso
             // 

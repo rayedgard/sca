@@ -45,9 +45,10 @@
             // dgvDatos
             // 
             this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDatos.Location = new System.Drawing.Point(6, 66);
+            this.dgvDatos.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvDatos.Location = new System.Drawing.Point(0, 65);
             this.dgvDatos.Name = "dgvDatos";
-            this.dgvDatos.Size = new System.Drawing.Size(874, 259);
+            this.dgvDatos.Size = new System.Drawing.Size(885, 267);
             this.dgvDatos.TabIndex = 0;
             // 
             // btnPDFModalidad

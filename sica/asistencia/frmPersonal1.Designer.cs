@@ -213,12 +213,13 @@
             this.label25.AutoSize = true;
             this.label25.Location = new System.Drawing.Point(344, 58);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(70, 13);
+            this.label25.Size = new System.Drawing.Size(69, 13);
             this.label25.TabIndex = 29;
-            this.label25.Text = "PROFESIÓM";
+            this.label25.Text = "PROFESIÓN";
             // 
             // tbProfesion
             // 
+            this.tbProfesion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tbProfesion.Location = new System.Drawing.Point(422, 54);
             this.tbProfesion.Name = "tbProfesion";
             this.tbProfesion.Size = new System.Drawing.Size(157, 20);
@@ -302,6 +303,7 @@
             // 
             // tbDireccion
             // 
+            this.tbDireccion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tbDireccion.Location = new System.Drawing.Point(708, 51);
             this.tbDireccion.Name = "tbDireccion";
             this.tbDireccion.Size = new System.Drawing.Size(147, 20);
@@ -400,6 +402,7 @@
             // 
             // tbMaterno
             // 
+            this.tbMaterno.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tbMaterno.Location = new System.Drawing.Point(85, 106);
             this.tbMaterno.Name = "tbMaterno";
             this.tbMaterno.Size = new System.Drawing.Size(167, 20);
@@ -417,6 +420,7 @@
             // 
             // tbPaterno
             // 
+            this.tbPaterno.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tbPaterno.Location = new System.Drawing.Point(85, 80);
             this.tbPaterno.Name = "tbPaterno";
             this.tbPaterno.Size = new System.Drawing.Size(167, 20);
@@ -443,6 +447,7 @@
             // 
             // tbNombres
             // 
+            this.tbNombres.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tbNombres.Location = new System.Drawing.Point(85, 53);
             this.tbNombres.Name = "tbNombres";
             this.tbNombres.Size = new System.Drawing.Size(167, 20);
@@ -521,7 +526,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(36, 13);
             this.label4.TabIndex = 32;
-            this.label4.Text = "AREA";
+            this.label4.Text = "ÁREA";
             // 
             // cbAreasTrabajo
             // 
@@ -713,10 +718,11 @@
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(49, 13);
             this.label22.TabIndex = 2;
-            this.label22.Text = "CODIGO";
+            this.label22.Text = "CÓDIGO";
             // 
             // tbCodigoEmpresa
             // 
+            this.tbCodigoEmpresa.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tbCodigoEmpresa.Location = new System.Drawing.Point(83, 19);
             this.tbCodigoEmpresa.Name = "tbCodigoEmpresa";
             this.tbCodigoEmpresa.Size = new System.Drawing.Size(169, 20);

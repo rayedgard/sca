@@ -310,6 +310,16 @@ namespace asistencia
             listaVacacion();
         }
 
+        private void tbDNI_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarDatos.texto_KeyPress(((TextBox)sender).Text, "Numeros", sender, e);
+            if (e.KeyChar == '\r')
+            {
+                e.Handled = true;
+                SendKeys.Send("{TAB}");
+            }
+        }
+
 
     }
 }

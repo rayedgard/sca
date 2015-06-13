@@ -98,6 +98,7 @@
             this.lbCambiarcuenta.Size = new System.Drawing.Size(125, 15);
             this.lbCambiarcuenta.TabIndex = 4;
             this.lbCambiarcuenta.Text = "CAMBIAR CUENTA";
+            this.lbCambiarcuenta.Click += new System.EventHandler(this.lbCambiarcuenta_Click);
             // 
             // lbOlvide
             // 

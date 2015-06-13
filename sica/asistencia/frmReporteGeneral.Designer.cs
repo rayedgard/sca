@@ -28,15 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReporteGeneral));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.cbFiltrado = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.gbEstadoPersonal = new System.Windows.Forms.GroupBox();
@@ -46,6 +47,8 @@
             this.prbCarga = new System.Windows.Forms.ProgressBar();
             this.cbSoloEstaModalidad = new System.Windows.Forms.CheckBox();
             this.cbModalidades = new System.Windows.Forms.ComboBox();
+            this.btnPDFModalidad = new System.Windows.Forms.Button();
+            this.btnExcelModalidad = new System.Windows.Forms.Button();
             this.lblAreas = new System.Windows.Forms.Label();
             this.dgvReportePersonal = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -93,9 +96,6 @@
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnPdfExpor2 = new System.Windows.Forms.Button();
             this.btnExcelExpor2 = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.btnPDFModalidad = new System.Windows.Forms.Button();
-            this.btnExcelModalidad = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.gbEstadoPersonal.SuspendLayout();
@@ -111,10 +111,11 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(4, 4);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1077, 522);
+            this.tabControl1.Size = new System.Drawing.Size(1083, 527);
             this.tabControl1.TabIndex = 3;
             // 
             // tabPage1
@@ -142,10 +143,23 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1069, 496);
+            this.tabPage1.Size = new System.Drawing.Size(1075, 501);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "REPORTES DE PERSONAL";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBuscar.BackgroundImage")));
+            this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBuscar.Location = new System.Drawing.Point(181, 3);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(29, 29);
+            this.btnBuscar.TabIndex = 66;
+            this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // cbFiltrado
             // 
@@ -245,6 +259,28 @@
             this.cbModalidades.Size = new System.Drawing.Size(436, 21);
             this.cbModalidades.TabIndex = 44;
             // 
+            // btnPDFModalidad
+            // 
+            this.btnPDFModalidad.BackgroundImage = global::asistencia.Properties.Resources.PDF_Viewer;
+            this.btnPDFModalidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnPDFModalidad.Location = new System.Drawing.Point(1025, 71);
+            this.btnPDFModalidad.Name = "btnPDFModalidad";
+            this.btnPDFModalidad.Size = new System.Drawing.Size(39, 38);
+            this.btnPDFModalidad.TabIndex = 28;
+            this.btnPDFModalidad.UseVisualStyleBackColor = true;
+            this.btnPDFModalidad.Click += new System.EventHandler(this.btnPDFModalidad_Click);
+            // 
+            // btnExcelModalidad
+            // 
+            this.btnExcelModalidad.BackgroundImage = global::asistencia.Properties.Resources.excel;
+            this.btnExcelModalidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnExcelModalidad.Location = new System.Drawing.Point(1025, 31);
+            this.btnExcelModalidad.Name = "btnExcelModalidad";
+            this.btnExcelModalidad.Size = new System.Drawing.Size(39, 42);
+            this.btnExcelModalidad.TabIndex = 29;
+            this.btnExcelModalidad.UseVisualStyleBackColor = true;
+            this.btnExcelModalidad.Click += new System.EventHandler(this.btnExcelModalidad_Click);
+            // 
             // lblAreas
             // 
             this.lblAreas.AutoSize = true;
@@ -280,11 +316,13 @@
             this.Column5,
             this.Column2,
             this.Column3});
-            this.dgvReportePersonal.Location = new System.Drawing.Point(3, 117);
+            this.dgvReportePersonal.Cursor = System.Windows.Forms.Cursors.Default;
+            this.dgvReportePersonal.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvReportePersonal.Location = new System.Drawing.Point(3, 126);
             this.dgvReportePersonal.Name = "dgvReportePersonal";
             this.dgvReportePersonal.ReadOnly = true;
             this.dgvReportePersonal.RowHeadersVisible = false;
-            this.dgvReportePersonal.Size = new System.Drawing.Size(1060, 372);
+            this.dgvReportePersonal.Size = new System.Drawing.Size(1069, 372);
             this.dgvReportePersonal.TabIndex = 43;
             // 
             // dataGridViewTextBoxColumn2
@@ -323,8 +361,8 @@
             // 
             // Column6
             // 
-            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.Blue;
-            this.Column6.DefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Blue;
+            this.Column6.DefaultCellStyle = dataGridViewCellStyle7;
             this.Column6.HeaderText = "Tardanza 1";
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
@@ -344,16 +382,16 @@
             // 
             // Column17
             // 
-            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.Blue;
-            this.Column17.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Blue;
+            this.Column17.DefaultCellStyle = dataGridViewCellStyle8;
             this.Column17.HeaderText = "Tardanza 2";
             this.Column17.Name = "Column17";
             this.Column17.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn8
             // 
-            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.Black;
-            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridViewTextBoxColumn8.HeaderText = "Salida";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
@@ -383,8 +421,8 @@
             // 
             // Column4
             // 
-            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.Blue;
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Blue;
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle10;
             this.Column4.HeaderText = "Total Horas Trabajadas";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
@@ -392,8 +430,8 @@
             // 
             // Column5
             // 
-            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.Blue;
-            this.Column5.DefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Blue;
+            this.Column5.DefaultCellStyle = dataGridViewCellStyle11;
             this.Column5.HeaderText = "Tardanzas";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
@@ -401,8 +439,8 @@
             // 
             // Column2
             // 
-            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.Blue;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Blue;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle12;
             this.Column2.HeaderText = "Horas Extra";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
@@ -511,7 +549,7 @@
             this.tabPage2.Controls.Add(this.dgvResumen);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(1069, 496);
+            this.tabPage2.Size = new System.Drawing.Size(1075, 501);
             this.tabPage2.TabIndex = 3;
             this.tabPage2.Text = "RESUMEN DESCUENTOS";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -551,10 +589,11 @@
             this.Column11,
             this.Column12,
             this.Column15});
-            this.dgvResumen.Location = new System.Drawing.Point(6, 55);
+            this.dgvResumen.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvResumen.Location = new System.Drawing.Point(0, 67);
             this.dgvResumen.Name = "dgvResumen";
             this.dgvResumen.ReadOnly = true;
-            this.dgvResumen.Size = new System.Drawing.Size(1060, 434);
+            this.dgvResumen.Size = new System.Drawing.Size(1075, 434);
             this.dgvResumen.TabIndex = 1;
             // 
             // CODIGO
@@ -610,7 +649,7 @@
             this.tabPage3.Controls.Add(this.btnExcelExpor2);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1069, 496);
+            this.tabPage3.Size = new System.Drawing.Size(1075, 501);
             this.tabPage3.TabIndex = 4;
             this.tabPage3.Text = "RESUMEN SIN REGISTROS";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -626,10 +665,11 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn11,
             this.Column13});
-            this.dgvResumen2.Location = new System.Drawing.Point(6, 92);
+            this.dgvResumen2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvResumen2.Location = new System.Drawing.Point(0, 64);
             this.dgvResumen2.Name = "dgvResumen2";
             this.dgvResumen2.ReadOnly = true;
-            this.dgvResumen2.Size = new System.Drawing.Size(1073, 675);
+            this.dgvResumen2.Size = new System.Drawing.Size(1075, 437);
             this.dgvResumen2.TabIndex = 35;
             // 
             // dataGridViewTextBoxColumn1
@@ -685,46 +725,11 @@
             this.btnExcelExpor2.UseVisualStyleBackColor = true;
             this.btnExcelExpor2.Click += new System.EventHandler(this.btnExcelExpor2_Click);
             // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBuscar.BackgroundImage")));
-            this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnBuscar.Location = new System.Drawing.Point(181, 3);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(29, 29);
-            this.btnBuscar.TabIndex = 66;
-            this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // btnPDFModalidad
-            // 
-            this.btnPDFModalidad.BackgroundImage = global::asistencia.Properties.Resources.PDF_Viewer;
-            this.btnPDFModalidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnPDFModalidad.Location = new System.Drawing.Point(1025, 71);
-            this.btnPDFModalidad.Name = "btnPDFModalidad";
-            this.btnPDFModalidad.Size = new System.Drawing.Size(39, 38);
-            this.btnPDFModalidad.TabIndex = 28;
-            this.btnPDFModalidad.UseVisualStyleBackColor = true;
-            this.btnPDFModalidad.Click += new System.EventHandler(this.btnPDFModalidad_Click);
-            // 
-            // btnExcelModalidad
-            // 
-            this.btnExcelModalidad.BackgroundImage = global::asistencia.Properties.Resources.excel;
-            this.btnExcelModalidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnExcelModalidad.Location = new System.Drawing.Point(1025, 31);
-            this.btnExcelModalidad.Name = "btnExcelModalidad";
-            this.btnExcelModalidad.Size = new System.Drawing.Size(39, 42);
-            this.btnExcelModalidad.TabIndex = 29;
-            this.btnExcelModalidad.UseVisualStyleBackColor = true;
-            this.btnExcelModalidad.Click += new System.EventHandler(this.btnExcelModalidad_Click);
-            // 
             // frmReporteGeneral
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1087, 527);
+            this.ClientSize = new System.Drawing.Size(1083, 527);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmReporteGeneral";

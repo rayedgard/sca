@@ -119,6 +119,19 @@ namespace asistencia
             rotativo(bandera);
         }
 
+        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                pDNI = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString().Trim();
+                lbSELECCIONADO.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                this.Close();
+            }
+            catch
+            {
+            }
+        }
+
        
     }
 }

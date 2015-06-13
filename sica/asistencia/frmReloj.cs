@@ -99,7 +99,7 @@ namespace asistencia
         {
             ValidarDatos.texto_KeyPress(((TextBox)sender).Text, "LetrasNumerosEspacio", sender, e);
 
-            ((TextBox)sender).CharacterCasing = CharacterCasing.Upper;
+            //((TextBox)sender).CharacterCasing = CharacterCasing.Upper;
 
         }
 

@@ -98,6 +98,7 @@
             this.calend_CalendarioDiasFeriados.MesAnioFecha = new int[] {
         3,
         2011};
+            this.calend_CalendarioDiasFeriados.MinimumSize = new System.Drawing.Size(423, 415);
             this.calend_CalendarioDiasFeriados.Name = "calend_CalendarioDiasFeriados";
             this.calend_CalendarioDiasFeriados.Size = new System.Drawing.Size(427, 416);
             this.calend_CalendarioDiasFeriados.TabIndex = 28;
@@ -109,9 +110,9 @@
             this.label17.ForeColor = System.Drawing.Color.DimGray;
             this.label17.Location = new System.Drawing.Point(10, 23);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(297, 13);
+            this.label17.Size = new System.Drawing.Size(299, 13);
             this.label17.TabIndex = 26;
-            this.label17.Text = "Debe guardar o modificar los dias no laborables por cada mes";
+            this.label17.Text = "Debe guardar o modificar los días no laborables por cada mes";
             // 
             // label20
             // 
@@ -120,9 +121,9 @@
             this.label20.ForeColor = System.Drawing.Color.DimGray;
             this.label20.Location = new System.Drawing.Point(10, 6);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(252, 13);
+            this.label20.Size = new System.Drawing.Size(254, 13);
             this.label20.TabIndex = 27;
-            this.label20.Text = "Click derecho para establecer los dias no laborables";
+            this.label20.Text = "Click derecho para establecer los días no laborables";
             // 
             // frmCalendario
             // 

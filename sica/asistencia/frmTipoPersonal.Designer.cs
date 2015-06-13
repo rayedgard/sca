@@ -176,6 +176,7 @@
             // 
             // tbNombreCargo
             // 
+            this.tbNombreCargo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tbNombreCargo.Location = new System.Drawing.Point(140, 20);
             this.tbNombreCargo.Name = "tbNombreCargo";
             this.tbNombreCargo.Size = new System.Drawing.Size(435, 20);
@@ -193,6 +194,7 @@
             // 
             // tbDescripcion
             // 
+            this.tbDescripcion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tbDescripcion.Location = new System.Drawing.Point(140, 70);
             this.tbDescripcion.Name = "tbDescripcion";
             this.tbDescripcion.Size = new System.Drawing.Size(435, 20);
@@ -204,45 +206,45 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(6, 121);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 13);
+            this.label5.Size = new System.Drawing.Size(41, 13);
             this.label5.TabIndex = 38;
-            this.label5.Text = "HORRIO";
+            this.label5.Text = "Horario";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(6, 97);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 13);
+            this.label4.Size = new System.Drawing.Size(78, 13);
             this.label4.TabIndex = 37;
-            this.label4.Text = "TIPO DE HORARIO";
+            this.label4.Text = "Tipo de horario";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(6, 73);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 13);
+            this.label3.Size = new System.Drawing.Size(40, 13);
             this.label3.TabIndex = 36;
-            this.label3.Text = "DETALLE";
+            this.label3.Text = "Detalle";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(6, 50);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(128, 13);
+            this.label2.Size = new System.Drawing.Size(92, 13);
             this.label2.TabIndex = 35;
-            this.label2.Text = "SUELDO REFERENCIAL";
+            this.label2.Text = "Sueldo referencial";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(6, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 13);
+            this.label1.Size = new System.Drawing.Size(91, 13);
             this.label1.TabIndex = 34;
-            this.label1.Text = "NOMBRE DEL CARGO";
+            this.label1.Text = "Nombre del cargo";
             // 
             // cbHorarioDefault
             // 

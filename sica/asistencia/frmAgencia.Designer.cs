@@ -138,9 +138,9 @@
             this.label16.ForeColor = System.Drawing.Color.DimGray;
             this.label16.Location = new System.Drawing.Point(6, 123);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(58, 13);
+            this.label16.Size = new System.Drawing.Size(39, 13);
             this.label16.TabIndex = 17;
-            this.label16.Text = "DISTRITO";
+            this.label16.Text = "Distrito";
             // 
             // label5
             // 
@@ -149,9 +149,9 @@
             this.label5.ForeColor = System.Drawing.Color.DimGray;
             this.label5.Location = new System.Drawing.Point(6, 98);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 13);
+            this.label5.Size = new System.Drawing.Size(51, 13);
             this.label5.TabIndex = 17;
-            this.label5.Text = "PROVINCIA";
+            this.label5.Text = "Provincia";
             // 
             // label3
             // 
@@ -160,9 +160,9 @@
             this.label3.ForeColor = System.Drawing.Color.DimGray;
             this.label3.Location = new System.Drawing.Point(6, 48);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 13);
+            this.label3.Size = new System.Drawing.Size(49, 13);
             this.label3.TabIndex = 17;
-            this.label3.Text = "TELÉFONO";
+            this.label3.Text = "Teléfono";
             // 
             // label1
             // 
@@ -171,9 +171,9 @@
             this.label1.ForeColor = System.Drawing.Color.DimGray;
             this.label1.Location = new System.Drawing.Point(5, 73);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 13);
+            this.label1.Size = new System.Drawing.Size(52, 13);
             this.label1.TabIndex = 17;
-            this.label1.Text = "DIRECCIÓN";
+            this.label1.Text = "Dirección";
             // 
             // label61
             // 
@@ -182,9 +182,9 @@
             this.label61.ForeColor = System.Drawing.Color.DimGray;
             this.label61.Location = new System.Drawing.Point(6, 23);
             this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(104, 13);
+            this.label61.Size = new System.Drawing.Size(100, 13);
             this.label61.TabIndex = 17;
-            this.label61.Text = "NOMBRE AGENCIA";
+            this.label61.Text = "Nombre de agencia";
             // 
             // dgvAgenciasExistentes
             // 

@@ -111,9 +111,9 @@
             this.cbPonerMismoHorario.ForeColor = System.Drawing.Color.Firebrick;
             this.cbPonerMismoHorario.Location = new System.Drawing.Point(105, 44);
             this.cbPonerMismoHorario.Name = "cbPonerMismoHorario";
-            this.cbPonerMismoHorario.Size = new System.Drawing.Size(214, 17);
+            this.cbPonerMismoHorario.Size = new System.Drawing.Size(230, 17);
             this.cbPonerMismoHorario.TabIndex = 2;
-            this.cbPonerMismoHorario.Text = "LUNES A VIERNES MISMO HORARIO";
+            this.cbPonerMismoHorario.Text = "LUNES A VIERNES EL MISMO HORARIO";
             this.cbPonerMismoHorario.UseVisualStyleBackColor = true;
             this.cbPonerMismoHorario.CheckedChanged += new System.EventHandler(this.cbPonerMismoHorario_CheckedChanged);
             // 
@@ -270,7 +270,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 13);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Horario Sabado";
+            this.label1.Text = "Horario Sábado";
             // 
             // label56
             // 
@@ -416,7 +416,7 @@
             // 
             // Column12
             // 
-            this.Column12.HeaderText = "OBSERVACION";
+            this.Column12.HeaderText = "OBSERVACIÓN";
             this.Column12.Name = "Column12";
             this.Column12.ReadOnly = true;
             this.Column12.Width = 250;

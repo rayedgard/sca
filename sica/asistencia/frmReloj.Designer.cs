@@ -117,16 +117,16 @@
             this.gbDatos.Size = new System.Drawing.Size(408, 79);
             this.gbDatos.TabIndex = 9;
             this.gbDatos.TabStop = false;
-            this.gbDatos.Text = "CONFIGURARIÓN DE AREAS DE TRABAJO";
+            this.gbDatos.Text = "CONFIGURACIÓN DE RELOJES BIOMÉTRICOS";
             // 
             // tbNombre
             // 
             this.tbNombre.BackColor = System.Drawing.Color.White;
             this.tbNombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tbNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbNombre.Location = new System.Drawing.Point(81, 50);
+            this.tbNombre.Location = new System.Drawing.Point(90, 50);
             this.tbNombre.Name = "tbNombre";
-            this.tbNombre.Size = new System.Drawing.Size(316, 20);
+            this.tbNombre.Size = new System.Drawing.Size(307, 20);
             this.tbNombre.TabIndex = 1;
             this.tbNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validaMayuscula);
             // 
@@ -135,9 +135,9 @@
             this.tbIP.BackColor = System.Drawing.Color.White;
             this.tbIP.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tbIP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbIP.Location = new System.Drawing.Point(81, 23);
+            this.tbIP.Location = new System.Drawing.Point(90, 23);
             this.tbIP.Name = "tbIP";
-            this.tbIP.Size = new System.Drawing.Size(316, 20);
+            this.tbIP.Size = new System.Drawing.Size(307, 20);
             this.tbIP.TabIndex = 0;
             this.tbIP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbIP_KeyPress);
             // 
@@ -148,9 +148,9 @@
             this.label18.ForeColor = System.Drawing.Color.DimGray;
             this.label18.Location = new System.Drawing.Point(3, 30);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(44, 13);
+            this.label18.Size = new System.Drawing.Size(54, 13);
             this.label18.TabIndex = 17;
-            this.label18.Text = "IP Reloj";
+            this.label18.Text = "IP de reloj";
             // 
             // label20
             // 
@@ -159,9 +159,9 @@
             this.label20.ForeColor = System.Drawing.Color.DimGray;
             this.label20.Location = new System.Drawing.Point(3, 53);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(71, 13);
+            this.label20.Size = new System.Drawing.Size(81, 13);
             this.label20.TabIndex = 17;
-            this.label20.Text = "Nombre Reloj";
+            this.label20.Text = "Nombre de reloj";
             // 
             // btnNuevo
             // 
@@ -204,7 +204,7 @@
             this.MinimizeBox = false;
             this.Name = "frmReloj";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ADMINISTRACION DE RELOJES BIOMÉTRICOAS";
+            this.Text = "ADMINISTRACIÓN DE RELOJES BIOMÉTRICOS";
             this.Load += new System.EventHandler(this.frmReloj_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRelojes)).EndInit();
             this.gbDatos.ResumeLayout(false);

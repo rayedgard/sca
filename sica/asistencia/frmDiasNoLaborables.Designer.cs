@@ -28,21 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDiasNoLaborables));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gbDatos = new System.Windows.Forms.GroupBox();
             this.nudMInutoFin = new System.Windows.Forms.NumericUpDown();
             this.nudMinutoIni = new System.Windows.Forms.NumericUpDown();
             this.nudHoraFIn = new System.Windows.Forms.NumericUpDown();
             this.nudHoraInicio = new System.Windows.Forms.NumericUpDown();
             this.paColorFondo = new System.Windows.Forms.Panel();
+            this.pbImagenMenu = new System.Windows.Forms.PictureBox();
             this.rbNoTodoDia = new System.Windows.Forms.RadioButton();
             this.rbSiTodoDia = new System.Windows.Forms.RadioButton();
             this.label9 = new System.Windows.Forms.Label();
@@ -66,14 +67,13 @@
             this.ofd_CargarImagen = new System.Windows.Forms.OpenFileDialog();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.pbImagenMenu = new System.Windows.Forms.PictureBox();
             this.gbDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudMInutoFin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudMinutoIni)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHoraFIn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHoraInicio)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDiasFeriados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagenMenu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDiasFeriados)).BeginInit();
             this.SuspendLayout();
             // 
             // gbDatos
@@ -164,6 +164,18 @@
             this.paColorFondo.TabIndex = 9;
             this.paColorFondo.Click += new System.EventHandler(this.paColorFondo_Click);
             // 
+            // pbImagenMenu
+            // 
+            this.pbImagenMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbImagenMenu.Image = global::asistencia.Properties.Resources.Navidad_Christmas_Tree;
+            this.pbImagenMenu.Location = new System.Drawing.Point(364, 45);
+            this.pbImagenMenu.Name = "pbImagenMenu";
+            this.pbImagenMenu.Size = new System.Drawing.Size(66, 69);
+            this.pbImagenMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbImagenMenu.TabIndex = 8;
+            this.pbImagenMenu.TabStop = false;
+            this.pbImagenMenu.Click += new System.EventHandler(this.pbImagenMenu_Click);
+            // 
             // rbNoTodoDia
             // 
             this.rbNoTodoDia.AutoSize = true;
@@ -197,9 +209,9 @@
             this.label9.ForeColor = System.Drawing.Color.DimGray;
             this.label9.Location = new System.Drawing.Point(6, 19);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(104, 13);
+            this.label9.Size = new System.Drawing.Size(115, 13);
             this.label9.TabIndex = 1;
-            this.label9.Text = "NOMBRE FERIADO";
+            this.label9.Text = "Nombre del día feriado";
             // 
             // tbNombreFeriado
             // 
@@ -219,9 +231,9 @@
             this.label6.ForeColor = System.Drawing.Color.DimGray;
             this.label6.Location = new System.Drawing.Point(6, 72);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(73, 13);
+            this.label6.Size = new System.Drawing.Size(57, 13);
             this.label6.TabIndex = 1;
-            this.label6.Text = "HORA INICIO";
+            this.label6.Text = "Hora inicio";
             // 
             // label4
             // 
@@ -230,9 +242,9 @@
             this.label4.ForeColor = System.Drawing.Color.DimGray;
             this.label4.Location = new System.Drawing.Point(6, 101);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 13);
+            this.label4.Size = new System.Drawing.Size(44, 13);
             this.label4.TabIndex = 1;
-            this.label4.Text = "HORA FIN";
+            this.label4.Text = "Hora fin";
             // 
             // label3
             // 
@@ -241,9 +253,9 @@
             this.label3.ForeColor = System.Drawing.Color.DimGray;
             this.label3.Location = new System.Drawing.Point(6, 45);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(125, 13);
+            this.label3.Size = new System.Drawing.Size(96, 13);
             this.label3.TabIndex = 1;
-            this.label3.Text = "FERIADO TODO EL DIA";
+            this.label3.Text = "Feriado todo el día";
             // 
             // lbImagenMenu
             // 
@@ -251,11 +263,11 @@
             this.lbImagenMenu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbImagenMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbImagenMenu.ForeColor = System.Drawing.Color.Firebrick;
-            this.lbImagenMenu.Location = new System.Drawing.Point(352, 118);
+            this.lbImagenMenu.Location = new System.Drawing.Point(349, 118);
             this.lbImagenMenu.Name = "lbImagenMenu";
-            this.lbImagenMenu.Size = new System.Drawing.Size(97, 13);
+            this.lbImagenMenu.Size = new System.Drawing.Size(99, 13);
             this.lbImagenMenu.TabIndex = 0;
-            this.lbImagenMenu.Text = "Imagen Referencia";
+            this.lbImagenMenu.Text = "Imagen Referencial";
             // 
             // lbColorFondo
             // 
@@ -297,13 +309,13 @@
             // 
             // Editar
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle1.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle1.NullValue")));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            this.Editar.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle9.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle9.NullValue")));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
+            this.Editar.DefaultCellStyle = dataGridViewCellStyle9;
             this.Editar.HeaderText = "Editar";
             this.Editar.Name = "Editar";
             this.Editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -311,13 +323,13 @@
             // 
             // Column4
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle2.NullValue")));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle10.NullValue")));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle10;
             this.Column4.HeaderText = "Eliminar";
             this.Column4.Name = "Column4";
             this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -332,11 +344,11 @@
             // 
             // NOMBREFERIADO
             // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Firebrick;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.DimGray;
-            this.NOMBREFERIADO.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Firebrick;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.DimGray;
+            this.NOMBREFERIADO.DefaultCellStyle = dataGridViewCellStyle11;
             this.NOMBREFERIADO.HeaderText = "NOMBRE FERIADO";
             this.NOMBREFERIADO.Name = "NOMBREFERIADO";
             this.NOMBREFERIADO.ReadOnly = true;
@@ -344,13 +356,13 @@
             // 
             // ToDoDIA
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle4.NullValue = false;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Firebrick;
-            this.ToDoDIA.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle12.NullValue = false;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Firebrick;
+            this.ToDoDIA.DefaultCellStyle = dataGridViewCellStyle12;
             this.ToDoDIA.HeaderText = "TODO EL DIA";
             this.ToDoDIA.Name = "ToDoDIA";
             this.ToDoDIA.ReadOnly = true;
@@ -360,11 +372,11 @@
             // 
             // HORAINI
             // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Firebrick;
-            this.HORAINI.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Firebrick;
+            this.HORAINI.DefaultCellStyle = dataGridViewCellStyle13;
             this.HORAINI.HeaderText = "HORA INICIO";
             this.HORAINI.Name = "HORAINI";
             this.HORAINI.ReadOnly = true;
@@ -372,11 +384,11 @@
             // 
             // Column1
             // 
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Firebrick;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.DimGray;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Firebrick;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.DimGray;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle14;
             this.Column1.HeaderText = "HORA FIN";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
@@ -384,11 +396,11 @@
             // 
             // Column2
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Transparent;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Transparent;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle15;
             this.Column2.HeaderText = "COLOR FONDO";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
@@ -396,13 +408,13 @@
             // 
             // Column3
             // 
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle8.NullValue")));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            this.Column3.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle16.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle16.NullValue")));
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.White;
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle16;
             this.Column3.HeaderText = "IMAGEN";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
@@ -444,18 +456,6 @@
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // pbImagenMenu
-            // 
-            this.pbImagenMenu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbImagenMenu.Image = global::asistencia.Properties.Resources.Navidad_Christmas_Tree;
-            this.pbImagenMenu.Location = new System.Drawing.Point(366, 45);
-            this.pbImagenMenu.Name = "pbImagenMenu";
-            this.pbImagenMenu.Size = new System.Drawing.Size(66, 69);
-            this.pbImagenMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbImagenMenu.TabIndex = 8;
-            this.pbImagenMenu.TabStop = false;
-            this.pbImagenMenu.Click += new System.EventHandler(this.pbImagenMenu_Click);
-            // 
             // frmDiasNoLaborables
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -468,7 +468,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmDiasNoLaborables";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ASIGNACIÓN DE DÍAS NO LABOTABLES";
+            this.Text = "ASIGNACIÓN DE DÍAS NO LABORABLES";
             this.Load += new System.EventHandler(this.frmDiasNoLaborables_Load);
             this.gbDatos.ResumeLayout(false);
             this.gbDatos.PerformLayout();
@@ -476,8 +476,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudMinutoIni)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHoraFIn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHoraInicio)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDiasFeriados)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagenMenu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDiasFeriados)).EndInit();
             this.ResumeLayout(false);
 
         }

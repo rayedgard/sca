@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTipoPermiso));
             this.dgvTiposDePermiso = new System.Windows.Forms.DataGridView();
             this.Column9 = new System.Windows.Forms.DataGridViewImageColumn();
@@ -68,14 +68,14 @@
             this.Column13,
             this.Column1,
             this.Column2});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Firebrick;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTiposDePermiso.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Firebrick;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTiposDePermiso.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvTiposDePermiso.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvTiposDePermiso.Location = new System.Drawing.Point(0, 161);
             this.dgvTiposDePermiso.Name = "dgvTiposDePermiso";
@@ -165,9 +165,9 @@
             this.label33.ForeColor = System.Drawing.Color.Black;
             this.label33.Location = new System.Drawing.Point(3, 26);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(134, 13);
+            this.label33.Size = new System.Drawing.Size(135, 13);
             this.label33.TabIndex = 1;
-            this.label33.Text = "NOMBRE TIPO PERMISO";
+            this.label33.Text = "Nombre del tipo de permiso";
             // 
             // tbDetalles
             // 
@@ -198,9 +198,9 @@
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(4, 49);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(121, 13);
+            this.label8.Size = new System.Drawing.Size(137, 13);
             this.label8.TabIndex = 1;
-            this.label8.Text = "CON GOCE DE HABER";
+            this.label8.Text = "Permiso con goce de haber";
             // 
             // label29
             // 
@@ -209,9 +209,9 @@
             this.label29.ForeColor = System.Drawing.Color.Black;
             this.label29.Location = new System.Drawing.Point(3, 72);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(55, 13);
+            this.label29.Size = new System.Drawing.Size(40, 13);
             this.label29.TabIndex = 1;
-            this.label29.Text = "DETALLE";
+            this.label29.Text = "Detalle";
             // 
             // btnNuevo
             // 

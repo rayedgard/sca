@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHabilitaPersonal));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbtHabilitadoBiometrico = new System.Windows.Forms.RadioButton();
-            this.rbtHabilitadoManual = new System.Windows.Forms.RadioButton();
             this.rbtDeshabilitado = new System.Windows.Forms.RadioButton();
+            this.rbtHabilitadoManual = new System.Windows.Forms.RadioButton();
+            this.rbtHabilitadoBiometrico = new System.Windows.Forms.RadioButton();
             this.lbDNI = new System.Windows.Forms.Label();
             this.lbNombre = new System.Windows.Forms.Label();
             this.btnCambiarEstado = new System.Windows.Forms.Button();
@@ -51,16 +51,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Edicion de estado del personal";
             // 
-            // rbtHabilitadoBiometrico
+            // rbtDeshabilitado
             // 
-            this.rbtHabilitadoBiometrico.AutoSize = true;
-            this.rbtHabilitadoBiometrico.Location = new System.Drawing.Point(33, 19);
-            this.rbtHabilitadoBiometrico.Name = "rbtHabilitadoBiometrico";
-            this.rbtHabilitadoBiometrico.Size = new System.Drawing.Size(242, 17);
-            this.rbtHabilitadoBiometrico.TabIndex = 0;
-            this.rbtHabilitadoBiometrico.TabStop = true;
-            this.rbtHabilitadoBiometrico.Text = "Personal HABILITADO con registro biometrico";
-            this.rbtHabilitadoBiometrico.UseVisualStyleBackColor = true;
+            this.rbtDeshabilitado.AutoSize = true;
+            this.rbtDeshabilitado.Location = new System.Drawing.Point(33, 65);
+            this.rbtDeshabilitado.Name = "rbtDeshabilitado";
+            this.rbtDeshabilitado.Size = new System.Drawing.Size(269, 17);
+            this.rbtDeshabilitado.TabIndex = 2;
+            this.rbtDeshabilitado.TabStop = true;
+            this.rbtDeshabilitado.Text = "Personal DESHABILITADO, no labora en el periodo";
+            this.rbtDeshabilitado.UseVisualStyleBackColor = true;
             // 
             // rbtHabilitadoManual
             // 
@@ -73,16 +73,16 @@
             this.rbtHabilitadoManual.Text = "Personal HABILITADO con registro manual";
             this.rbtHabilitadoManual.UseVisualStyleBackColor = true;
             // 
-            // rbtDeshabilitado
+            // rbtHabilitadoBiometrico
             // 
-            this.rbtDeshabilitado.AutoSize = true;
-            this.rbtDeshabilitado.Location = new System.Drawing.Point(33, 65);
-            this.rbtDeshabilitado.Name = "rbtDeshabilitado";
-            this.rbtDeshabilitado.Size = new System.Drawing.Size(269, 17);
-            this.rbtDeshabilitado.TabIndex = 2;
-            this.rbtDeshabilitado.TabStop = true;
-            this.rbtDeshabilitado.Text = "Personal DESHABILITADO, no labora en el periodo";
-            this.rbtDeshabilitado.UseVisualStyleBackColor = true;
+            this.rbtHabilitadoBiometrico.AutoSize = true;
+            this.rbtHabilitadoBiometrico.Location = new System.Drawing.Point(33, 19);
+            this.rbtHabilitadoBiometrico.Name = "rbtHabilitadoBiometrico";
+            this.rbtHabilitadoBiometrico.Size = new System.Drawing.Size(242, 17);
+            this.rbtHabilitadoBiometrico.TabIndex = 0;
+            this.rbtHabilitadoBiometrico.TabStop = true;
+            this.rbtHabilitadoBiometrico.Text = "Personal HABILITADO con registro biometrico";
+            this.rbtHabilitadoBiometrico.UseVisualStyleBackColor = true;
             // 
             // lbDNI
             // 
@@ -128,6 +128,7 @@
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(371, 199);
             this.MinimizeBox = false;
             this.Name = "frmHabilitaPersonal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
